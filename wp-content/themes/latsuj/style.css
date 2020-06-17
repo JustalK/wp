@@ -54,6 +54,8 @@ h1 {
     color: #111;
     text-align: center;
     font-size: 4.125rem;
+    margin: 0;
+    padding-bottom: 2rem;
 } 
 
 h2 {
@@ -70,12 +72,12 @@ h3 {
     margin: 25px 25%;
 } 
 
-blockquote {
-	margin: 0;
+#theexcerpt {
     position: relative;
+	margin: 0;
 }
 
-blockquote p {
+#theexcerpt p {
 	border-top: .125rem solid #afafaf;
 	border-bottom: .125rem solid #afafaf;
 	padding: 30px 5%;
@@ -83,7 +85,7 @@ blockquote p {
     text-align: justify;
 }
 
-blockquote::before {
+#theexcerpt::before {
 	background-color: #fff;
     border: 2px solid #afafaf;
     border: .125rem solid #afafaf;
@@ -99,7 +101,7 @@ blockquote::before {
     left: 30%;
 }
 
-blockquote::after {
+#theexcerpt::after {
 	background-color: #fff;
     border: 2px solid #afafaf;
     border: .125rem solid #afafaf;
@@ -113,10 +115,6 @@ blockquote::after {
     width: .625rem;
     bottom: -0.4rem;
     right: 30%;
-}
-
-#thecontent {
-
 }
  
 .wp-block-code {
@@ -141,10 +139,111 @@ ul {
 	margin: 0 25%;
 }
  
-article.post {
-    border-bottom: 4px dashed #ecf0f1;
-}
+#firstcategory {
+	position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-100%);
+    padding: 10px;
+    color: #1111117d;
+} 
+
+#secondcategory {
+	position: absolute;
+    top: 0;
+    left: 50%;
+    padding: 10px;
+    color: #1111117d;
+} 
  
+article.post {    
+	position: relative;
+	padding: 6rem 0;
+}
+
+.design {
+    position: absolute;
+}
+
+.design::after {
+	background-color: #fff;
+    border: 2px solid #afafaf;
+    border: .125rem solid #afafaf;
+    content: '';
+    height: 10px;
+    height: .625rem;
+    position: absolute;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    width: .625rem;
+}
+
+#design_01 {
+    background: #afafaf;
+    height: 50px;
+    top: 0;
+    left: 50%;
+    width: .125rem;
+}
+
+#design_01::after {
+    bottom: -0.4rem;
+    left: -0.345rem;
+}
+
+#design_02 {
+    width: 10%;
+    height: 3rem;
+    border-top: .125rem solid #afafaf;
+    border-right: .125rem solid #afafaf;
+    top: 25%;
+}
+
+#design_02::after {
+    bottom: -0.4rem;
+    right: -0.5rem;
+}
+
+#design_03 {
+    width: 5%;
+    height: 6rem;
+    border-bottom: .125rem solid #afafaf;
+    border-left: .125rem solid #afafaf;
+    top: 50%;
+    right:0;
+}
+
+#design_03::after {
+    top: -0.4rem;
+    left: -0.5rem;
+}
+
+#design_04 {
+    width: 10%;
+    height: 1rem;
+    border-top: .125rem solid #afafaf;
+    top: 90%;
+}
+
+#design_04::after {
+    top: -0.5rem;
+    right: -0.5rem;
+}
+
+#design_05 {
+    background: #afafaf;
+    height: 50px;
+    bottom: 0;
+    left: 50%;
+    width: .125rem;
+}
+
+#design_05::after {
+    top: -0.4rem;
+    left: -0.345rem;
+}
+
 article.post:last-of-type {
     border-bottom: none;
 }
