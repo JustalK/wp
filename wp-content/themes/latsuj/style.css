@@ -51,9 +51,14 @@ body {
 #menu {
 	position: fixed;
     z-index: 10;
-    padding: 20px 40px;
+    padding: 1rem 3rem;
     cursor: pointer;
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
 } 
+
+#menu.active {
+	transform: translate3d(12rem,0,0);
+}
 
 .box-shadow-menu:before {
 	content: "";
@@ -62,8 +67,8 @@ body {
     transform: translateX(-50%);
     width: 1.5em;
     height: 0.25em;
-    background: black;
-    box-shadow: 0 0.5rem 0 0 black, 0 1rem 0 0 black;
+    background: #fcd116;
+    box-shadow: 0 0.5rem 0 0 #fcd116, 0 1rem 0 0 #fcd116;
 }
  
 h1 {
@@ -96,17 +101,17 @@ h3 {
 }
 
 #theexcerpt p {
-	border-top: .125rem solid #61affe;
-    border-bottom: .125rem solid #61affe;
+	border-top: .125rem solid #fcd116;
+    border-bottom: .125rem solid #fcd116;
     padding: 30px 5%;
     margin: 0 20%;
     text-align: justify;
 }
 
 #theexcerpt::before {
-	background-color: #fff;
-    border: 2px solid #61affe;
-    border: .125rem solid #61affe;
+	background-color: #fcd116;
+    border: 2px solid #fcd116;
+    border: .125rem solid #fcd116;
     content: '';
     height: 10px;
     height: .625rem;
@@ -120,9 +125,9 @@ h3 {
 }
 
 #theexcerpt::after {
-	background-color: #fff;
-    border: 2px solid #61affe;
-    border: .125rem solid #61affe;
+	background-color: #fcd116;
+    border: 2px solid #fcd116;
+    border: .125rem solid #fcd116;
     content: '';
     height: 10px;
     height: .625rem;
@@ -191,9 +196,9 @@ article.post {
 }
 
 .design::after {
-	background-color: #fff;
-    border: 2px solid #61affe;
-    border: .125rem solid #61affe;
+	background-color: #fcd116;
+    border: 2px solid #fcd116;
+    border: .125rem solid #fcd116;
     content: '';
     height: 10px;
     height: .625rem;
@@ -205,7 +210,7 @@ article.post {
 }
 
 #design_top {
-    background: #61affe;
+    background: #fcd116;
     height: 50px;
     top: 0;
     left: 50%;
@@ -218,7 +223,7 @@ article.post {
 }
 
 #design_bottom {
-    background: #61affe;
+    background: #fcd116;
     height: 50px;
     bottom: 0;
     left: 50%;
@@ -232,7 +237,7 @@ article.post {
 
 #thedate {
 	margin-left: 70%;
-    background: #61affe;
+    background: #fcd116;
     margin-right: 20%;
     text-align: center;
     padding: 0.5rem 0.5rem;
@@ -242,8 +247,8 @@ article.post {
 
 #thedate::before {
 	background-color: #fff;
-    border: 2px solid #61affe;
-    border: .125rem solid #61affe;
+    border: 2px solid #fcd116;
+    border: .125rem solid #fcd116;
     content: '';
     height: 10px;
     height: .625rem;
@@ -267,17 +272,106 @@ article.post:last-of-type {
 
 .design_side {
     position: absolute;
-	width: 100%;
+	width: 50%;
     height: 100%;
     background-image: url(./img/background_left_01.png);
     background-repeat-x: no-repeat;
     z-index: 1;
     pointer-events: none;
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+}
+
+#design_side_left.right {
+    transform: translate3d(12rem,0,0);
+}
+
+#side_left {
+    position: fixed;
+    z-index: 1;
+	width: 13rem;
+    height: 100%;
+    background: #61affe;
+    transform: translate3d(-12rem,0,0);
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+}
+
+#side_left.right {
+    transform: translate3d(0,0,0);
 }
 
 #design_side_right {
-    background-position-x: left;
-    transform: rotateY(180deg);
+    background-position-x: right;
+    background-image: url(./img/background_right_01.png);
+    right: 0;
 }
 
+#menu-list {
+	position: absolute;
+    width: 100%;
+    top: 4rem;
+}
 
+#menu-list > span {
+	position: absolute;
+    width: 100%;
+    font-family: "GothamSSm-Black", Arial, sans-serif;
+    text-transform: uppercase;
+    color: white;
+}
+
+#menu-list .home {
+    top: 1rem;
+    left: 1rem;
+}
+
+#menu-list > span::before {
+	width: 100%;
+    background: white;
+    position: absolute;
+    height: 0.25rem;
+    top: 0.5rem;
+    content: "";
+    left: -105%;
+}
+
+#menu-list .posts {
+    top: 3rem;
+    left: 2rem;
+}
+
+#menu-list .categories {
+    top: 5rem;
+    left: 3rem;
+    color: black;
+}
+
+#menu-list .category_01 {
+    top: 7rem;
+    left: 2rem;
+}
+
+#menu-list .category_02 {
+    top: 9rem;
+    left: 2rem;
+}
+
+#menu-list .postRelated {
+    top: 11rem;
+    left: 3rem;
+    color: black;
+}
+
+#menu-list .related_01 {
+    top: 13rem;
+    left: 2rem;
+}
+
+#menu-list .related_02 {
+    top: 15rem;
+    left: 2rem;
+}
+
+#menu-list .related_03 {
+    top: 17rem;
+    left: 2rem;
+}
