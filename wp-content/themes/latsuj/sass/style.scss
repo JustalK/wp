@@ -1,0 +1,18 @@
+/*
+Theme Name: Latsuj
+Author: Justal "Latsuj" Kevin
+Author URI: https://latsuj.com
+Version: 1.0
+*/
+
+@import "compass";
+@import "compass/reset";
+
+$white: #fff;
+$yellow: #fcd116;
+$blue: #61affe;
+$red: #fff;
+
+#theexcerpt p {
+	color: .125rem solid $yellow;
+}
