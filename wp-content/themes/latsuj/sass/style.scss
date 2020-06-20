@@ -8,11 +8,345 @@ Version: 1.0
 @import "compass";
 @import "compass/reset";
 
-$white: #fff;
-$yellow: #fcd116;
-$blue: #61affe;
-$red: #fff;
+$color_header: #111;
+$color_white: #fff;
+$color_yellow: #fcd116;
+$color_blue: #61affe;
+$color_cyan: #ebf3fb;
+$color_red: #fff;
+$color_gray: #545454;
 
-#theexcerpt p {
-	color: .125rem solid $yellow;
+$text_header_stack: "GothamSSm-Black", Arial, sans-serif;
+$text_header_proportion: 4.125rem;
+$text_p_stack: "Maitree-Regular", Arial, sans-serif;
+$text_stack: Arial, sans-serif;
+
+$website_margin: 25%;
+$website_border_size: 0.125rem; 
+
+@mixin font($folder,$name,$local,$weight,$style) {
+    font-family: $name;
+    src: url("./font/#{$folder}/#{$name}.eot");
+    src: local($local), local($name),
+        url('./font/#{$folder}/#{$name}.eot?#iefix') format('embedded-opentype'),
+        url('./font/#{$folder}/#{$name}.woff2') format('woff2'),
+        url('./font/#{$folder}/#{$name}.woff') format('woff'),
+        url('./font/#{$folder}/#{$name}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
 }
+
+@mixin diamond() {
+    content: '';
+    position: absolute;
+	background-color: $color_yellow;
+    border: $website_border_size solid $color_yellow;
+    height: .625rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    width: .625rem;
+}
+
+// ==========================================================
+
+@font-face {
+	@include font("gothamSS","GothamSSm-Book","GothamSSm Book",normal,normal);
+}
+
+@font-face {
+	@include font("gothamSS","GothamSSm-Black","GothamSSm Black",900,normal);
+}
+
+@font-face {
+	@include font("maitree","Maitree-Regular","Maitree Regular",normal,normal);
+}
+
+// ==========================================================
+
+body {
+    font-family: $text_stack;
+    font-size: 16px;
+    color: $color_gray;
+    margin: 0;
+}
+
+#menu {
+	position: fixed;
+    z-index: 10;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+    
+    &.active {
+    	transform: translate3d(12rem,0,0);
+    }
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: $text_header_stack;
+    text-transform: uppercase;
+    color: $color_header;
+}
+
+h1 {
+    font-size: $text_header_proportion;
+	text-align: center;
+    padding-bottom: 2rem;
+    margin: 0;
+}
+
+h2 {
+    font-size: $text_header_proportion / 2;
+    margin: 40px $website_margin;
+}
+
+h3 {
+    font-size: $text_header_proportion / 4;
+    margin: 25px $website_margin;
+} 
+
+// ==========================================================
+
+.container {
+	position: relative;
+}
+
+.design_side {
+    position: absolute;
+	width: 50%;
+    height: 100%;
+    background-image: url(./img/background_left_01.png);
+    background-repeat-x: no-repeat;
+    z-index: 1;
+    pointer-events: none;
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+    
+    &.right {
+    	transform: translate3d(12rem,0,0);
+    }
+}
+
+#design_side_right {
+    background-position-x: right;
+    background-image: url(./img/background_right_01.png);
+    right: 0;
+}
+
+// ==========================================================
+
+.box-shadow-menu:before {
+	content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1.5em;
+    height: 0.25em;
+    background: $color_yellow;
+    box-shadow: 0 0.5rem 0 0 $color_yellow, 0 1rem 0 0 $color_yellow;
+}
+
+#side_left {
+    position: fixed;
+    z-index: 1;
+	width: 13rem;
+    height: 100%;
+    background: $color_blue;
+    transform: translate3d(-12rem,0,0);
+    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+    
+    &.right {
+    	transform: translate3d(0,0,0);
+	}
+}
+
+#menu-list {
+	position: absolute;
+    width: 100%;
+    top: 4rem;
+    
+	& > span {
+		position: absolute;
+	    width: 100%;
+	    font-family: $text_header_stack;
+	    text-transform: uppercase;
+	    color: white;
+	    
+	    &::before {
+		    content: "";
+		    position: absolute;
+			width: 100%;
+		    background: $color_white;
+		    height: 0.25rem;
+		    top: 0.5rem;
+		    left: -105%;
+		}
+    }
+    
+    & .home {
+    	top: 1rem;
+    	left: 1rem;
+	}
+	
+	& .posts {
+    	top: 3rem;
+    	left: 2rem;
+	}
+	
+	& .categories {
+	    top: 5rem;
+	    left: 3rem;
+	    color: black;
+	}
+	
+	& .category_01 {
+	    top: 7rem;
+	    left: 2rem;
+	}
+	
+	& .category_02 {
+	    top: 9rem;
+	    left: 2rem;
+	}
+	
+	& .postRelated {
+	    top: 11rem;
+	    left: 3rem;
+	    color: black;
+	}
+	
+	& .related_01 {
+	    top: 13rem;
+	    left: 2rem;
+	}
+	
+	& .related_02 {
+	    top: 15rem;
+	    left: 2rem;
+	}
+	
+	& .related_03 {
+	    top: 17rem;
+	    left: 2rem;
+	}
+}
+
+// ==========================================================
+
+#firstcategory, #secondcategory {
+	position: absolute;
+    padding: 20px 10px;
+    color: $color_gray;
+    top: 0;
+    left: 50%;
+}
+
+#firstcategory {
+    transform: translateX(-100%);
+}
+
+// ==========================================================
+
+article.post {    
+	position: relative;
+	padding: 6rem 0;
+}
+
+// ==========================================================
+
+#thedate {
+    position: relative;
+    background: $color_yellow;
+    margin-right: 20%;
+    text-align: center;
+    color: $color_white;
+    padding: 0.5rem 0.5rem;
+	margin-left: 70%;
+	
+	&::before {
+		@include diamond();
+		background: $color_white;
+	    top: -0.4rem;
+	    right: -0.4rem;
+	}
+}
+
+
+// ==========================================================
+
+#theexcerpt {
+    position: relative;
+	margin: 0;
+	
+	&::before {
+		@include diamond();
+	    top: -0.4rem;
+	    left: 30%;
+	}
+
+	&::after {
+		@include diamond();
+	    bottom: -0.4rem;
+	    right: 30%;
+	}
+	
+	p {
+		border-top: $website_border_size solid $color_yellow;
+	    border-bottom: $website_border_size solid $color_yellow;
+	    text-align: justify;
+	    padding: 30px 5%;
+	    margin: 0 ($website_margin - 5%) 2rem;
+	}
+}
+
+// ==========================================================
+
+.wp-block-code {
+    background: $color_cyan;
+    border-bottom: 1px solid $color_blue;
+    border-top: 1px solid $color_blue;
+    color: black;
+	padding: 40px $website_margin;
+    margin: 30px 0;
+}
+
+.wp-block-image {
+    margin-left: $website_margin;
+    width: 50%;
+}
+
+// ==========================================================
+
+p {
+	font-family: $text_p_stack;
+    line-height: 1.7em;
+    text-align: justify;
+    padding: 0 $website_margin;
+}
+
+ul {
+	margin: 0 $website_margin;
+}
+
+// ==========================================================
+
+.design {
+    position: absolute;
+    background: $color_yellow;
+    height: 50px;
+    top: 0;
+    left: 50%;
+    width: $website_border_size;
+    
+    &::after {
+    	@include diamond();
+    	bottom: -0.4rem;
+    	left: -0.345rem;
+    }
+}
+
+#design_bottom {
+    bottom: 0;
+}
+
+
