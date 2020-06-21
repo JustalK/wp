@@ -92,18 +92,14 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
     font-size: $text_header_proportion;
 	text-align: center;
-    padding-bottom: 2rem;
-    margin: 0;
 }
 
 h2 {
     font-size: $text_header_proportion / 2;
-    margin: 40px $website_margin;
 }
 
 h3 {
     font-size: $text_header_proportion / 4;
-    margin: 25px $website_margin;
 } 
 
 // ==========================================================
@@ -252,6 +248,19 @@ article.post {
 	padding: 6rem 0;
 }
 
+.article  h1 {
+    padding-bottom: 2rem;
+    margin: 0;
+}
+
+.article h2 {
+    margin: 40px $website_margin;
+}
+
+.article h3 {
+    margin: 25px $website_margin;
+} 
+
 // ==========================================================
 
 #thedate {
@@ -313,6 +322,11 @@ article.post {
 .wp-block-image {
     margin-left: $website_margin;
     width: 50%;
+    
+    & > img {
+        width: auto;
+    	height: auto;
+    }
 }
 
 // ==========================================================
@@ -348,5 +362,88 @@ ul {
 #design_bottom {
     bottom: 0;
 }
+
+// ==========================================================
+// ==========================================================
+// ==========================================================
+
+#most_recent-posts {
+	width: 90%;
+    height: 26rem;
+    margin: 0 5%;
+
+	& .h2 {
+		margin:0;
+	}
+
+	& .left {
+		display: inline-block;
+		float:left;
+		width: 66%;
+		height: 100%;
+		
+		& > a {
+		    width: 90%;
+		    margin: 2.5% 0;
+		    height: 90%;
+		    display: inline-block;
+		    background-position: center;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		}
+	}
+	
+	& .right {
+		display: inline-block;
+		width: 33.999%;
+		height: 100%;
+		
+		& .secondary_post{
+		    display: block;
+		    height: 40%;
+		    width: 100%;
+		    margin: 5% 0%;
+		    background-position: center;
+		    background-size: cover;
+		    background-repeat: no-repeat;
+		}
+		
+		& #post_3 {
+			margin-top: 10%;
+		}
+	}
+}
+
+#older_post {
+	font-family: $text_header_stack;
+	font-size: 1.5rem;
+	margin: 1rem 5%;
+}
+
+#small_most_recent-posts {
+	width: 90%;
+    height: 10rem;
+    margin: 2rem 5%;
+	border-top: $website_border_size solid $color_yellow;
+	border-bottom: $website_border_size solid $color_yellow;
+	padding: 1rem 0;
+	display: inline-flex;
+    justify-content: center;
+	
+	& > a {
+	    display: inline-block;
+	    width: 25%;
+	    height: 100%;
+	    margin: 0 2rem;
+	    background-position: center;
+    	background-size: cover;
+    	background-repeat: no-repeat;
+	}
+}
+
+
+
+
+
 
 
