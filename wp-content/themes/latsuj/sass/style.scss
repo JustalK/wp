@@ -22,7 +22,7 @@ $text_p_stack: "Maitree-Regular", Arial, sans-serif;
 $text_stack: Arial, sans-serif;
 
 $website_margin: 25%;
-$website_category_margin: 10%;
+$website_category_margin: 25%;
 $website_border_size: 0.125rem; 
 
 @mixin font($folder,$name,$local,$weight,$style) {
@@ -309,7 +309,7 @@ article p {
 		border-top: $website_border_size solid $color_yellow;
 	    border-bottom: $website_border_size solid $color_yellow;
 	    text-align: justify;
-	    padding: 30px 5%;
+	    padding: 2rem 5%;
 	    margin: 0 ($website_margin - 5%) 2rem;
 	}
 }
@@ -379,28 +379,19 @@ ul {
 	}
 
 	& h1 {
-		margin: 0 $website_category_margin;
 		padding-bottom: 2rem;
-	}
-	
-	& #design_side_left {
-		transform: translate3d(-12.5%, 0, 0);
-	}
-
-	& #design_side_right {
-		transform: translate3d(12.5%, 0, 0);
+		width: 100% - 2 * $website_category_margin + 10%;
+    	margin: 0 $website_category_margin - 5%;
 	}
 	
 	& .intro {
-		width: 100% - 2 * $website_category_margin;
-    	margin: 0 $website_category_margin;
-	
+    
 		& p {
 			display: block;
-    		padding: 2.5rem 0;
-    		margin: 2rem 0;
     		border-top: 0.125rem solid #fcd116;
     		border-bottom: 0.125rem solid #fcd116;
+    		padding: 2rem 5%;
+    		margin: 0 $website_category_margin - 5%;
 		}
 	}
 
@@ -410,7 +401,7 @@ ul {
 	    background-size: cover;
 	    background-repeat: no-repeat;
 	    text-decoration: none;
-	    border: $website_border_size solid $color_yellow;
+	    box-shadow: inset 0 0 0 $website_border_size $color_yellow;
 	    
 	    & h2, & h3 {
 			position: absolute;
@@ -427,7 +418,7 @@ ul {
 
 #most_recent-posts {
 	width: 100% - 2 * $website_category_margin;
-    height: 26rem;
+    height: 22rem;
     margin: 0 $website_category_margin;
 
 	& .left {
@@ -439,21 +430,20 @@ ul {
 		& a {
 		    display: inline-block;
 		    width: 90%;
-		    margin: 2.5% 0;
-		    height: 90%;
+		    height: 100%;
 		}
 	}
 	
 	& .right {
+		position: relative;
 		display: inline-block;
 		width: 33.999%;
 		height: 100%;
 		
 		& .secondary_post{
 		    display: block;
-		    height: 40%;
+		    height: 44%;
 		    width: 100%;
-		    margin: 5% 0%;
 		}
 		
 		& h2 {
@@ -461,7 +451,8 @@ ul {
 		}
 		
 		& #post_3 {
-			margin-top: 10%;
+			position: absolute;
+			bottom: 0;
 		}
 	}
 }
