@@ -22,6 +22,7 @@ $text_p_stack: "Maitree-Regular", Arial, sans-serif;
 $text_stack: Arial, sans-serif;
 
 $website_margin: 25%;
+$website_category_margin: 10%;
 $website_border_size: 0.125rem; 
 
 @mixin font($folder,$name,$local,$weight,$style) {
@@ -106,6 +107,7 @@ h3 {
 
 .container {
 	position: relative;
+	overflow: hidden;
 }
 
 .design_side {
@@ -248,18 +250,22 @@ article.post {
 	padding: 6rem 0;
 }
 
-.article  h1 {
+article  h1 {
     padding-bottom: 2rem;
     margin: 0;
 }
 
-.article h2 {
+article h2 {
     margin: 40px $website_margin;
 }
 
-.article h3 {
+article h3 {
     margin: 25px $website_margin;
 } 
+
+article p {
+    padding: 0 $website_margin;
+}
 
 // ==========================================================
 
@@ -335,7 +341,6 @@ p {
 	font-family: $text_p_stack;
     line-height: 1.7em;
     text-align: justify;
-    padding: 0 $website_margin;
 }
 
 ul {
@@ -367,14 +372,63 @@ ul {
 // ==========================================================
 // ==========================================================
 
-#most_recent-posts {
-	width: 90%;
-    height: 26rem;
-    margin: 0 5%;
+.category {
 
-	& .h2 {
-		margin:0;
+	#category {
+	    padding: 6rem 0;
 	}
+
+	& h1 {
+		margin: 0 $website_category_margin;
+		padding-bottom: 2rem;
+	}
+	
+	& #design_side_left {
+		transform: translate3d(-12.5%, 0, 0);
+	}
+
+	& #design_side_right {
+		transform: translate3d(12.5%, 0, 0);
+	}
+	
+	& .intro {
+		width: 100% - 2 * $website_category_margin;
+    	margin: 0 $website_category_margin;
+	
+		& p {
+			display: block;
+    		padding: 2.5rem 0;
+    		margin: 2rem 0;
+    		border-top: 0.125rem solid #fcd116;
+    		border-bottom: 0.125rem solid #fcd116;
+		}
+	}
+
+	& .posts {
+		position: relative;
+	    background-position: center;
+	    background-size: cover;
+	    background-repeat: no-repeat;
+	    text-decoration: none;
+	    border: $website_border_size solid $color_yellow;
+	    
+	    & h2, & h3 {
+			position: absolute;
+		    margin: 0;
+		    color: $color_white;
+		    text-decoration: none;
+		    bottom: 0;
+		    background: #ffffff5e;
+		    width: 80%;
+		    padding: 1rem 10%;
+	    }
+	}
+}
+
+#most_recent-posts {
+	width: 100% - 2 * $website_category_margin;
+    height: 26rem;
+    margin: 0 $website_category_margin;
 
 	& .left {
 		display: inline-block;
@@ -382,14 +436,11 @@ ul {
 		width: 66%;
 		height: 100%;
 		
-		& > a {
+		& a {
+		    display: inline-block;
 		    width: 90%;
 		    margin: 2.5% 0;
 		    height: 90%;
-		    display: inline-block;
-		    background-position: center;
-		    background-size: cover;
-		    background-repeat: no-repeat;
 		}
 	}
 	
@@ -403,9 +454,10 @@ ul {
 		    height: 40%;
 		    width: 100%;
 		    margin: 5% 0%;
-		    background-position: center;
-		    background-size: cover;
-		    background-repeat: no-repeat;
+		}
+		
+		& h2 {
+			font-size: $text_header_proportion / 4;
 		}
 		
 		& #post_3 {
@@ -414,31 +466,53 @@ ul {
 	}
 }
 
-#older_post {
-	font-family: $text_header_stack;
-	font-size: 1.5rem;
-	margin: 1rem 5%;
+.block_slider {
+	margin: 2rem 0;
+	
+	& .description {
+		display: inline-block;
+    	margin: 0 $website_category_margin;
+    	padding: 0.5rem 0.5rem;
+    	text-align: center;
+    	background: #fcd116;
+    	color: white;
+	}
+
+	& .slider {
+		width: 100% - 2 * $website_category_margin;
+	    height: 10rem;
+	    margin: 0 $website_category_margin;
+		border-top: $website_border_size solid $color_yellow;
+		border-bottom: $website_border_size solid $color_yellow;
+		padding: 2.5rem 0;
+		display: inline-flex;
+	    justify-content: center;
+		
+		& a {
+		    display: inline-block;
+		    width: 25%;
+		    height: 100%;
+		    margin: 0 2rem;
+		    
+		    & h3 {
+				font-size: $text_header_proportion / 6;
+			}
+		}
+	}
 }
 
-#small_most_recent-posts {
-	width: 90%;
-    height: 10rem;
-    margin: 2rem 5%;
-	border-top: $website_border_size solid $color_yellow;
-	border-bottom: $website_border_size solid $color_yellow;
-	padding: 1rem 0;
-	display: inline-flex;
-    justify-content: center;
-	
-	& > a {
-	    display: inline-block;
-	    width: 25%;
-	    height: 100%;
-	    margin: 0 2rem;
-	    background-position: center;
-    	background-size: cover;
-    	background-repeat: no-repeat;
-	}
+
+#random_single {
+	background: $color_cyan;
+    padding: 4.5rem  $website_category_margin;
+    margin: 2rem 0;
+    
+    & .description {
+		display: block;
+    	margin-bottom: 2rem;
+    	font-size: 1.5rem;
+    	font-family: $text_header_stack;
+    }
 }
 
 
