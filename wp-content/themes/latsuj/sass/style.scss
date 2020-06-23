@@ -17,7 +17,7 @@ $color_red: #fff;
 $color_gray: #545454;
 
 $text_header_stack: "GothamSSm-Black", Arial, sans-serif;
-$text_header_proportion: 4.125rem;
+$text_header_proportion: 3rem;
 $text_p_stack: "Maitree-Regular", Arial, sans-serif;
 $text_stack: Arial, sans-serif;
 
@@ -47,6 +47,31 @@ $website_border_size: 0.125rem;
     transform: rotate(45deg);
     width: 10px;
     width: .625rem;
+}
+
+@mixin line() {
+	border-top: $website_border_size solid $color_yellow;
+    border-bottom: $website_border_size solid $color_yellow;
+	margin: 0 ($website_margin - 5%) 2rem;
+	width: 100% - 2 * $website_margin;
+	padding: 2rem 5%;
+}
+
+@mixin full-background() {
+   	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+@mixin posts-title($size) {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: $size;
+	width: 100%;
+	padding: 1rem 0;
+	background: #ffffff73;
 }
 
 // ==========================================================
@@ -247,12 +272,53 @@ h3 {
 
 article.post {    
 	position: relative;
-	padding: 6rem 0;
 }
 
-article  h1 {
-    padding-bottom: 2rem;
-    margin: 0;
+.single, .category {
+
+	& h1 {
+		padding-bottom: 4rem;
+    	padding-top: 8rem;
+		width: 100% - 2 * $website_margin + 10%;
+	    margin: 0 $website_margin - 5%;	
+	    text-align: center;
+	}
+	
+}
+
+.posts {
+	position: relative;
+	min-width: 10rem;
+	@include full-background();
+	
+	& h2 {
+    	@include posts-title($text_header_proportion / 2);
+	}
+	
+	&.secondary_post h2 {
+    	@include posts-title($text_header_proportion / 3.5);
+	}
+	
+	& h3 {
+    	@include posts-title($text_header_proportion / 6);
+	}
+}
+
+.line-description {
+	position: relative;
+	display: inline-block;
+	margin: 0 $website_margin - 5%;
+	padding: 0.5rem 0.5rem;
+	text-align: center;
+	background: $color_yellow;
+	color: white;
+	
+	&::before {
+		@include diamond();
+		background: $color_white;
+	    top: -0.4rem;
+	    left: -0.4rem;
+	}
 }
 
 article h2 {
@@ -267,25 +333,12 @@ article p {
     padding: 0 $website_margin;
 }
 
-// ==========================================================
-
-#thedate {
-    position: relative;
-    background: $color_yellow;
-    margin-right: 20%;
-    text-align: center;
-    color: $color_white;
-    padding: 0.5rem 0.5rem;
-	margin-left: 70%;
-	
-	&::before {
-		@include diamond();
-		background: $color_white;
-	    top: -0.4rem;
-	    right: -0.4rem;
-	}
+.slider {
+	@include line();
+    height: 10rem;
+	display: inline-flex;
+    justify-content: space-between;
 }
-
 
 // ==========================================================
 
@@ -306,11 +359,8 @@ article p {
 	}
 	
 	p {
-		border-top: $website_border_size solid $color_yellow;
-	    border-bottom: $website_border_size solid $color_yellow;
+		@include line();
 	    text-align: justify;
-	    padding: 2rem 5%;
-	    margin: 0 ($website_margin - 5%) 2rem;
 	}
 }
 
@@ -323,6 +373,13 @@ article p {
     color: black;
 	padding: 40px $website_margin;
     margin: 30px 0;
+    
+    & .description {
+		display: block;
+    	margin-bottom: 2rem;
+    	font-size: 1.5rem;
+    	font-family: $text_header_stack;
+    }
 }
 
 .wp-block-image {
@@ -372,50 +429,6 @@ ul {
 // ==========================================================
 // ==========================================================
 
-.category {
-
-	#category {
-	    padding: 6rem 0;
-	}
-
-	& h1 {
-		padding-bottom: 2rem;
-		width: 100% - 2 * $website_category_margin + 10%;
-    	margin: 0 $website_category_margin - 5%;
-	}
-	
-	& .intro {
-    
-		& p {
-			display: block;
-    		border-top: 0.125rem solid #fcd116;
-    		border-bottom: 0.125rem solid #fcd116;
-    		padding: 2rem 5%;
-    		margin: 0 $website_category_margin - 5%;
-		}
-	}
-
-	& .posts {
-		position: relative;
-	    background-position: center;
-	    background-size: cover;
-	    background-repeat: no-repeat;
-	    text-decoration: none;
-	    box-shadow: inset 0 0 0 $website_border_size $color_yellow;
-	    
-	    & h2, & h3 {
-			position: absolute;
-		    margin: 0;
-		    color: $color_white;
-		    text-decoration: none;
-		    bottom: 0;
-		    background: #ffffff5e;
-		    width: 80%;
-		    padding: 1rem 10%;
-	    }
-	}
-}
-
 #most_recent-posts {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
@@ -446,64 +459,11 @@ ul {
 		    width: 100%;
 		}
 		
-		& h2 {
-			font-size: $text_header_proportion / 4;
-		}
-		
 		& #post_3 {
 			position: absolute;
 			bottom: 0;
 		}
 	}
-}
-
-.block_slider {
-	margin: 2rem 0;
-	
-	& .description {
-		display: inline-block;
-    	margin: 0 $website_category_margin;
-    	padding: 0.5rem 0.5rem;
-    	text-align: center;
-    	background: #fcd116;
-    	color: white;
-	}
-
-	& .slider {
-		width: 100% - 2 * $website_category_margin;
-	    height: 10rem;
-	    margin: 0 $website_category_margin;
-		border-top: $website_border_size solid $color_yellow;
-		border-bottom: $website_border_size solid $color_yellow;
-		padding: 2.5rem 0;
-		display: inline-flex;
-	    justify-content: center;
-		
-		& a {
-		    display: inline-block;
-		    width: 25%;
-		    height: 100%;
-		    margin: 0 2rem;
-		    
-		    & h3 {
-				font-size: $text_header_proportion / 6;
-			}
-		}
-	}
-}
-
-
-#random_single {
-	background: $color_cyan;
-    padding: 4.5rem  $website_category_margin;
-    margin: 2rem 0;
-    
-    & .description {
-		display: block;
-    	margin-bottom: 2rem;
-    	font-size: 1.5rem;
-    	font-family: $text_header_stack;
-    }
 }
 
 
