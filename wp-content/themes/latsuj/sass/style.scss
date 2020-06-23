@@ -272,6 +272,7 @@ h3 {
 
 article.post {    
 	position: relative;
+	margin-bottom: 3rem;
 }
 
 .single, .category {
@@ -307,7 +308,7 @@ article.post {
 .line-description {
 	position: relative;
 	display: inline-block;
-	margin: 0 $website_margin - 5%;
+	margin: 1rem ($website_margin - 5%) 0;
 	padding: 0.5rem 0.5rem;
 	text-align: center;
 	background: $color_yellow;
@@ -338,6 +339,22 @@ article p {
     height: 10rem;
 	display: inline-flex;
     justify-content: space-between;
+}
+
+.columns {
+	display: inline-block;
+	position: relative;
+	float:left;
+	height: 100%;
+
+	&.column23 {
+		width: 66%;
+	}
+	
+	&.column13 {
+		width: 33.99%;
+	}
+	
 }
 
 // ==========================================================
@@ -372,7 +389,7 @@ article p {
     border-top: 1px solid $color_blue;
     color: black;
 	padding: 40px $website_margin;
-    margin: 30px 0;
+    margin: 2rem 0;
     
     & .description {
 		display: block;
@@ -432,34 +449,19 @@ ul {
 #most_recent-posts {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
-    margin: 0 $website_category_margin;
+    margin: 3rem $website_category_margin;
 
-	& .left {
-		display: inline-block;
-		float:left;
-		width: 66%;
-		height: 100%;
-		
-		& a {
-		    display: inline-block;
-		    width: 90%;
-		    height: 100%;
-		}
-	}
-	
-	& .right {
-		position: relative;
-		display: inline-block;
-		width: 33.999%;
-		height: 100%;
-		
-		& .secondary_post{
-		    display: block;
-		    height: 44%;
-		    width: 100%;
-		}
-		
-		& #post_3 {
+	& a {
+	    display: block;
+	    width: 90%;
+	    height: 100%;
+	    
+	    &.secondary_post {
+	    	height: 44%;
+	    	width: 100%;
+	    }
+	    
+	    &.bottom_post {
 			position: absolute;
 			bottom: 0;
 		}
