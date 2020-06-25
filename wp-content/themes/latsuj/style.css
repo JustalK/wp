@@ -579,3 +579,40 @@ ul {
   position: absolute;
   bottom: 0;
 }
+
+/* line 501, sass/style.scss */
+header {
+  position: relative;
+  margin: 1rem 20%;
+  border-bottom: 0.125rem solid #fcd116;
+}
+/* line 506, sass/style.scss */
+header img {
+  width: 50%;
+  margin: 0 25%;
+  height: 100%;
+  display: block;
+}
+/* line 513, sass/style.scss */
+header h1 {
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+  font-size: 5rem;
+  color: #fcd116;
+}
+/* line 522, sass/style.scss */
+header p.left {
+  position: absolute;
+  width: 20%;
+  bottom: 5%;
+  left: 5%;
+}
+/* line 529, sass/style.scss */
+header p.right {
+  position: absolute;
+  width: 20%;
+  bottom: 5%;
+  right: 5%;
+}

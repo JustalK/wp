@@ -8,8 +8,8 @@ $category = get_category( get_query_var( 'cat' ) );
 $cat_id = $category->cat_ID;
 
 
-$posts = get_most_recent_posts_by_category($cat_id);
-$random_posts = get_random_posts_by_category($cat_id);
+$posts = get_most_recent_posts_by_category($cat_id,6);
+$random_posts = get_random_posts_by_category($cat_id,4);
 set_query_var( 'query_slider', array(
     'description' => "Older posts",
     'first_post' => $posts[3],
@@ -52,14 +52,10 @@ $category->category_description;
         'second_post' => $posts[4],
         'third_post' => $posts[5]
     )); ?>
-
-    <div id="random_single" class="wp-block-code">
-        <span class="description"><?= $random_posts[0]["post_title"]; ?></span>
-        
-        <p>
-    		<?= $random_posts[0]["post_excerpt"]; ?><a href="<?= the_permalink($random_posts[0]["ID"]) ?>">[ Read more ]</a>
-    	</p>
-    </div>
+    
+    <?php wpse_get_partial('template-parts/preview_posts', array(
+        'post' => $random_posts[0]
+    )); ?>
     
     <?php wpse_get_partial('template-parts/slider', array(
         'description' => "Random posts",
