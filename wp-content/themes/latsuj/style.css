@@ -299,8 +299,13 @@ article.post {
   background-size: cover;
   background-repeat: no-repeat;
   text-decoration: none;
+  transition: all 0.5s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 296, sass/style.scss */
+/* line 297, sass/style.scss */
+.posts.invisible {
+  opacity: 0;
+}
+/* line 301, sass/style.scss */
 .posts h2 {
   position: absolute;
   bottom: 0;
@@ -311,7 +316,7 @@ article.post {
   background: #ffffff73;
   color: #fff;
 }
-/* line 300, sass/style.scss */
+/* line 305, sass/style.scss */
 .posts.secondary_post h2 {
   position: absolute;
   bottom: 0;
@@ -322,7 +327,7 @@ article.post {
   background: #ffffff73;
   color: #fff;
 }
-/* line 304, sass/style.scss */
+/* line 309, sass/style.scss */
 .posts h3 {
   position: absolute;
   bottom: 0;
@@ -334,7 +339,7 @@ article.post {
   color: #fff;
 }
 
-/* line 309, sass/style.scss */
+/* line 314, sass/style.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -344,7 +349,7 @@ article.post {
   background: #fcd116;
   color: white;
 }
-/* line 318, sass/style.scss */
+/* line 323, sass/style.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -360,22 +365,22 @@ article.post {
   left: -0.4rem;
 }
 
-/* line 326, sass/style.scss */
+/* line 331, sass/style.scss */
 article h2 {
   margin: 40px 25%;
 }
 
-/* line 330, sass/style.scss */
+/* line 335, sass/style.scss */
 article h3 {
   margin: 25px 25%;
 }
 
-/* line 334, sass/style.scss */
+/* line 339, sass/style.scss */
 article p {
   padding: 0 25%;
 }
 
-/* line 338, sass/style.scss */
+/* line 343, sass/style.scss */
 .slider {
   position: relative;
   border-top: 0.125rem solid #fcd116;
@@ -387,7 +392,7 @@ article p {
   display: inline-flex;
   justify-content: space-between;
 }
-/* line 345, sass/style.scss */
+/* line 350, sass/style.scss */
 .slider::before {
   content: '';
   position: absolute;
@@ -401,7 +406,7 @@ article p {
   top: -0.45rem;
   right: 30%;
 }
-/* line 351, sass/style.scss */
+/* line 356, sass/style.scss */
 .slider::after {
   content: '';
   position: absolute;
@@ -416,28 +421,28 @@ article p {
   left: 30%;
 }
 
-/* line 358, sass/style.scss */
+/* line 363, sass/style.scss */
 .columns {
   display: inline-block;
   position: relative;
   float: left;
   height: 100%;
 }
-/* line 364, sass/style.scss */
+/* line 369, sass/style.scss */
 .columns.column23 {
   width: 66%;
 }
-/* line 368, sass/style.scss */
+/* line 373, sass/style.scss */
 .columns.column13 {
   width: 33.99%;
 }
 
-/* line 376, sass/style.scss */
+/* line 381, sass/style.scss */
 #theexcerpt {
   position: relative;
   margin: 0;
 }
-/* line 380, sass/style.scss */
+/* line 385, sass/style.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -451,7 +456,7 @@ article p {
   top: -0.4rem;
   right: 30%;
 }
-/* line 386, sass/style.scss */
+/* line 391, sass/style.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -465,7 +470,7 @@ article p {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 392, sass/style.scss */
+/* line 397, sass/style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -475,7 +480,7 @@ article p {
   text-align: justify;
 }
 
-/* line 400, sass/style.scss */
+/* line 405, sass/style.scss */
 .wp-block-code {
   background: #ebf3fb;
   border-bottom: 1px solid #61affe;
@@ -484,7 +489,7 @@ article p {
   padding: 40px 25%;
   margin: 2rem 0;
 }
-/* line 408, sass/style.scss */
+/* line 413, sass/style.scss */
 .wp-block-code .description {
   display: block;
   margin-bottom: 2rem;
@@ -492,30 +497,30 @@ article p {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
 
-/* line 416, sass/style.scss */
+/* line 421, sass/style.scss */
 .wp-block-image {
   margin-left: 25%;
   width: 50%;
 }
-/* line 420, sass/style.scss */
+/* line 425, sass/style.scss */
 .wp-block-image > img {
   width: auto;
   height: auto;
 }
 
-/* line 428, sass/style.scss */
+/* line 433, sass/style.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.7em;
   text-align: justify;
 }
 
-/* line 434, sass/style.scss */
+/* line 439, sass/style.scss */
 ul {
   margin: 0 25%;
 }
 
-/* line 440, sass/style.scss */
+/* line 445, sass/style.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -524,7 +529,7 @@ ul {
   left: 50%;
   width: 0.125rem;
 }
-/* line 448, sass/style.scss */
+/* line 453, sass/style.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -539,66 +544,66 @@ ul {
   left: -0.345rem;
 }
 
-/* line 455, sass/style.scss */
+/* line 460, sass/style.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 463, sass/style.scss */
+/* line 468, sass/style.scss */
 #last-posts {
   width: 50%;
   height: 22rem;
   margin: 1rem 25%;
 }
-/* line 468, sass/style.scss */
+/* line 473, sass/style.scss */
 #last-posts a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 475, sass/style.scss */
+/* line 480, sass/style.scss */
 #most_recent-posts {
   width: 50%;
   height: 22rem;
   margin: 2rem 25%;
 }
-/* line 480, sass/style.scss */
+/* line 485, sass/style.scss */
 #most_recent-posts a {
   display: block;
   width: 90%;
   height: 100%;
 }
-/* line 485, sass/style.scss */
+/* line 490, sass/style.scss */
 #most_recent-posts a.secondary_post {
   height: 44%;
   width: 100%;
 }
-/* line 490, sass/style.scss */
+/* line 495, sass/style.scss */
 #most_recent-posts a.bottom_post {
   position: absolute;
   bottom: 0;
 }
 
-/* line 502, sass/style.scss */
+/* line 507, sass/style.scss */
 .home .design_side {
   transform: translateY(10rem);
 }
 
-/* line 507, sass/style.scss */
+/* line 512, sass/style.scss */
 header {
   position: relative;
   margin: 1rem 20%;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 512, sass/style.scss */
+/* line 517, sass/style.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 519, sass/style.scss */
+/* line 524, sass/style.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -607,14 +612,14 @@ header h1 {
   font-size: 5rem;
   color: #fcd116;
 }
-/* line 528, sass/style.scss */
+/* line 533, sass/style.scss */
 header p.left {
   position: absolute;
   width: 20%;
   bottom: 5%;
   left: 5%;
 }
-/* line 535, sass/style.scss */
+/* line 540, sass/style.scss */
 header p.right {
   position: absolute;
   width: 20%;
@@ -623,7 +628,7 @@ header p.right {
   direction: rtl;
 }
 
-/* line 544, sass/style.scss */
+/* line 549, sass/style.scss */
 #category-posts {
   position: relative;
   height: 9rem;
@@ -633,25 +638,25 @@ header p.right {
   width: 50%;
   padding: 0 5%;
 }
-/* line 553, sass/style.scss */
+/* line 558, sass/style.scss */
 #category-posts a {
   width: 47.5%;
   display: block;
 }
 
-/* line 559, sass/style.scss */
+/* line 564, sass/style.scss */
 .arrow {
   position: absolute;
   cursor: pointer;
   width: 2rem;
   top: 50%;
 }
-/* line 565, sass/style.scss */
+/* line 570, sass/style.scss */
 .arrow.left {
   left: 0;
   transform: translateY(-50%) rotateY(180deg);
 }
-/* line 570, sass/style.scss */
+/* line 575, sass/style.scss */
 .arrow.right {
   right: 0;
   transform: translateY(-50%);

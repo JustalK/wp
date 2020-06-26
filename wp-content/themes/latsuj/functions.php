@@ -8,11 +8,7 @@ function custom_theme_assets() {
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');
 }
-function collectiveray_load_js_script() {
-    if(is_singular()) wp_enqueue_script( 'js-file', get_template_directory_uri().'/js/latsuj.js');
-}
 
-add_action('wp_enqueue_scripts', 'collectiveray_load_js_script');
 add_action( 'wp_enqueue_scripts', 'custom_theme_assets' );
 add_action('get_header', 'remove_admin_login_header');
 
@@ -127,6 +123,30 @@ function wpse_get_partial($template_name, $data = []) {
     extract($data);
     include($template);
 }
+
+// =======================================================================> AJAX
+
+function ajax_enqueue() {
+    wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/latsuj.js' );
+    wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+}
+add_action( 'wp_enqueue_scripts', 'ajax_enqueue' );
+
+function get_loop_categories(){
+    $loop = $_GET["loop"];
+    $categories = get_all_categories();
+
+    $new_first_category = ($loop+2) %  sizeof($categories);
+    $new_second_category = ($loop+3) %  sizeof($categories);
+
+    $needed_category = [$categories[$new_first_category],$categories[$new_second_category]];
+    
+    echo json_encode($needed_category);
+    die();
+}
+add_action('wp_ajax_get_loop_categories', 'get_loop_categories');
+add_action('wp_ajax_nopriv_get_loop_categories', 'get_loop_categories');
+
 
 
 

@@ -292,6 +292,11 @@ article.post {
 	position: relative;
 	min-width: 10rem;
 	@include full-background();
+	transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
+	
+	&.invisible {
+		opacity: 0;
+	}
 	
 	& h2 {
     	@include posts-title($text_header_proportion / 2);
