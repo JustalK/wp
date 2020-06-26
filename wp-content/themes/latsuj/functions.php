@@ -113,6 +113,15 @@ function get_random_posts($number_post) {
     return wp_get_recent_posts($args);
 }
 
+function get_all_categories() {
+    $args = array(
+        'hide_empty' => 0,
+        'orderby' => 'name',
+        'order' => 'DESC'
+    );
+    return get_categories($args);
+}
+
 function wpse_get_partial($template_name, $data = []) {
     $template = locate_template($template_name . '.php', false);
     extract($data);

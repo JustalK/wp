@@ -4,6 +4,7 @@ get_header();
 
 $posts = get_most_recent_posts(6);
 $random_posts = get_random_posts(4);
+$categories = get_all_categories();
 
 ?>
 
@@ -15,14 +16,13 @@ $random_posts = get_random_posts(4);
 	<header>
 		<img src="<?php echo get_template_directory_uri(); ?>/img/background_index.png">
 		<h1>Latsuj</h1>
-		<p class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare quam sit amet mi condimentum porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
-		<p class="right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris ornare quam sit amet mi condimentum porttitor. Interdum et malesuada fames ac ante ipsum primis in faucibus.</p>
+		<p class="left">Hello and welcome to my world. I'm Kevin, a french full stack developer who is actually living in the Philippines</p>
+		<p class="right">And on my right, it's my crazy little wife. The one who always support me and make my life so much more entertaining </p>
 	</header>
-	
-	<div>
-		
-	</div>
-	
+	<?php wpse_get_partial('template-parts/category_posts', array(
+	    'first_category' => $categories[0],
+	    'second_category' => $categories[1]
+    )); ?> 
     <?php wpse_get_partial('template-parts/last_posts', array(
         'post' => $posts[0]
     )); ?>

@@ -463,7 +463,7 @@ ul {
 #last-posts {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
-    margin: 3rem $website_category_margin;
+    margin: 1rem $website_category_margin;
     
     & a {
 	    display: block;
@@ -475,7 +475,7 @@ ul {
 #most_recent-posts {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
-    margin: 3rem $website_category_margin;
+    margin: 2rem $website_category_margin;
 
 	& a {
 	    display: block;
@@ -497,6 +497,12 @@ ul {
 // ==========================================================
 // ==========================================================
 // ==========================================================
+
+.home {
+	& .design_side {
+		transform: translateY(10rem);
+	}
+}
 
 header {
 	position:relative;
@@ -531,8 +537,40 @@ header {
 	    width: 20%;
 	    bottom: 5%;
 	    right: 5%;
+	    direction:rtl;
 	}
 }
 
+#category-posts {
+    position: relative;
+    height: 9rem;
+    display: inline-flex;
+    justify-content: space-between;
+    margin: 1rem 20%;
+    width: 50%;
+    padding: 0 5%;
+    
+    & a {
+	    width: 47.5%;
+	    display: block;
+    }
+}
+
+.arrow {
+	position: absolute;
+	cursor: pointer;
+    width: 2rem;
+    top: 50%;
+	
+	&.left {
+    	left: 0;
+    	transform: translateY(-50%) rotateY(180deg);
+	}
+	
+	&.right {
+    	right: 0;
+    	transform: translateY(-50%);
+	}
+}
 
 

@@ -10,12 +10,6 @@ $cat_id = $category->cat_ID;
 
 $posts = get_most_recent_posts_by_category($cat_id,6);
 $random_posts = get_random_posts_by_category($cat_id,4);
-set_query_var( 'query_slider', array(
-    'description' => "Older posts",
-    'first_post' => $posts[3],
-    'second_post' => $posts[4],
-    'third_post' => $posts[5]
-));
 
 $category->cat_name;
 $category->slug;
