@@ -43,7 +43,7 @@ endif;
 </article>
 
 <?php 
-    $posts = get_most_recent_posts_by_category(4);
+    $posts = get_most_recent_posts_by_category($cat_id,3);
 ?>
 <span class="line-description">Random posts</span>
 <div class="slider">

@@ -136,16 +136,24 @@ function get_loop_categories(){
     $loop = $_GET["loop"];
     $categories = get_all_categories();
 
-    $new_first_category = ($loop+2) %  sizeof($categories);
-    $new_second_category = ($loop+3) %  sizeof($categories);
-
-    $needed_category = [$categories[$new_first_category],$categories[$new_second_category]];
+    $new_first_category = $categories[($loop) %  sizeof($categories)];
+    $new_second_category = $categories[($loop+1) %  sizeof($categories)];
+    
+    $new_first_category->url = get_category_link($new_first_category->cat_ID);
+    $new_second_category->url = get_category_link($new_second_category->cat_ID);
+    
+    $needed_category = [$new_first_category,$new_second_category];
     
     echo json_encode($needed_category);
     die();
 }
 add_action('wp_ajax_get_loop_categories', 'get_loop_categories');
 add_action('wp_ajax_nopriv_get_loop_categories', 'get_loop_categories');
+
+function custom_excerpt_length( $length ) {
+    return 500;
+}
+add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 
 

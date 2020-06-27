@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function() {
     let menu = document.getElementById("menu");
+    let sliderLock = false;
     let designSideLeft = document.getElementById("design_side_left");
     let sideLeft = document.getElementById("side_left");
     menu.addEventListener("click", menuActionOnClick);
@@ -27,9 +28,13 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     function sliderActive(e) {
-        clearInterval();
+        if(sliderLock) return;
+        sliderLock=true;
         let parent = e.currentTarget.parentNode;
-        let loop = parent.dataset.loop;
+        // Carefull with the -0
+        let loop = e.target.classList.contains('left') ? parent.dataset.loop*1 - 2 : parent.dataset.loop*1 + 2;
+        parent.dataset.loop = loop;
+
         let a = parent.getElementsByTagName('a');
         sliderItemInvisble(a);
         
@@ -41,12 +46,13 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(sliderItemVisible, 600, a);
             }
         };
-        parent.dataset.loop = parent.dataset.loop*1 + 2;
     }    
     
     function sliderItemInvisble(a) {
         for(let i=a.length;i--;) {
-            a[i].classList.add("invisible");
+            setTimeout(function() {
+                a[i].classList.add("invisible");
+            }, i*100);
         }
     }
     
@@ -60,14 +66,18 @@ document.addEventListener("DOMContentLoaded", function() {
     function sliderSwitchInformations(a,categories) {
         for(let i=a.length;i--;) {
             let h = a[i].children[0];
-            a[i].style.backgroundImage = "url('./images/article_2.jpg')";
+            a[i].style.backgroundImage = "url('./images/"+categories[i].cat_name+".jpg')";
+            a[i].href = categories[i].url;
             h.innerHTML = categories[i].cat_name;
         }
     }
     
     function sliderItemVisible(a) {
         for(let i=a.length;i--;) {
-            a[i].classList.remove("invisible");
+            setTimeout(function() {
+                a[i].classList.remove("invisible");
+                sliderLock=false;
+            }, i*100);
         }
     }
 })
