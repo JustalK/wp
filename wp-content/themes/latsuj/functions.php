@@ -132,20 +132,52 @@ function ajax_enqueue() {
 }
 add_action( 'wp_enqueue_scripts', 'ajax_enqueue' );
 
+function get_loop_posts(){
+    $loop = $_GET["loop"];
+    $args = array(
+        'post_type' => 'post',
+        'numberposts' => 3,
+        'offset' => $loop,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    $posts = wp_get_recent_posts($args);
+    $total_posts = sizeof($posts);
+    
+    for($i=$total_posts;$i--;) {
+        $posts[$i]["url"] = get_the_permalink($posts[$i]["ID"]);
+        $posts[$i]["innerHTML"] = $posts[$i]["post_title"];
+        $posts[$i]["backgroundImage"] = get_the_post_thumbnail_url($posts[$i]["ID"],'full');
+    }
+    
+    echo get_loop_elements(3,$loop,$posts);
+    die();
+}
+
+add_action('wp_ajax_get_loop_posts', 'get_loop_posts');
+add_action('wp_ajax_nopriv_get_loop_posts', 'get_loop_posts');
+
 function get_loop_categories(){
     $loop = $_GET["loop"];
     $categories = get_all_categories();
-
-    $new_first_category = $categories[($loop) %  sizeof($categories)];
-    $new_second_category = $categories[($loop+1) %  sizeof($categories)];
+    $total_categories = sizeof($categories);
     
-    $new_first_category->url = get_category_link($new_first_category->cat_ID);
-    $new_second_category->url = get_category_link($new_second_category->cat_ID);
+    for($i=$total_categories;$i--;) {
+        $categories[$i]->url = get_category_link($categories[$i]->cat_ID);
+        $categories[$i]->innerHTML = $categories[$i]->cat_name;
+        $categories[$i]->backgroundImage = "./images/".$categories[$i]->cat_name.".jpg";
+    }
     
-    $needed_category = [$new_first_category,$new_second_category];
-    
-    echo json_encode($needed_category);
+    echo get_loop_elements(2,$loop,$categories);
     die();
+}
+
+function get_loop_elements($nbr_elements,$loop,$elements) {
+    $rsl = [];
+    for($i=$nbr_elements;$i--;) {
+        $rsl[$i]=$elements[($loop*1+$i) %  sizeof($elements)];
+    }
+    return json_encode($rsl);
 }
 add_action('wp_ajax_get_loop_categories', 'get_loop_categories');
 add_action('wp_ajax_nopriv_get_loop_categories', 'get_loop_categories');

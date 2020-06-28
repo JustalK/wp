@@ -31,22 +31,29 @@ document.addEventListener("DOMContentLoaded", function() {
         if(sliderLock) return;
         sliderLock=true;
         let parent = e.currentTarget.parentNode;
-        // Carefull with the -0
-        let loop = e.target.classList.contains('left') ? parent.dataset.loop*1 - 2 : parent.dataset.loop*1 + 2;
+        let a = parent.getElementsByTagName('a');
+        let action = parent.dataset.action;
+        let loop = nextLoop(e,parent.dataset.total_loop,parent.dataset.loop,a.length);
         parent.dataset.loop = loop;
 
-        let a = parent.getElementsByTagName('a');
         sliderItemInvisble(a);
         
-        let xmlhttp = sliderAjax(loop);
+        let xmlhttp = sliderAjax(loop,action);
         xmlhttp.onreadystatechange = function() {
             if (this.readyState == 4 && this.status == 200) {
                 let categories = JSON.parse(this.response);
-                setTimeout(sliderSwitchInformations, 500, a, categories);
-                setTimeout(sliderItemVisible, 600, a);
+                setTimeout(sliderSwitchInformations, 150, a, categories);
+                setTimeout(sliderItemVisible, 200, a);
             }
         };
     }    
+    
+    function nextLoop(e,total_loop,loop,nbr_element) {
+        if(e.target.classList.contains('right') && loop*1 + nbr_element>=total_loop) return 0; 
+        if(e.target.classList.contains('right')) return loop*1 + nbr_element;
+        if(loop*1 - nbr_element>=0) return loop*1 - nbr_element;
+        return total_loop-nbr_element;
+    }
     
     function sliderItemInvisble(a) {
         for(let i=a.length;i--;) {
@@ -56,9 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
     
-    function sliderAjax(loop) {
-        var xmlhttp = new XMLHttpRequest();
-        xmlhttp.open("POST", my_ajax_object.ajax_url+"?action=get_loop_categories&loop="+loop, true);
+    function sliderAjax(loop,action) {
+        let xmlhttp = new XMLHttpRequest();
+        xmlhttp.open("POST", my_ajax_object.ajax_url+"?action="+action+"&loop="+loop, true);
         xmlhttp.send();
         return xmlhttp;
     }
@@ -66,9 +73,9 @@ document.addEventListener("DOMContentLoaded", function() {
     function sliderSwitchInformations(a,categories) {
         for(let i=a.length;i--;) {
             let h = a[i].children[0];
-            a[i].style.backgroundImage = "url('./images/"+categories[i].cat_name+".jpg')";
+            a[i].style.backgroundImage = "url('"+categories[i].backgroundImage+"')";
             a[i].href = categories[i].url;
-            h.innerHTML = categories[i].cat_name;
+            h.innerHTML = categories[i].innerHTML;
         }
     }
     

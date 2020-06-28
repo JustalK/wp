@@ -292,7 +292,7 @@ article.post {
 	position: relative;
 	min-width: 10rem;
 	@include full-background();
-	transition: opacity 0.5s cubic-bezier(0.75,0,0.25,1);
+	transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
 	
 	&.invisible {
 		opacity: 0;
@@ -578,4 +578,36 @@ header {
 	}
 }
 
+hr {
+	width: 10%;
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    border-color: #fcd116;
+    border-width: 0.125rem;
+    border-style: solid;
+}
 
+.hcb_wrap { 
+	background: #f7f6f6;
+	
+	& pre.prism {
+		margin: 25px 25%;
+	}
+	
+	& pre::before {
+		opacity: 0;
+	}
+	
+	& .line-numbers-rows>span::before {
+		text-align: left !important;
+	}
+	
+	& pre.line-numbers {
+		padding-left: 1.75em !important;
+	}
+	
+	& .line-numbers .line-numbers-rows {
+		width: 1.2em !important;
+		left: -1.75em !important;
+	}
+}

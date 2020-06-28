@@ -5,6 +5,7 @@ get_header();
 $posts = get_most_recent_posts(6);
 $random_posts = get_random_posts(4);
 $categories = get_all_categories();
+$total_posts = wp_count_posts()->publish;
 
 ?>
 
@@ -21,7 +22,8 @@ $categories = get_all_categories();
 	</header>
 	<?php wpse_get_partial('template-parts/category_posts', array(
 	    'first_category' => $categories[0],
-	    'second_category' => $categories[1]
+	    'second_category' => $categories[1],
+	    'total_category' => sizeof($categories)
     )); ?> 
     <?php wpse_get_partial('template-parts/last_posts', array(
         'post' => $posts[0]
@@ -37,7 +39,8 @@ $categories = get_all_categories();
         'description' => "Older posts",
         'first_post' => $posts[4],
         'second_post' => $posts[5],
-        'third_post' => $posts[6] 
+        'third_post' => $posts[6],
+        'total_post' => $total_posts
     )); ?>
     
     <?php wpse_get_partial('template-parts/preview_posts', array(
@@ -48,7 +51,8 @@ $categories = get_all_categories();
         'description' => "Random posts",
         'first_post' => $random_posts[1],
         'second_post' => $random_posts[2],
-        'third_post' => $random_posts[3] 
+        'third_post' => $random_posts[3],
+        'total_post' => $total_posts
     )); ?>
 	
 </div>
