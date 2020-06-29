@@ -2,7 +2,7 @@
  
 get_header();
 
-$posts = get_most_recent_posts(6);
+$posts = get_most_recent_posts(7);
 $random_posts = get_random_posts(4);
 $categories = get_all_categories();
 $total_posts = wp_count_posts()->publish;
@@ -40,6 +40,7 @@ $total_posts = wp_count_posts()->publish;
         'first_post' => $posts[4],
         'second_post' => $posts[5],
         'third_post' => $posts[6],
+        'loop_init' => 3,
         'total_post' => $total_posts
     )); ?>
     
@@ -52,6 +53,7 @@ $total_posts = wp_count_posts()->publish;
         'first_post' => $random_posts[1],
         'second_post' => $random_posts[2],
         'third_post' => $random_posts[3],
+        'loop_init' => 0,
         'total_post' => $total_posts
     )); ?>
 	
