@@ -10,4 +10,3 @@
 <body <?php body_class(); ?>>
 
 <div class="container"> 
-	<span id="menu" class="box-shadow-menu">&nbsp;</span>

@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", function() {
     let sliderLock = false;
     let designSideLeft = document.getElementById("design_side_left");
     let sideLeft = document.getElementById("side_left");
-    menu.addEventListener("click", menuActionOnClick);
+    if(menu) menu.addEventListener("click", menuActionOnClick);
 
     function menuActionOnClick() {
         if(!menu.classList.contains('active')) return menuActive();

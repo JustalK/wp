@@ -3,20 +3,15 @@ get_header();
 ?>
 
 <span id="design_side_left" class="design_side">&nbsp;</span>
-<span id="side_left">
-	<span id="menu-list">
-		<span class="home">Home</span>
-		<span class="posts">All Post</span>
-		<span class="categories">Categories</span>
-		<span class="category_01"><?php get_first_category(); ?></span>
-		<span class="category_02"><?php get_second_category(); ?></span>
-		<span class="postRelated">Related Post</span>
-		<span class="related_01">Related 1</span>
-		<span class="related_02">Related 2</span>
-		<span class="related_03">Related 3</span>
-	</span>
-</span>
 <span id="design_side_right" class="design_side">&nbsp;</span>
+<a id="back" href="javascript:history.back()">
+	<img src="<?php echo get_template_directory_uri(); ?>/img/back.png">
+	<span>Back</span>	
+</a>
+<a id="home" href="<?= home_url(); ?>">
+	<span>Home</span>	
+	<img src="<?php echo get_template_directory_uri(); ?>/img/home.png">
+</a>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<span id="design_top" class="design">&nbsp;</span> <span
