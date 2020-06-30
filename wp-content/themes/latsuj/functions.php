@@ -118,6 +118,10 @@ function get_all_categories() {
     return get_categories($args);
 }
 
+function count_all_published_post() {
+    return wp_count_posts()->publish;
+}
+
 function wpse_get_partial($template_name, $data = []) {
     $template = locate_template($template_name . '.php', false);
     extract($data);
@@ -134,23 +138,28 @@ add_action( 'wp_enqueue_scripts', 'ajax_enqueue' );
 
 function get_loop_posts(){
     $loop = $_GET["loop"];
+    $order = $_GET["order"];
+    $total = count_all_published_post();
+    
+    $posts = [];
+    
     $args = array(
         'post_type' => 'post',
-        'numberposts' => 3,
-        'offset' => $loop,
-        'orderby' => 'date',
+        'numberposts' => 1,
+        'orderby' => $order,
         'order' => 'DESC'
     );
-    $posts = wp_get_recent_posts($args);
-    $total_posts = sizeof($posts);
     
-    for($i=$total_posts;$i--;) {
-        $posts[$i]["url"] = get_the_permalink($posts[$i]["ID"]);
-        $posts[$i]["innerHTML"] = $posts[$i]["post_title"];
-        $posts[$i]["backgroundImage"] = get_the_post_thumbnail_url($posts[$i]["ID"],'full');
+    for($i=0;$i<3;$i++) {
+        $args["offset"] = ($loop + $i) % $total;
+        $post = wp_get_recent_posts($args)[0];
+        $post["url"] = get_the_permalink($post["ID"]);
+        $post["innerHTML"] = $post["post_title"];
+        $post["backgroundImage"] = get_the_post_thumbnail_url($post["ID"],'full');
+        $posts[] = $post;
     }
     
-    echo get_loop_elements(3,$loop,$posts);
+    echo json_encode($posts);
     die();
 }
 
