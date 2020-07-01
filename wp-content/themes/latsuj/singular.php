@@ -5,12 +5,12 @@ get_header();
 <span id="design_side_left" class="design_side">&nbsp;</span>
 <span id="design_side_right" class="design_side">&nbsp;</span>
 <a id="back" href="javascript:history.back()">
-	<img src="<?php echo get_template_directory_uri(); ?>/img/back.png">
+	<i class="material-icons">arrow_back</i>
 	<span>Back</span>	
 </a>
 <a id="home" href="<?= home_url(); ?>">
-	<span>Home</span>	
-	<img src="<?php echo get_template_directory_uri(); ?>/img/home.png">
+	<span>Home</span>
+	<i class="material-icons">home</i>
 </a>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">

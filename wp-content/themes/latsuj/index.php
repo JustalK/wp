@@ -9,6 +9,49 @@ $total_posts = count_all_published_post();
 
 ?>
 
+<?php if ( wp_is_mobile() ) : ?>
+
+<div>
+	<header>
+		<img src="<?php echo get_template_directory_uri(); ?>/img/background_index.png">
+		<h1>Latsuj</h1>
+	</header>
+    <div id="mb-categories">
+    	<span class="legend">All categories</span>
+    	<ul>
+    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
+    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
+    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
+    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
+    	</ul>
+    </div>
+	<div id="mb-horizontal-posts">
+    	<ul>
+    		<li>
+            	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
+            		<h2><?= $posts[0]["post_title"]; ?></h2>
+            	</a>
+    		</li>
+    		<li>
+            	<a class="posts" href="<?= the_permalink($posts[1]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[1]["ID"],'full'); ?>')"></div>
+            		<h2><?= $posts[1]["post_title"]; ?></h2>
+            	</a>
+    		</li>
+    		<li>
+            	<a class="posts" href="<?= the_permalink($posts[2]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[2]["ID"],'full'); ?>')"></div>
+            		<h2><?= $posts[2]["post_title"]; ?></h2>
+            	</a>
+    		</li>
+    	</ul>
+	</div>
+</div>
+
+
+<?php else : ?>
+
 <span id="design_side_left" class="design_side">&nbsp;</span>
 <span id="design_side_right" class="design_side">&nbsp;</span>
 
@@ -62,6 +105,7 @@ $total_posts = count_all_published_post();
 	
 </div>
 
+<?php endif; ?>
 
 <?php
 
