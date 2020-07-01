@@ -746,20 +746,47 @@ hr {
     margin: 1rem 5%;
   }
   /* line 661, sass/style.scss */
+  #mb-horizontal-posts .legend {
+    display: block;
+    text-align: center;
+    padding: 1rem;
+  }
+  /* line 667, sass/style.scss */
+  #mb-horizontal-posts .red {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: red;
+    top: 0;
+    right: 0;
+  }
+  /* line 676, sass/style.scss */
+  #mb-horizontal-posts .blue {
+    position: absolute;
+    height: 100%;
+    width: 20%;
+    background: blue;
+    top: 0;
+    left: 0;
+  }
+  /* line 685, sass/style.scss */
   #mb-horizontal-posts ul {
     margin: 0;
   }
-  /* line 664, sass/style.scss */
+  /* line 688, sass/style.scss */
   #mb-horizontal-posts ul li {
-    border: 1px solid black;
+    padding: 0.2rem 1%;
     margin-bottom: 1rem;
+    position: relative;
   }
-  /* line 670, sass/style.scss */
+  /* line 695, sass/style.scss */
   #mb-horizontal-posts a {
     display: block;
     height: 10rem;
+    z-index: 10;
+    border: 1px solid #676662;
   }
-  /* line 674, sass/style.scss */
+  /* line 701, sass/style.scss */
   #mb-horizontal-posts a .image {
     width: 50%;
     height: 100%;
@@ -768,12 +795,34 @@ hr {
     background-position: center;
     float: left;
   }
-  /* line 683, sass/style.scss */
-  #mb-horizontal-posts a h2 {
+  /* line 710, sass/style.scss */
+  #mb-horizontal-posts a .legend {
     width: 50%;
     height: 100%;
     color: black;
     display: inline-block;
     position: inherit;
+    text-align: left;
+    font-size: 1rem;
+    padding: 0;
+    background: white;
+  }
+  /* line 721, sass/style.scss */
+  #mb-horizontal-posts a .legend span {
+    color: black;
+    font-size: 1rem;
+    margin: 1rem;
+    width: initial;
+    text-align: left;
+    position: absolute;
+    top: 10%;
+  }
+  /* line 731, sass/style.scss */
+  #mb-horizontal-posts a .legend h2 {
+    color: black;
+    font-size: 1rem;
+    margin: 1rem;
+    width: initial;
+    text-align: left;
   }
 }

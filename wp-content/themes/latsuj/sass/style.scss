@@ -657,19 +657,46 @@ hr {
 	
 	#mb-horizontal-posts {
 	    margin: 1rem 5%;
+	        
+	    & .legend {
+			display: block;
+	    	text-align: center;
+	    	padding: 1rem;
+		}
+		
+		& .red {
+			position: absolute;
+		    height: 100%;
+		    width: 20%;
+		    background: red;
+		    top: 0;
+		    right: 0;
+		}
+	    
+	    & .blue {
+			position: absolute;
+		    height: 100%;
+		    width: 20%;
+		    background: blue;
+		    top: 0;
+		    left: 0;
+		}
 	    
 	    & ul {
 	    	margin: 0;
 	    	
 	    	& li {
-	    		border: 1px solid black;
-	    		margin-bottom: 1rem;
+			    padding: 0.2rem 1%;
+			    margin-bottom: 1rem;
+			    position: relative;
 	    	}
 	    }
 	    
 	    & a {
-	    	display: block;
-	    	height: 10rem;
+			display: block;
+    		height: 10rem;
+    		z-index: 10;
+    		border: 1px solid #676662;
 	    	
 	    	& .image {
 			    width: 50%;
@@ -680,13 +707,37 @@ hr {
 			    float: left;
 	    	}
 	    	
-	    	& h2 {
+	    	& .legend {
 	    		width: 50%;
 			    height: 100%;
 			    color: black;
 			    display: inline-block;
 			    position: inherit;
+			    text-align: left;
+			    font-size: 1rem;
+			    padding: 0;
+			    background: white;
+			    
+			    & span {
+			    	color: black;
+				    font-size: 1rem;
+				    margin: 1rem;
+				    width: initial;
+				    text-align: left;
+				    position: absolute;
+				    top: 10%;
+			    }
+			    
+			    & h2 {
+			    	color: black;
+				    font-size: 1rem;
+				    margin: 1rem;
+				    width: initial;
+				    text-align: left;
+			    }
 	    	}
+	    	
+	    	
 	    }
 	}
 	

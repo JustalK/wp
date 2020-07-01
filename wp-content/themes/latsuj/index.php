@@ -26,24 +26,40 @@ $total_posts = count_all_published_post();
     	</ul>
     </div>
 	<div id="mb-horizontal-posts">
+		<span class="legend">Recent posts</span>
     	<ul>
     		<li>
             	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
             		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<h2><?= $posts[0]["post_title"]; ?></h2>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
             	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
     		</li>
     		<li>
             	<a class="posts" href="<?= the_permalink($posts[1]["ID"]) ?>">
             		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[1]["ID"],'full'); ?>')"></div>
-            		<h2><?= $posts[1]["post_title"]; ?></h2>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
             	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
     		</li>
     		<li>
             	<a class="posts" href="<?= the_permalink($posts[2]["ID"]) ?>">
             		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[2]["ID"],'full'); ?>')"></div>
-            		<h2><?= $posts[2]["post_title"]; ?></h2>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
             	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
     		</li>
     	</ul>
 	</div>
