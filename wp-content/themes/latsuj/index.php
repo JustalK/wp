@@ -63,6 +63,33 @@ $total_posts = count_all_published_post();
     		</li>
     	</ul>
 	</div>
+	<div id="mb-vertical-posts">
+		<span class="legend">Recent posts</span>
+    	<ul>
+    		<li>
+    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
+            	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
+    		</li>
+    		<li>
+    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
+            	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
+    		</li>
+    	</ul>
+	</div>
 </div>
 
 
