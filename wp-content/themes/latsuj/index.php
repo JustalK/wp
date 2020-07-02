@@ -16,8 +16,12 @@ $total_posts = count_all_published_post();
 		<img src="<?php echo get_template_directory_uri(); ?>/img/background_index.png">
 		<h1>Latsuj</h1>
 	</header>
+	<p id="resume">
+	Hello and welcome to my world. I'm Kevin, a french full stack developer who is actually living in the Philippines.
+	And on my right, it's my crazy little wife. The one who always support me and make my life so much more entertaining.
+	</p>
     <div id="mb-categories">
-    	<span class="legend">All categories</span>
+    	<span class="legend title">All categories</span>
     	<ul>
     		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
     		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
@@ -26,7 +30,7 @@ $total_posts = count_all_published_post();
     	</ul>
     </div>
 	<div id="mb-horizontal-posts">
-		<span class="legend">Recent posts</span>
+		<span class="legend title">Recent posts</span>
     	<ul>
     		<li>
             	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
@@ -64,8 +68,30 @@ $total_posts = count_all_published_post();
     	</ul>
 	</div>
 	<div id="mb-vertical-posts">
-		<span class="legend">Recent posts</span>
+		<span class="legend title">Older posts</span>
     	<ul>
+    		<li>
+    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
+            	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
+    		</li>
+    		<li>
+    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
+            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
+            		<div class="legend">
+            			<span>Category</span>
+            			<h2><?= $posts[2]["post_title"]; ?></h2>
+            		</div>
+            	</a>
+            	<div class="red"></div>
+            	<div class="blue"></div>
+    		</li>
     		<li>
     			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
             		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
@@ -90,6 +116,7 @@ $total_posts = count_all_published_post();
     		</li>
     	</ul>
 	</div>
+	<a id="mb-see-all" href="#">See all <i class="material-icons">chevron_right</i></a>
 </div>
 
 

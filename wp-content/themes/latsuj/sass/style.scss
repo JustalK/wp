@@ -610,16 +610,23 @@ hr {
 // ==========================================================
 
 @media only screen and (max-width: 600px) {
-	body {
-		height: 3000px;
-	}
-
 	header {
 	    margin: 1rem 5%;
 	}
 	
-	#mb-categories {
+	body {
+		font-size: 22px;
+	}
+	
+	p {
+		line-height: 1.4em;
+	}
+	
+	#resume {
 		margin: 1rem 5%;
+	}
+	
+	#mb-categories {
 		
 		& .legend {
 			display: block;
@@ -628,7 +635,7 @@ hr {
 		}
 		
 		& ul {
-			margin: 0;
+			margin: 1rem 5%;
 		}
 		
 		& li {
@@ -660,7 +667,6 @@ hr {
 			display: block;
 	    	text-align: center;
 	    	padding: 1rem;
-	    	background: white;
 	    	
 	    	& h2 {
 		    	position: relative;
@@ -671,19 +677,28 @@ hr {
 		}	
 		
 		& ul {
-	    	margin: 0;
 	    	margin: 1rem 5%;
+			display: flex;
+    		justify-content: space-between;
+    		flex-wrap: wrap;
 	    	
 	    	& li {
-	    	    width: 50%;
+	    	    width: 48%;
 			    display: inline-block;
 			    position: relative;
+			    margin-bottom: 1rem;
 	    	}
 	    	
 	    	& a {
-			    display: block;
-			    padding: 1rem 4%;
+				display: block;
 			    z-index: 10;
+			    margin: 0.2rem;
+			    min-width: initial;
+			    border: 1px solid black;
+			    
+			    & .legend {
+			    	background: white;
+			    }
 			    
 			    & .image {
 			    	height: 8rem;
@@ -694,16 +709,23 @@ hr {
 	    	
 	    	& .red {
 		    	width: 100%;
-			    height: 20%;
+			    height: 30%;
+			    position: absolute;
+			    bottom: 0;
+			    background: red;
+	    	}
+	    	
+	    	& .blue {
+		    	width: 100%;
+			    height: 30%;
 			    position: absolute;
 			    top: 0;
-			    background: red;
+			    background: blue;
 	    	}
 	    }
 	}
 	
 	#mb-horizontal-posts {
-	    margin: 1rem 5%;
 	        
 	    & .legend {
 			display: block;
@@ -730,7 +752,7 @@ hr {
 		}
 	    
 	    & ul {
-	    	margin: 0;
+	    	margin: 1rem 5%;
 	    	
 	    	& li {
 			    padding: 0.2rem 1%;
@@ -783,10 +805,23 @@ hr {
 				    text-align: left;
 			    }
 	    	}
-	    	
-	    	
 	    }
 	}
 	
+		
+	.legend.title {
+	    background: #efefef;
+	    font-size: 1.5rem;
+	    color: #fcd116;
+	    font-family: "GothamSSm-Black", Arial, sans-serif;
+	    text-transform: uppercase;
+	    margin: 2rem 0;
+	}
 	
+	#mb-see-all {
+		text-align: center;
+    	display: flex;
+    	align-items: center;
+    	justify-content: center;	
+	}
 }
