@@ -129,7 +129,36 @@ body {
   margin: 0;
 }
 
-/* line 14, sass/mb-style.scss */
-body {
-  background: #fff;
+/* line 16, sass/mb-style.scss */
+#categories_listing .legend {
+  display: block;
+  text-align: center;
+  padding: 1rem;
+}
+/* line 22, sass/mb-style.scss */
+#categories_listing ul {
+  margin: 1rem 5%;
+}
+/* line 26, sass/mb-style.scss */
+#categories_listing li {
+  border: 1px solid black;
+  border-top: none;
+  text-align: left;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+/* line 35, sass/mb-style.scss */
+#categories_listing li span {
+  padding: 0 0.4rem;
+}
+/* line 39, sass/mb-style.scss */
+#categories_listing li i:last-child {
+  position: absolute;
+  right: 1rem;
+}
+/* line 45, sass/mb-style.scss */
+#categories_listing li:first-child {
+  border-top: 1px solid black;
 }

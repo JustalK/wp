@@ -412,7 +412,7 @@ header {
 	}
 }
 
-#category-posts {
+#categories_listing {
     position: relative;
     height: 9rem;
     display: inline-flex;
@@ -429,18 +429,19 @@ header {
 
 .arrow {
 	position: absolute;
-	cursor: pointer;
-    width: 2rem;
     top: 50%;
+    font-size: 6rem;
+    color: $color_yellow;
+    cursor: pointer;
 	
 	&.left {
     	left: 0;
-    	transform: translateY(-50%) rotateY(180deg);
+    	transform: translateY(-50%) translateX(-50%);
 	}
 	
 	&.right {
     	right: 0;
-    	transform: translateY(-50%);
+    	transform: translateY(-50%) translateX(50%);
 	}
 }
 
@@ -496,41 +497,7 @@ hr {
 		margin: 1rem 5%;
 	}
 	
-	#mb-categories {
-		
-		& .legend {
-			display: block;
-	    	text-align: center;
-	    	padding: 1rem;
-		}
-		
-		& ul {
-			margin: 1rem 5%;
-		}
-		
-		& li {
-			border: 1px solid black;
-			border-top: none;
-		    text-align: left;
-		    padding: 1rem;
-		    position: relative;
-		    display: flex;
-    		align-items: center;
-    		
-    		& span {
-				padding: 0 0.4rem;
-			}
-			
-			& i:last-child {
-				position: absolute;
-    			right: 1rem;
-			}
-		}
-		
-		& li:first-child {
-			border-top: 1px solid black;
-		}
-	}
+	
 	
 	#mb-vertical-posts {
 		& .legend {

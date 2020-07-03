@@ -11,6 +11,38 @@ Version: 1.0
 @import 'mixins';
 @import 'shared';
 
-body {
-	background: $color_red;
+#categories_listing {
+	
+	& .legend {
+		display: block;
+    	text-align: center;
+    	padding: 1rem;
+	}
+	
+	& ul {
+		margin: 1rem 5%;
+	}
+	
+	& li {
+		border: 1px solid black;
+		border-top: none;
+	    text-align: left;
+	    padding: 1rem;
+	    position: relative;
+	    display: flex;
+		align-items: center;
+		
+		& span {
+			padding: 0 0.4rem;
+		}
+		
+		& i:last-child {
+			position: absolute;
+			right: 1rem;
+		}
+	}
+	
+	& li:first-child {
+		border-top: 1px solid black;
+	}
 }

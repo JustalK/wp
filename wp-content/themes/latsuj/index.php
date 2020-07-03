@@ -4,7 +4,6 @@ get_header();
 
 $posts = get_most_recent_posts(7);
 $random_posts = get_random_posts(4);
-$categories = get_all_categories();
 $total_posts = count_all_published_post();
 ?>
 
@@ -12,15 +11,8 @@ $total_posts = count_all_published_post();
 
 <div>
 	<?php wpse_get_partial('template-parts/header'); ?>
-    <div id="mb-categories">
-    	<span class="legend title">All categories</span>
-    	<ul>
-    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
-    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
-    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
-    		<li><i class="material-icons">home</i><span>Category 1</span><i class="material-icons">chevron_right</i></li>
-    	</ul>
-    </div>
+    <?php wpse_get_partial('template-parts/categories_listing'); ?> 
+    
 	<div id="mb-horizontal-posts">
 		<span class="legend title">Recent posts</span>
     	<ul>
@@ -119,12 +111,7 @@ $total_posts = count_all_published_post();
 
 <div>
     <?php wpse_get_partial('template-parts/header'); ?>
-	<?php wpse_get_partial('template-parts/category_posts', array(
-	    'first_category' => $categories[0],
-	    'second_category' => $categories[1],
-	    'total_category' => sizeof($categories),
-	    'order' => "date"
-    )); ?> 
+	<?php wpse_get_partial('template-parts/categories_listing'); ?> 
     <?php wpse_get_partial('template-parts/last_posts', array(
         'post' => $posts[0]
     )); ?>

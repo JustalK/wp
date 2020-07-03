@@ -1,5 +1,59 @@
 <?php
 
+// ===================================================================================>
+// Adding field to the general setting
+// ===================================================================================>
+
+add_filter('admin_init', 'my_general_settings_register_fields');
+
+function my_general_settings_register_fields()
+{
+    register_setting('general', 'left_resume', 'esc_attr');
+    register_setting('general', 'right_resume', 'esc_attr');
+    add_settings_field('left_resume', '<label for="left_resume">'.__('Left Resume' , 'left_resume' ).'</label>' , 'left_resume_html', 'general');
+    add_settings_field('right_resume', '<label for="right_resume">'.__('Right Resume' , 'right_resume' ).'</label>' , 'right_resume_html', 'general');
+}
+
+function left_resume_html()
+{
+    $value = get_option( 'left_resume', '' );
+    echo '<input type="text" id="left_resume" name="left_resume" class="regular-text" value="' . $value . '" />';
+}
+
+function right_resume_html()
+{
+    $value = get_option( 'right_resume', '' );
+    echo '<input type="text" id="right_resume" name="right_resume" class="regular-text" value="' . $value . '" />';
+}
+
+// ===================================================================================>
+// Adding fields to the categories
+// ===================================================================================>
+
+function addCategoryIcon(){
+    $cat_icon = get_term_meta($_GET['tag_ID'], 'cat_icon', true);
+    ?>
+    <tr class="form-field">
+        <th scope="row" valign="top"><label for="cat_icon"><?php _e('Category Icon'); ?></label></th>
+        <td>
+        <input type="text" name="cat_icon" id="cat_icon" value="<?php echo $cat_icon ?>"><br />
+            <span class="description"><?php _e('Icon for the mobile version '); ?></span>
+        </td>
+    </tr>
+    <?php
+
+}
+add_action ( 'edit_category_form_fields', 'addCategoryIcon');
+
+function saveCategoryFields() {
+    if ( isset( $_POST['cat_icon'] ) ) {
+        update_term_meta($_POST['tag_ID'], 'cat_icon', $_POST['cat_icon']);
+    }
+}
+add_action ( 'edited_category', 'saveCategoryFields');
+
+
+
 add_theme_support( 'post-thumbnails' );
 
 function custom_theme_assets() {
