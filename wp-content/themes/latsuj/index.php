@@ -6,20 +6,12 @@ $posts = get_most_recent_posts(7);
 $random_posts = get_random_posts(4);
 $categories = get_all_categories();
 $total_posts = count_all_published_post();
-
 ?>
 
 <?php if ( wp_is_mobile() ) : ?>
 
 <div>
-	<header>
-		<img src="<?php echo get_template_directory_uri(); ?>/img/background_index.png">
-		<h1>Latsuj</h1>
-	</header>
-	<p id="resume">
-	Hello and welcome to my world. I'm Kevin, a french full stack developer who is actually living in the Philippines.
-	And on my right, it's my crazy little wife. The one who always support me and make my life so much more entertaining.
-	</p>
+	<?php wpse_get_partial('template-parts/header'); ?>
     <div id="mb-categories">
     	<span class="legend title">All categories</span>
     	<ul>
@@ -126,13 +118,7 @@ $total_posts = count_all_published_post();
 <span id="design_side_right" class="design_side">&nbsp;</span>
 
 <div>
-
-	<header>
-		<img src="<?php echo get_template_directory_uri(); ?>/img/background_index.png">
-		<h1>Latsuj</h1>
-		<p class="left">Hello and welcome to my world. I'm Kevin, a french full stack developer who is actually living in the Philippines</p>
-		<p class="right">And on my right, it's my crazy little wife. The one who always support me and make my life so much more entertaining </p>
-	</header>
+    <?php wpse_get_partial('template-parts/header'); ?>
 	<?php wpse_get_partial('template-parts/category_posts', array(
 	    'first_category' => $categories[0],
 	    'second_category' => $categories[1],

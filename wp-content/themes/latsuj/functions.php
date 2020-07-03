@@ -3,7 +3,8 @@
 add_theme_support( 'post-thumbnails' );
 
 function custom_theme_assets() {
-	wp_enqueue_style( 'style', get_stylesheet_uri() );
+    if(wp_is_mobile()) wp_enqueue_style( 'mb-style', get_template_directory_uri()."/mb-style.css" );
+    else wp_enqueue_style( 'style', get_stylesheet_uri() );
 }
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');

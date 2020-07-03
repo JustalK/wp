@@ -1,0 +1,59 @@
+@font-face {
+  font-family: "GothamSSm-Book";
+  src: url("./font/gothamSS/GothamSSm-Book.eot");
+  src: local("GothamSSm Book"), local("GothamSSm-Book"), url("./font/gothamSS/GothamSSm-Book.eot?#iefix") format("embedded-opentype"), url("./font/gothamSS/GothamSSm-Book.woff2") format("woff2"), url("./font/gothamSS/GothamSSm-Book.woff") format("woff"), url("./font/gothamSS/GothamSSm-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamSSm-Black";
+  src: url("./font/gothamSS/GothamSSm-Black.eot");
+  src: local("GothamSSm Black"), local("GothamSSm-Black"), url("./font/gothamSS/GothamSSm-Black.eot?#iefix") format("embedded-opentype"), url("./font/gothamSS/GothamSSm-Black.woff2") format("woff2"), url("./font/gothamSS/GothamSSm-Black.woff") format("woff"), url("./font/gothamSS/GothamSSm-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Maitree-Regular";
+  src: url("./font/maitree/Maitree-Regular.eot");
+  src: local("Maitree Regular"), local("Maitree-Regular"), url("./font/maitree/Maitree-Regular.eot?#iefix") format("embedded-opentype"), url("./font/maitree/Maitree-Regular.woff2") format("woff2"), url("./font/maitree/Maitree-Regular.woff") format("woff"), url("./font/maitree/Maitree-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MaterialIcons-Regular";
+  src: url("./font/material/MaterialIcons-Regular.eot");
+  src: local("MaterialIcons-Regular"), local("MaterialIcons-Regular"), url("./font/material/MaterialIcons-Regular.eot?#iefix") format("embedded-opentype"), url("./font/material/MaterialIcons-Regular.woff2") format("woff2"), url("./font/material/MaterialIcons-Regular.woff") format("woff"), url("./font/material/MaterialIcons-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 22, sass/shared.scss */
+.material-icons {
+  font-family: 'MaterialIcons-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* line 49, sass/shared.scss */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #545454;
+  margin: 0;
+}

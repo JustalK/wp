@@ -1,0 +1,135 @@
+/*
+Theme Name: Latsuj
+Author: Justal "Latsuj" Kevin
+Author URI: https://latsuj.com
+Version: 1.0
+*/
+/* line 5, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* line 22, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+html {
+  line-height: 1;
+}
+
+/* line 24, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 26, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 28, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 30, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 103, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 32, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 116, ../../../../../../../var/lib/gems/2.5.0/gems/compass-core-1.0.3/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+  display: block;
+}
+
+@font-face {
+  font-family: "GothamSSm-Book";
+  src: url("./font/gothamSS/GothamSSm-Book.eot");
+  src: local("GothamSSm Book"), local("GothamSSm-Book"), url("./font/gothamSS/GothamSSm-Book.eot?#iefix") format("embedded-opentype"), url("./font/gothamSS/GothamSSm-Book.woff2") format("woff2"), url("./font/gothamSS/GothamSSm-Book.woff") format("woff"), url("./font/gothamSS/GothamSSm-Book.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GothamSSm-Black";
+  src: url("./font/gothamSS/GothamSSm-Black.eot");
+  src: local("GothamSSm Black"), local("GothamSSm-Black"), url("./font/gothamSS/GothamSSm-Black.eot?#iefix") format("embedded-opentype"), url("./font/gothamSS/GothamSSm-Black.woff2") format("woff2"), url("./font/gothamSS/GothamSSm-Black.woff") format("woff"), url("./font/gothamSS/GothamSSm-Black.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Maitree-Regular";
+  src: url("./font/maitree/Maitree-Regular.eot");
+  src: local("Maitree Regular"), local("Maitree-Regular"), url("./font/maitree/Maitree-Regular.eot?#iefix") format("embedded-opentype"), url("./font/maitree/Maitree-Regular.woff2") format("woff2"), url("./font/maitree/Maitree-Regular.woff") format("woff"), url("./font/maitree/Maitree-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "MaterialIcons-Regular";
+  src: url("./font/material/MaterialIcons-Regular.eot");
+  src: local("MaterialIcons-Regular"), local("MaterialIcons-Regular"), url("./font/material/MaterialIcons-Regular.eot?#iefix") format("embedded-opentype"), url("./font/material/MaterialIcons-Regular.woff2") format("woff2"), url("./font/material/MaterialIcons-Regular.woff") format("woff"), url("./font/material/MaterialIcons-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 22, sass/shared.scss */
+.material-icons {
+  font-family: 'MaterialIcons-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+/* line 49, sass/shared.scss */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  color: #545454;
+  margin: 0;
+}
+
+/* line 14, sass/mb-style.scss */
+body {
+  background: #fff;
+}

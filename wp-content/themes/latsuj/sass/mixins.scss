@@ -1,0 +1,51 @@
+@import 'constants';
+
+@mixin font($folder,$name,$local,$weight,$style) {
+    font-family: $name;
+    src: url("./font/#{$folder}/#{$name}.eot");
+    src: local($local), local($name),
+        url('./font/#{$folder}/#{$name}.eot?#iefix') format('embedded-opentype'),
+        url('./font/#{$folder}/#{$name}.woff2') format('woff2'),
+        url('./font/#{$folder}/#{$name}.woff') format('woff'),
+        url('./font/#{$folder}/#{$name}.ttf') format('truetype');
+    font-weight: $weight;
+    font-style: $style;
+}
+
+@mixin diamond() {
+    content: '';
+    position: absolute;
+	background-color: $color_yellow;
+    border: $website_border_size solid $color_yellow;
+    height: .625rem;
+    -webkit-transform: rotate(45deg);
+    transform: rotate(45deg);
+    width: 10px;
+    width: .625rem;
+}
+
+@mixin line() {
+	border-top: $website_border_size solid $color_yellow;
+    border-bottom: $website_border_size solid $color_yellow;
+	margin: 0 ($website_margin - 5%) 2rem;
+	width: 100% - 2 * $website_margin;
+	padding: 2rem 5%;
+}
+
+@mixin full-background() {
+   	background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-decoration: none;
+}
+
+@mixin posts-title($size) {
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+	font-size: $size;
+	width: 100%;
+	padding: 1rem 0;
+	background: #ffffff73;
+	color: $color_white;
+}

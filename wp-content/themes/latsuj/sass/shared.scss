@@ -1,0 +1,56 @@
+@import 'constants';
+@import 'mixins';
+
+// ==============================================================================================>
+
+@font-face {
+	@include font("gothamSS","GothamSSm-Book","GothamSSm Book",normal,normal);
+}
+
+@font-face {
+	@include font("gothamSS","GothamSSm-Black","GothamSSm Black",900,normal);
+}
+
+@font-face {
+	@include font("maitree","Maitree-Regular","Maitree Regular",normal,normal);
+}
+
+@font-face {
+	@include font("material","MaterialIcons-Regular","MaterialIcons-Regular",normal,normal);
+}
+
+.material-icons {
+  font-family: 'MaterialIcons-Regular';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+// ==============================================================================================>
+
+body {
+    font-family: $text_stack;
+    font-size: 16px;
+    color: $color_gray;
+    margin: 0;
+}
+
+

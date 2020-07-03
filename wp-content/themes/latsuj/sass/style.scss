@@ -7,137 +7,11 @@ Version: 1.0
 
 @import "compass";
 @import "compass/reset";
-
-$color_header: #111;
-$color_white: #fff;
-$color_yellow: #fcd116;
-$color_blue: #61affe;
-$color_cyan: #ebf3fb;
-$color_red: #fff;
-$color_gray: #545454;
-
-$text_header_stack: "GothamSSm-Black", Arial, sans-serif;
-$text_header_proportion: 3rem;
-$text_p_stack: "Maitree-Regular", Arial, sans-serif;
-$text_stack: Arial, sans-serif;
-
-$website_margin: 25%;
-$website_category_margin: 25%;
-$website_border_size: 0.125rem; 
-
-@mixin font($folder,$name,$local,$weight,$style) {
-    font-family: $name;
-    src: url("./font/#{$folder}/#{$name}.eot");
-    src: local($local), local($name),
-        url('./font/#{$folder}/#{$name}.eot?#iefix') format('embedded-opentype'),
-        url('./font/#{$folder}/#{$name}.woff2') format('woff2'),
-        url('./font/#{$folder}/#{$name}.woff') format('woff'),
-        url('./font/#{$folder}/#{$name}.ttf') format('truetype');
-    font-weight: $weight;
-    font-style: $style;
-}
-
-@mixin diamond() {
-    content: '';
-    position: absolute;
-	background-color: $color_yellow;
-    border: $website_border_size solid $color_yellow;
-    height: .625rem;
-    -webkit-transform: rotate(45deg);
-    transform: rotate(45deg);
-    width: 10px;
-    width: .625rem;
-}
-
-@mixin line() {
-	border-top: $website_border_size solid $color_yellow;
-    border-bottom: $website_border_size solid $color_yellow;
-	margin: 0 ($website_margin - 5%) 2rem;
-	width: 100% - 2 * $website_margin;
-	padding: 2rem 5%;
-}
-
-@mixin full-background() {
-   	background-position: center;
-    background-size: cover;
-    background-repeat: no-repeat;
-    text-decoration: none;
-}
-
-@mixin posts-title($size) {
-	position: absolute;
-	bottom: 0;
-	text-align: center;
-	font-size: $size;
-	width: 100%;
-	padding: 1rem 0;
-	background: #ffffff73;
-	color: $color_white;
-}
+@import 'constants';
+@import 'mixins';
+@import 'shared';
 
 // ==========================================================
-
-@font-face {
-	@include font("gothamSS","GothamSSm-Book","GothamSSm Book",normal,normal);
-}
-
-@font-face {
-	@include font("gothamSS","GothamSSm-Black","GothamSSm Black",900,normal);
-}
-
-@font-face {
-	@include font("maitree","Maitree-Regular","Maitree Regular",normal,normal);
-}
-
-@font-face {
-	@include font("material","MaterialIcons-Regular","MaterialIcons-Regular",normal,normal);
-}
-
-.material-icons {
-  font-family: 'MaterialIcons-Regular';
-  font-weight: normal;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}
-
-// ==========================================================
-
-body {
-    font-family: $text_stack;
-    font-size: 16px;
-    color: $color_gray;
-    margin: 0;
-}
-
-#menu {
-	position: fixed;
-    z-index: 10;
-    padding: 1rem 3rem;
-    cursor: pointer;
-    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
-    
-    &.active {
-    	transform: translate3d(12rem,0,0);
-    }
-}
 
 #home {
 	position: fixed;
@@ -612,10 +486,6 @@ hr {
 @media only screen and (max-width: 600px) {
 	header {
 	    margin: 1rem 5%;
-	}
-	
-	body {
-		font-size: 22px;
 	}
 	
 	p {
