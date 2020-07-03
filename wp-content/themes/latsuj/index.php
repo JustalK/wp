@@ -12,45 +12,11 @@ $total_posts = count_all_published_post();
 <div>
 	<?php wpse_get_partial('template-parts/header'); ?>
     <?php wpse_get_partial('template-parts/categories_listing'); ?> 
+    <?php wpse_get_partial('template-parts/most_recent_posts', array(
+        'nbr_of_post' => 4,
+        'offset' => 0
+    )); ?>
     
-	<div id="mb-horizontal-posts">
-		<span class="legend title">Recent posts</span>
-    	<ul>
-    		<li>
-            	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    		<li>
-            	<a class="posts" href="<?= the_permalink($posts[1]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[1]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    		<li>
-            	<a class="posts" href="<?= the_permalink($posts[2]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[2]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    	</ul>
-	</div>
 	<div id="mb-vertical-posts">
 		<span class="legend title">Older posts</span>
     	<ul>
@@ -117,9 +83,8 @@ $total_posts = count_all_published_post();
     )); ?>
     
     <?php wpse_get_partial('template-parts/most_recent_posts', array(
-        'first_post' => $posts[1],
-        'second_post' => $posts[2],
-        'third_post' => $posts[3] 
+        'nbr_of_post' => 3,
+        'offset' => 1
     )); ?>
     
     <?php wpse_get_partial('template-parts/slider', array(

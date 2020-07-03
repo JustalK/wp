@@ -53,4 +53,25 @@ body {
     margin: 0;
 }
 
+header {
+	position:relative;
+	border-bottom: 0.125rem solid #fcd116;
+	
+	& img {
+		width: 50%;
+		margin: 0 25%;
+		height: 100%;
+		display: block;
+	}
+	
+	& h1 {
+		position: absolute;
+		bottom: 0;
+		text-align: center;
+		width: 100%;
+		font-size: 5rem;
+		color: $color_yellow;
+	}
+}
+
 
