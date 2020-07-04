@@ -12,7 +12,7 @@ Version: 1.0
 @import 'shared';
 
 header {
-    margin: 1rem 5%;
+    margin: $mobile_website_margin_between_element $mobile_website_margin;
 }
 
 h1 {
@@ -21,15 +21,15 @@ h1 {
 }
 
 h2 {
-    font-size: $mobile_text_header_proportion / 2;
+    font-size: $mobile_text_header_proportion / 2.5;
 }
 
 h3 {
-    font-size: $mobile_text_header_proportion / 4;
+    font-size: $mobile_text_header_proportion / 6;
 } 
 
 #resume {
-	margin: 1rem 5%;
+	margin: $mobile_website_margin_between_element $mobile_website_margin;
 }
 
 .legend {
@@ -39,7 +39,7 @@ h3 {
     color: $color_yellow;
     font-family: $text_header_stack;
     text-transform: uppercase;
-    margin: 1rem 0;
+    margin: $mobile_website_margin_between_element 0;
     padding: 1rem;
 }
 
@@ -62,10 +62,12 @@ h3 {
 }
 
 ul {
-	margin: 1rem 5%;
+	margin: 1rem $mobile_website_margin;
 }
 
 a {
+	color: $color_gray;
+
 	&.posts {
 	    position: relative;
 		z-index: 10;
@@ -103,7 +105,7 @@ a {
 	& li {
 	    position: relative;
 	    padding: 0.2rem;
-	    margin-bottom: 1rem;
+	    margin-bottom: $mobile_website_margin_between_element;
 	}
 	
 	& .post_informations {
@@ -115,6 +117,7 @@ a {
 	    & span {
 			margin: 20% 0;
 			display: block;
+			font-size: 0.8rem
 	    }
 	}
 }
