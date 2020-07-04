@@ -151,24 +151,52 @@ header h1 {
   color: #fcd116;
 }
 
+/* line 77, sass/shared.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #111;
+}
+
 /* line 14, sass/mb-style.scss */
 header {
   margin: 1rem 5%;
 }
 
 /* line 18, sass/mb-style.scss */
+h1 {
+  font-size: 2rem;
+  text-align: center;
+}
+
+/* line 23, sass/mb-style.scss */
+h2 {
+  font-size: 1rem;
+}
+
+/* line 27, sass/mb-style.scss */
+h3 {
+  font-size: 0.5rem;
+}
+
+/* line 31, sass/mb-style.scss */
 #resume {
   margin: 1rem 5%;
 }
 
-/* line 22, sass/mb-style.scss */
+/* line 35, sass/mb-style.scss */
 .legend {
   display: block;
   text-align: center;
-  marging: 1rem;
+  background: #efefef;
+  color: #fcd116;
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  margin: 1rem 0;
+  padding: 1rem;
 }
 
-/* line 28, sass/mb-style.scss */
+/* line 46, sass/mb-style.scss */
 .red {
   position: absolute;
   height: 100%;
@@ -178,7 +206,7 @@ header {
   right: 0;
 }
 
-/* line 37, sass/mb-style.scss */
+/* line 55, sass/mb-style.scss */
 .blue {
   position: absolute;
   height: 100%;
@@ -188,12 +216,21 @@ header {
   left: 0;
 }
 
-/* line 46, sass/mb-style.scss */
+/* line 64, sass/mb-style.scss */
 ul {
   margin: 1rem 5%;
 }
 
-/* line 51, sass/mb-style.scss */
+/* line 69, sass/mb-style.scss */
+a.posts {
+  position: relative;
+  z-index: 10;
+  display: block;
+  border: 0.125rem solid #fcd116;
+  background: #fff;
+}
+
+/* line 79, sass/mb-style.scss */
 #categories_listing li {
   position: relative;
   border: 0.125rem solid #fcd116;
@@ -202,36 +239,44 @@ ul {
   display: flex;
   align-items: center;
 }
-/* line 59, sass/mb-style.scss */
+/* line 87, sass/mb-style.scss */
 #categories_listing li span {
   padding: 0 0.4rem;
 }
-/* line 63, sass/mb-style.scss */
+/* line 91, sass/mb-style.scss */
 #categories_listing li i:last-child {
   position: absolute;
   right: 1rem;
 }
-/* line 69, sass/mb-style.scss */
+/* line 97, sass/mb-style.scss */
 #categories_listing li:first-child {
   border-top: 0.125rem solid #fcd116;
 }
 
-/* line 76, sass/mb-style.scss */
-#mb-horizontal-posts li {
+/* line 103, sass/mb-style.scss */
+#mb-vertical-posts li, #mb-horizontal-posts li {
   position: relative;
   padding: 0.2rem;
   margin-bottom: 1rem;
 }
-/* line 82, sass/mb-style.scss */
-#mb-horizontal-posts a {
+/* line 109, sass/mb-style.scss */
+#mb-vertical-posts .post_informations, #mb-horizontal-posts .post_informations {
   position: relative;
-  z-index: 10;
-  display: block;
-  height: 10rem;
-  border: 0.125rem solid #fcd116;
-  background: #fff;
+  margin: 0 5%;
+  display: inline-block;
+  text-align: center;
 }
-/* line 90, sass/mb-style.scss */
+/* line 115, sass/mb-style.scss */
+#mb-vertical-posts .post_informations span, #mb-horizontal-posts .post_informations span {
+  margin: 20% 0;
+  display: block;
+}
+
+/* line 123, sass/mb-style.scss */
+#mb-horizontal-posts a {
+  height: 8rem;
+}
+/* line 126, sass/mb-style.scss */
 #mb-horizontal-posts a .image {
   width: 50%;
   height: 100%;
@@ -241,15 +286,30 @@ ul {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 97, sass/mb-style.scss */
+/* line 133, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations {
-  position: relative;
   width: 40%;
-  margin: 0 5%;
-  display: inline-block;
 }
-/* line 103, sass/mb-style.scss */
-#mb-horizontal-posts a .post_informations span {
-  margin: 25% 0;
-  display: block;
+
+/* line 140, sass/mb-style.scss */
+#mb-vertical-posts ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+/* line 145, sass/mb-style.scss */
+#mb-vertical-posts ul li {
+  width: 45%;
+}
+/* line 149, sass/mb-style.scss */
+#mb-vertical-posts ul a {
+  height: 16rem;
+}
+/* line 152, sass/mb-style.scss */
+#mb-vertical-posts ul a .image {
+  height: 50%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-decoration: none;
 }

@@ -151,6 +151,13 @@ header h1 {
   color: #fcd116;
 }
 
+/* line 77, sass/shared.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #111;
+}
+
 /* line 16, sass/style.scss */
 #home {
   position: fixed;
@@ -200,35 +207,28 @@ header h1 {
 }
 
 /* line 62, sass/style.scss */
-h1, h2, h3, h4, h5, h6 {
-  font-family: "GothamSSm-Black", Arial, sans-serif;
-  text-transform: uppercase;
-  color: #111;
-}
-
-/* line 68, sass/style.scss */
 h1 {
   font-size: 3rem;
   text-align: center;
 }
 
-/* line 73, sass/style.scss */
+/* line 67, sass/style.scss */
 h2 {
   font-size: 1.5rem;
 }
 
-/* line 77, sass/style.scss */
+/* line 71, sass/style.scss */
 h3 {
   font-size: 0.75rem;
 }
 
-/* line 83, sass/style.scss */
+/* line 77, sass/style.scss */
 .container {
   position: relative;
   overflow: hidden;
 }
 
-/* line 88, sass/style.scss */
+/* line 82, sass/style.scss */
 .design_side {
   position: absolute;
   width: 50%;
@@ -239,19 +239,19 @@ h3 {
   pointer-events: none;
   transition: all 1.3s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 98, sass/style.scss */
+/* line 92, sass/style.scss */
 .design_side.right {
   transform: translate3d(12rem, 0, 0);
 }
 
-/* line 103, sass/style.scss */
+/* line 97, sass/style.scss */
 #design_side_right {
   background-position-x: right;
   background-image: url(./img/background_right_01.png);
   right: 0;
 }
 
-/* line 111, sass/style.scss */
+/* line 105, sass/style.scss */
 #side_left {
   position: fixed;
   z-index: 1;
@@ -260,12 +260,12 @@ h3 {
   background: #61affe;
   transform: translate3d(-12rem, 0, 0);
 }
-/* line 119, sass/style.scss */
+/* line 113, sass/style.scss */
 #side_left.right {
   transform: translate3d(0, 0, 0);
 }
 
-/* line 126, sass/style.scss */
+/* line 120, sass/style.scss */
 #firstcategory, #secondcategory {
   position: absolute;
   padding: 20px 10px;
@@ -274,18 +274,18 @@ h3 {
   left: 50%;
 }
 
-/* line 134, sass/style.scss */
+/* line 128, sass/style.scss */
 #firstcategory {
   transform: translateX(-100%);
 }
 
-/* line 140, sass/style.scss */
+/* line 134, sass/style.scss */
 article.post {
   position: relative;
   margin-bottom: 3rem;
 }
 
-/* line 147, sass/style.scss */
+/* line 141, sass/style.scss */
 .single h1, .category h1 {
   padding-bottom: 4rem;
   padding-top: 8rem;
@@ -294,7 +294,7 @@ article.post {
   text-align: center;
 }
 
-/* line 157, sass/style.scss */
+/* line 151, sass/style.scss */
 .posts {
   position: relative;
   min-width: 10rem;
@@ -304,11 +304,11 @@ article.post {
   text-decoration: none;
   transition: opacity 0.25s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 163, sass/style.scss */
+/* line 157, sass/style.scss */
 .posts.invisible {
   opacity: 0;
 }
-/* line 167, sass/style.scss */
+/* line 161, sass/style.scss */
 .posts h2 {
   position: absolute;
   bottom: 0;
@@ -319,7 +319,7 @@ article.post {
   background: #ffffff73;
   color: #fff;
 }
-/* line 171, sass/style.scss */
+/* line 165, sass/style.scss */
 .posts.secondary_post h2 {
   position: absolute;
   bottom: 0;
@@ -330,7 +330,7 @@ article.post {
   background: #ffffff73;
   color: #fff;
 }
-/* line 175, sass/style.scss */
+/* line 169, sass/style.scss */
 .posts h3 {
   position: absolute;
   bottom: 0;
@@ -342,7 +342,7 @@ article.post {
   color: #fff;
 }
 
-/* line 180, sass/style.scss */
+/* line 174, sass/style.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -352,7 +352,7 @@ article.post {
   background: #fcd116;
   color: white;
 }
-/* line 189, sass/style.scss */
+/* line 183, sass/style.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -368,22 +368,22 @@ article.post {
   left: -0.4rem;
 }
 
-/* line 197, sass/style.scss */
+/* line 191, sass/style.scss */
 article h2 {
   margin: 40px 25%;
 }
 
-/* line 201, sass/style.scss */
+/* line 195, sass/style.scss */
 article h3 {
   margin: 25px 25%;
 }
 
-/* line 205, sass/style.scss */
+/* line 199, sass/style.scss */
 article p {
   padding: 0 25%;
 }
 
-/* line 209, sass/style.scss */
+/* line 203, sass/style.scss */
 .slider {
   position: relative;
   border-top: 0.125rem solid #fcd116;
@@ -395,7 +395,7 @@ article p {
   display: inline-flex;
   justify-content: space-between;
 }
-/* line 216, sass/style.scss */
+/* line 210, sass/style.scss */
 .slider::before {
   content: '';
   position: absolute;
@@ -409,7 +409,7 @@ article p {
   top: -0.45rem;
   right: 30%;
 }
-/* line 222, sass/style.scss */
+/* line 216, sass/style.scss */
 .slider::after {
   content: '';
   position: absolute;
@@ -424,28 +424,28 @@ article p {
   left: 30%;
 }
 
-/* line 229, sass/style.scss */
+/* line 223, sass/style.scss */
 .columns {
   display: inline-block;
   position: relative;
   float: left;
   height: 100%;
 }
-/* line 235, sass/style.scss */
+/* line 229, sass/style.scss */
 .columns.column23 {
   width: 66%;
 }
-/* line 239, sass/style.scss */
+/* line 233, sass/style.scss */
 .columns.column13 {
   width: 33.99%;
 }
 
-/* line 247, sass/style.scss */
+/* line 241, sass/style.scss */
 #theexcerpt {
   position: relative;
   margin: 0;
 }
-/* line 251, sass/style.scss */
+/* line 245, sass/style.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -459,7 +459,7 @@ article p {
   top: -0.4rem;
   right: 30%;
 }
-/* line 257, sass/style.scss */
+/* line 251, sass/style.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -473,7 +473,7 @@ article p {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 263, sass/style.scss */
+/* line 257, sass/style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -483,7 +483,7 @@ article p {
   text-align: justify;
 }
 
-/* line 271, sass/style.scss */
+/* line 265, sass/style.scss */
 .wp-block-code {
   background: #ebf3fb;
   border-bottom: 1px solid #61affe;
@@ -492,7 +492,7 @@ article p {
   padding: 40px 25%;
   margin: 2rem 0;
 }
-/* line 279, sass/style.scss */
+/* line 273, sass/style.scss */
 .wp-block-code .description {
   display: block;
   margin-bottom: 2rem;
@@ -500,30 +500,30 @@ article p {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
 
-/* line 287, sass/style.scss */
+/* line 281, sass/style.scss */
 .wp-block-image {
   margin-left: 25%;
   width: 50%;
 }
-/* line 291, sass/style.scss */
+/* line 285, sass/style.scss */
 .wp-block-image > img {
   width: auto;
   height: auto;
 }
 
-/* line 299, sass/style.scss */
+/* line 293, sass/style.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.7em;
   text-align: justify;
 }
 
-/* line 305, sass/style.scss */
+/* line 299, sass/style.scss */
 ul {
   margin: 0 25%;
 }
 
-/* line 311, sass/style.scss */
+/* line 305, sass/style.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -532,7 +532,7 @@ ul {
   left: 50%;
   width: 0.125rem;
 }
-/* line 319, sass/style.scss */
+/* line 313, sass/style.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -547,64 +547,64 @@ ul {
   left: -0.345rem;
 }
 
-/* line 326, sass/style.scss */
+/* line 320, sass/style.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 334, sass/style.scss */
+/* line 328, sass/style.scss */
 #last-posts {
   width: 50%;
   height: 22rem;
   margin: 1rem 25%;
 }
-/* line 339, sass/style.scss */
+/* line 333, sass/style.scss */
 #last-posts a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 346, sass/style.scss */
+/* line 340, sass/style.scss */
 #most_recent-posts {
   width: 50%;
   height: 22rem;
   margin: 2rem 25%;
 }
-/* line 351, sass/style.scss */
+/* line 345, sass/style.scss */
 #most_recent-posts a {
   display: block;
   width: 90%;
   height: 100%;
 }
-/* line 356, sass/style.scss */
+/* line 350, sass/style.scss */
 #most_recent-posts a.secondary_post {
   height: 44%;
   width: 100%;
 }
-/* line 361, sass/style.scss */
+/* line 355, sass/style.scss */
 #most_recent-posts a.bottom_post {
   position: absolute;
   bottom: 0;
 }
 
-/* line 373, sass/style.scss */
+/* line 367, sass/style.scss */
 .home .design_side {
   transform: translateY(10rem);
 }
 
-/* line 378, sass/style.scss */
+/* line 372, sass/style.scss */
 header {
   margin: 1rem 20%;
 }
-/* line 381, sass/style.scss */
+/* line 375, sass/style.scss */
 header p.left {
   position: absolute;
   width: 20%;
   bottom: 5%;
   left: 5%;
 }
-/* line 388, sass/style.scss */
+/* line 382, sass/style.scss */
 header p.right {
   position: absolute;
   width: 20%;
@@ -613,7 +613,7 @@ header p.right {
   direction: rtl;
 }
 
-/* line 397, sass/style.scss */
+/* line 391, sass/style.scss */
 #categories_listing {
   position: relative;
   height: 9rem;
@@ -623,13 +623,13 @@ header p.right {
   width: 50%;
   padding: 0 5%;
 }
-/* line 406, sass/style.scss */
+/* line 400, sass/style.scss */
 #categories_listing a {
   width: 47.5%;
   display: block;
 }
 
-/* line 412, sass/style.scss */
+/* line 406, sass/style.scss */
 .arrow {
   position: absolute;
   top: 50%;
@@ -637,18 +637,18 @@ header p.right {
   color: #fcd116;
   cursor: pointer;
 }
-/* line 419, sass/style.scss */
+/* line 413, sass/style.scss */
 .arrow.left {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
 }
-/* line 424, sass/style.scss */
+/* line 418, sass/style.scss */
 .arrow.right {
   right: 0;
   transform: translateY(-50%) translateX(50%);
 }
 
-/* line 430, sass/style.scss */
+/* line 424, sass/style.scss */
 hr {
   width: 10%;
   margin-top: 3rem;
@@ -658,111 +658,34 @@ hr {
   border-style: solid;
 }
 
-/* line 439, sass/style.scss */
+/* line 433, sass/style.scss */
 .hcb_wrap {
   background: #f7f6f6;
 }
-/* line 442, sass/style.scss */
+/* line 436, sass/style.scss */
 .hcb_wrap pre.prism {
   margin: 25px 25%;
 }
-/* line 446, sass/style.scss */
+/* line 440, sass/style.scss */
 .hcb_wrap pre::before {
   opacity: 0;
 }
-/* line 450, sass/style.scss */
+/* line 444, sass/style.scss */
 .hcb_wrap .line-numbers-rows > span::before {
   text-align: left !important;
 }
-/* line 454, sass/style.scss */
+/* line 448, sass/style.scss */
 .hcb_wrap pre.line-numbers {
   padding-left: 1.75em !important;
 }
-/* line 458, sass/style.scss */
+/* line 452, sass/style.scss */
 .hcb_wrap .line-numbers .line-numbers-rows {
   width: 1.2em !important;
   left: -1.75em !important;
 }
 
 @media only screen and (max-width: 600px) {
-  /* line 471, sass/style.scss */
-  p {
-    line-height: 1.4em;
-  }
-
-  /* line 478, sass/style.scss */
-  #mb-vertical-posts .legend {
-    display: block;
-    text-align: center;
-    padding: 1rem;
-  }
-  /* line 483, sass/style.scss */
-  #mb-vertical-posts .legend h2 {
-    position: relative;
-    color: black;
-    text-align: center;
-    font-size: 1rem;
-  }
-  /* line 491, sass/style.scss */
-  #mb-vertical-posts ul {
-    margin: 1rem 5%;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-  /* line 497, sass/style.scss */
-  #mb-vertical-posts ul li {
-    width: 48%;
-    display: inline-block;
-    position: relative;
-    margin-bottom: 1rem;
-  }
-  /* line 504, sass/style.scss */
-  #mb-vertical-posts ul a {
-    display: block;
-    z-index: 10;
-    margin: 0.2rem;
-    min-width: initial;
-    border: 1px solid black;
-  }
-  /* line 511, sass/style.scss */
-  #mb-vertical-posts ul a .legend {
-    background: white;
-  }
-  /* line 515, sass/style.scss */
-  #mb-vertical-posts ul a .image {
-    height: 8rem;
-    background-size: cover;
-    background-position: center;
-  }
-  /* line 522, sass/style.scss */
-  #mb-vertical-posts ul .red {
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    bottom: 0;
-    background: red;
-  }
-  /* line 530, sass/style.scss */
-  #mb-vertical-posts ul .blue {
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    top: 0;
-    background: blue;
-  }
-
-  /* line 541, sass/style.scss */
-  .legend.title {
-    background: #efefef;
-    font-size: 1.5rem;
-    color: #fcd116;
-    font-family: "GothamSSm-Black", Arial, sans-serif;
-    text-transform: uppercase;
-    margin: 2rem 0;
-  }
-
-  /* line 550, sass/style.scss */
+  /* line 465, sass/style.scss */
   #mb-see-all {
     text-align: center;
     display: flex;

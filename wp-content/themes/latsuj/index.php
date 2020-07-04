@@ -10,62 +10,23 @@ $total_posts = count_all_published_post();
 <?php if ( wp_is_mobile() ) : ?>
 
 <div>
-	<?php wpse_get_partial('template-parts/header'); ?>
-    <?php wpse_get_partial('template-parts/categories_listing'); ?> 
-    <?php wpse_get_partial('template-parts/most_recent_posts', array(
+	<?php 
+	
+	wpse_get_partial('template-parts/header');
+    wpse_get_partial('template-parts/categories_listing');
+    wpse_get_partial('template-parts/most_recent_posts', array(
         'nbr_of_post' => 4,
-        'offset' => 0
-    )); ?>
+        'offset' => 0,
+        'direction' => 'horizontal'
+    )); 
+    wpse_get_partial('template-parts/most_recent_posts', array(
+        'nbr_of_post' => 4,
+        'offset' => 4,
+        'direction' => 'vertical'
+    )); 
     
-	<div id="mb-vertical-posts">
-		<span class="legend title">Older posts</span>
-    	<ul>
-    		<li>
-    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    		<li>
-    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    		<li>
-    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    		<li>
-    			<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>">
-            		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')"></div>
-            		<div class="legend">
-            			<span>Category</span>
-            			<h2><?= $posts[2]["post_title"]; ?></h2>
-            		</div>
-            	</a>
-            	<div class="red"></div>
-            	<div class="blue"></div>
-    		</li>
-    	</ul>
-	</div>
+    ?>
+
 	<a id="mb-see-all" href="#">See all <i class="material-icons">chevron_right</i></a>
 </div>
 

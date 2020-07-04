@@ -15,14 +15,32 @@ header {
     margin: 1rem 5%;
 }
 
+h1 {
+    font-size: $mobile_text_header_proportion;
+	text-align: center;
+}
+
+h2 {
+    font-size: $mobile_text_header_proportion / 2;
+}
+
+h3 {
+    font-size: $mobile_text_header_proportion / 4;
+} 
+
 #resume {
 	margin: 1rem 5%;
 }
 
 .legend {
 	display: block;
-	text-align: center;
-	marging: 1rem;
+    text-align: center;
+    background: $color_gray_light;
+    color: $color_yellow;
+    font-family: $text_header_stack;
+    text-transform: uppercase;
+    margin: 1rem 0;
+    padding: 1rem;
 }
 
 .red {
@@ -45,6 +63,16 @@ header {
 
 ul {
 	margin: 1rem 5%;
+}
+
+a {
+	&.posts {
+	    position: relative;
+		z-index: 10;
+		display: block;
+		border: $website_border_size solid $color_yellow;
+		background: $color_white;
+	}
 }
 
 #categories_listing {
@@ -71,21 +99,29 @@ ul {
 	}
 }
 
-#mb-horizontal-posts {
-
+#mb-vertical-posts, #mb-horizontal-posts {
 	& li {
 	    position: relative;
 	    padding: 0.2rem;
 	    margin-bottom: 1rem;
 	}
-    
+	
+	& .post_informations {
+		position: relative;
+		margin: 0 5%;
+	    display: inline-block;
+		text-align: center;
+	    
+	    & span {
+			margin: 20% 0;
+			display: block;
+	    }
+	}
+}
+
+#mb-horizontal-posts {
     & a {
-        position: relative;
-		z-index: 10;
-		display: block;
-		height: 10rem;
-		border: $website_border_size solid $color_yellow;
-		background: $color_white;
+		height: 8rem;
     	
     	& .image {
 		    width: 50%;
@@ -95,14 +131,27 @@ ul {
     	}
     	
     	& .post_informations {
-    		position: relative;
 			width: 40%;
-    		margin: 0 5%;
-		    display: inline-block;
+    	}
+    }
+}
+
+#mb-vertical-posts {	
+	& ul {
+		display: flex;
+		justify-content: space-between;
+		flex-wrap: wrap;
+    	
+    	& li {
+    	    width: 45%;
+    	}
+    	
+    	& a {
+		    height: 16rem;
 		    
-		    & span {
-				margin: 25% 0;
-    			display: block;
+		    & .image {
+		    	height: 50%;
+		    	@include full-background();
 		    }
     	}
     }

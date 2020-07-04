@@ -4,25 +4,50 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
 
 
 <?php if ( wp_is_mobile() ) : ?>
+    
+    <?php if($direction=="horizontal") { ?>
+        <div id="mb-horizontal-posts">
+        	<span class="legend title">Recent posts</span>
+        	<ul>
+        		<?php foreach($posts as $post) { ?>
+            		<li>
+                    	<a class="posts" href="<?= the_permalink($post["ID"]) ?>">
+                    		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($post["ID"],'full'); ?>')"></div>
+                    		<div class="post_informations">
+                    			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
+                    			<h2><?= $post["post_title"]; ?></h2>
+                    		</div>
+                    	</a>
+                    	<div class="red"></div>
+                    	<div class="blue"></div>
+            		</li>
+        		<?php } ?>
+        	</ul>
+        </div>
+    <?php } ?>
+    
+	<?php if($direction=="vertical") { ?>
 
-<div id="mb-horizontal-posts">
-	<span class="legend title">Recent posts</span>
-	<ul>
-		<?php foreach($posts as $post) { ?>
-		<li>
-        	<a class="posts" href="<?= the_permalink($post["ID"]) ?>">
-        		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($post["ID"],'full'); ?>')"></div>
-        		<div class="post_informations">
-        			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
-        			<h2><?= $post["post_title"]; ?></h2>
-        		</div>
-        	</a>
-        	<div class="red"></div>
-        	<div class="blue"></div>
-		</li>
-		<?php } ?>
-	</ul>
-</div>
+    	<div id="mb-vertical-posts">
+    		<span class="legend title">Older posts</span>
+        	<ul>
+        		<?php foreach($posts as $post) { ?>
+            		<li>
+            			<a class="posts" href="<?= the_permalink($post["ID"]) ?>">
+                    		<div class="image" style="background-image: url('<?= get_the_post_thumbnail_url($post["ID"],'full'); ?>')"></div>
+                    		<div class="post_informations">
+                    			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
+                    			<h2><?= $post["post_title"]; ?></h2>
+                    		</div>
+                    	</a>
+                    	<div class="red"></div>
+                    	<div class="blue"></div>
+            		</li>
+        		<?php } ?>
+        	</ul>
+    	</div>
+
+	<?php } ?>
 
 <?php else : ?>
 

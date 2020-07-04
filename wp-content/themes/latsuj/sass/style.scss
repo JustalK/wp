@@ -59,12 +59,6 @@ Version: 1.0
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-	font-family: $text_header_stack;
-    text-transform: uppercase;
-    color: $color_header;
-}
-
 h1 {
     font-size: $text_header_proportion;
 	text-align: center;
@@ -466,86 +460,7 @@ hr {
 // ==========================================================
 // ==========================================================
 
-@media only screen and (max-width: 600px) {
-	
-	p {
-		line-height: 1.4em;
-	}
-	
-	
-	
-	#mb-vertical-posts {
-		& .legend {
-			display: block;
-	    	text-align: center;
-	    	padding: 1rem;
-	    	
-	    	& h2 {
-		    	position: relative;
-				color: black;
-				text-align: center;
-				font-size: 1rem;
-	    	}
-		}	
-		
-		& ul {
-	    	margin: 1rem 5%;
-			display: flex;
-    		justify-content: space-between;
-    		flex-wrap: wrap;
-	    	
-	    	& li {
-	    	    width: 48%;
-			    display: inline-block;
-			    position: relative;
-			    margin-bottom: 1rem;
-	    	}
-	    	
-	    	& a {
-				display: block;
-			    z-index: 10;
-			    margin: 0.2rem;
-			    min-width: initial;
-			    border: 1px solid black;
-			    
-			    & .legend {
-			    	background: white;
-			    }
-			    
-			    & .image {
-			    	height: 8rem;
-				    background-size: cover;
-				    background-position: center;
-			    }
-	    	}
-	    	
-	    	& .red {
-		    	width: 100%;
-			    height: 30%;
-			    position: absolute;
-			    bottom: 0;
-			    background: red;
-	    	}
-	    	
-	    	& .blue {
-		    	width: 100%;
-			    height: 30%;
-			    position: absolute;
-			    top: 0;
-			    background: blue;
-	    	}
-	    }
-	}
-	
-		
-	.legend.title {
-	    background: #efefef;
-	    font-size: 1.5rem;
-	    color: #fcd116;
-	    font-family: "GothamSSm-Black", Arial, sans-serif;
-	    text-transform: uppercase;
-	    margin: 2rem 0;
-	}
+@media only screen and (max-width: 600px) {	
 	
 	#mb-see-all {
 		text-align: center;
