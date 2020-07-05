@@ -24,8 +24,6 @@ get_header();
 if (have_posts()) :
     while (have_posts()) :
         the_post();
-        get_first_category("firstcategory");
-        get_second_category("secondcategory");
         the_title();
         the_date();
         the_excerpt();
@@ -41,20 +39,12 @@ endif;
 </article>
 
 <?php 
-    $posts = get_most_recent_posts_by_category($cat_id,3);
+    wpse_get_partial('template-parts/most_recent_posts', array(
+        'nbr_of_post' => 4,
+        'offset' => 4,
+        'direction' => 'vertical'
+    )); 
 ?>
-<span class="line-description">Random posts</span>
-<div class="slider">
-    	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')">
-    		<h3><?= $posts[0]["post_title"]; ?></h3>
-    	</a>
-    	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')">
-    		<h3><?= $posts[0]["post_title"]; ?></h3>
-    	</a>
-    	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')">
-    		<h3><?= $posts[0]["post_title"]; ?></h3>
-    	</a>
-</div>
 
 <?php
 get_footer();

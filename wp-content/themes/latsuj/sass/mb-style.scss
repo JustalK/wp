@@ -168,5 +168,56 @@ a {
 }
 
 #nav {
-    background: #bf2b2b;
+    background: $color_yellow;
+    
+    .options {
+    	color: $color_white;
+    }
+}
+
+.design {
+	height: 6rem;
+}
+
+#firstcategory, #secondcategory {
+	top: 2.5rem;
+}
+
+.single, .category {
+	& h1 {
+		width: 100% - 2 * $mobile_website_margin + 10%;
+	    margin: 0 $mobile_website_margin - 5%;	
+	}
+}
+
+#theexcerpt {
+	margin: 0 $mobile_website_margin;
+	
+	p {
+		@include line($mobile_website_margin);
+		width: 100%;
+		padding: 2rem 0;
+	}
+}
+
+.wp-block-image {
+    margin: 0 $mobile_website_margin;
+    
+    & > img {
+    	height: initial;
+    }
+}
+
+.line-description {
+	margin: 1rem $mobile_website_margin 0;
+}
+
+article {
+    & h2 {
+    	margin: 2rem $mobile_website_margin;
+	}
+	
+	& p {
+    	padding: 0 $mobile_website_margin;
+    }
 }

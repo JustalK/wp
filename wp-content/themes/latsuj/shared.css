@@ -88,6 +88,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* line 83, sass/shared.scss */
+p {
+  font-family: "Maitree-Regular", Arial, sans-serif;
+  line-height: 1.4rem;
+  text-align: justify;
+  word-spacing: 0.005rem;
+}
+
+/* line 90, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -97,7 +105,7 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   z-index: 10;
 }
-/* line 92, sass/shared.scss */
+/* line 99, sass/shared.scss */
 #nav .options {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
@@ -110,7 +118,105 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 104, sass/shared.scss */
+/* line 111, sass/shared.scss */
 #nav .options i {
   color: white;
+}
+
+/* line 119, sass/shared.scss */
+.design {
+  position: absolute;
+  background: #fcd116;
+  top: 0;
+  left: 50%;
+  width: 0.125rem;
+}
+/* line 126, sass/shared.scss */
+.design::after {
+  content: '';
+  position: absolute;
+  background-color: #fcd116;
+  border: 0.125rem solid #fcd116;
+  height: .625rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 10px;
+  width: .625rem;
+  bottom: -0.4rem;
+  left: -0.345rem;
+}
+
+/* line 133, sass/shared.scss */
+#design_bottom {
+  bottom: 0;
+}
+
+/* line 141, sass/shared.scss */
+.single h1, .category h1 {
+  padding-bottom: 4rem;
+  padding-top: 8rem;
+  text-align: center;
+}
+
+/* line 149, sass/shared.scss */
+#theexcerpt {
+  position: relative;
+  font-style: italic;
+}
+/* line 153, sass/shared.scss */
+#theexcerpt::before {
+  content: '';
+  position: absolute;
+  background-color: #fcd116;
+  border: 0.125rem solid #fcd116;
+  height: .625rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 10px;
+  width: .625rem;
+  top: -0.4rem;
+  right: 30%;
+}
+/* line 159, sass/shared.scss */
+#theexcerpt::after {
+  content: '';
+  position: absolute;
+  background-color: #fcd116;
+  border: 0.125rem solid #fcd116;
+  height: .625rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 10px;
+  width: .625rem;
+  bottom: -0.4rem;
+  left: 30%;
+}
+/* line 165, sass/shared.scss */
+#theexcerpt p::first-line {
+  text-indent: 2rem;
+}
+
+/* line 170, sass/shared.scss */
+.line-description {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 0.5rem;
+  text-align: center;
+  background: #fcd116;
+  color: white;
+}
+/* line 178, sass/shared.scss */
+.line-description::before {
+  content: '';
+  position: absolute;
+  background-color: #fcd116;
+  border: 0.125rem solid #fcd116;
+  height: .625rem;
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+  width: 10px;
+  width: .625rem;
+  background: #fff;
+  top: -0.4rem;
+  left: -0.4rem;
 }

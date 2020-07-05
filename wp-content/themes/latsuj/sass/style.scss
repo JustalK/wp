@@ -71,35 +71,16 @@ h3 {
 
 // ==========================================================
 
-#firstcategory, #secondcategory {
-	position: absolute;
-    padding: 20px 10px;
-    color: $color_gray;
-    top: 0;
-    left: 50%;
-}
-
-#firstcategory {
-    transform: translateX(-100%);
-}
-
-// ==========================================================
-
 article.post {    
 	position: relative;
 	margin-bottom: 3rem;
 }
 
 .single, .category {
-
 	& h1 {
-		padding-bottom: 4rem;
-    	padding-top: 8rem;
 		width: 100% - 2 * $website_margin + 10%;
 	    margin: 0 $website_margin - 5%;	
-	    text-align: center;
 	}
-	
 }
 
 .posts {
@@ -126,24 +107,11 @@ article.post {
 }
 
 .line-description {
-	position: relative;
-	display: inline-block;
 	margin: 1rem ($website_margin - 5%) 0;
-	padding: 0.5rem 0.5rem;
-	text-align: center;
-	background: $color_yellow;
-	color: white;
-	
-	&::before {
-		@include diamond();
-		background: $color_white;
-	    top: -0.4rem;
-	    left: -0.4rem;
-	}
 }
 
 article h2 {
-    margin: 40px $website_margin;
+    margin: 2rem $website_margin;
 }
 
 article h3 {
@@ -156,7 +124,7 @@ article p {
 
 .slider {
 	position: relative;
-	@include line();
+	@include line($website_margin);
     height: 10rem;
 	display: inline-flex;
     justify-content: space-between;
@@ -192,30 +160,6 @@ article p {
 
 // ==========================================================
 
-#theexcerpt {
-    position: relative;
-	margin: 0;
-	
-	&::before {
-		@include diamond();
-	    top: -0.4rem;
-	    right: 30%;
-	}
-
-	&::after {
-		@include diamond();
-	    bottom: -0.4rem;
-	    left: 30%;
-	}
-	
-	p {
-		@include line();
-	    text-align: justify;
-	}
-}
-
-// ==========================================================
-
 .wp-block-code {
     background: $color_cyan;
     border-bottom: 1px solid $color_blue;
@@ -233,51 +177,34 @@ article p {
 }
 
 .wp-block-image {
-    margin-left: $website_margin;
-    width: 50%;
+    margin: 0 $website_margin;
     
     & > img {
-        width: auto;
-    	height: auto;
+    	height: initial;
     }
 }
 
 // ==========================================================
-
-p {
-	font-family: $text_p_stack;
-    line-height: 1.7em;
-    text-align: justify;
-}
 
 ul {
 	margin: 0 $website_margin;
 }
 
-// ==========================================================
-
 .design {
-    position: absolute;
-    background: $color_yellow;
-    height: 50px;
-    top: 0;
-    left: 50%;
-    width: $website_border_size;
-    
-    &::after {
-    	@include diamond();
-    	bottom: -0.4rem;
-    	left: -0.345rem;
-    }
-}
-
-#design_bottom {
-    bottom: 0;
+	height: 4rem;
 }
 
 // ==========================================================
 // ==========================================================
 // ==========================================================
+
+#theexcerpt {
+	margin: 0;
+	
+	p {
+		@include line($website_margin);
+	}
+}
 
 #last-posts {
 	width: 100% - 2 * $website_category_margin;

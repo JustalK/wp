@@ -24,11 +24,11 @@
     width: .625rem;
 }
 
-@mixin line() {
+@mixin line($margin) {
 	border-top: $website_border_size solid $color_yellow;
     border-bottom: $website_border_size solid $color_yellow;
-	margin: 0 ($website_margin - 5%) 2rem;
-	width: 100% - 2 * $website_margin;
+	margin: 0 ($margin - 5%) 2rem;
+	width: 100% - 2 * $margin;
 	padding: 2rem 5%;
 }
 

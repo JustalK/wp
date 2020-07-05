@@ -80,6 +80,13 @@ h1, h2, h3, h4, h5, h6 {
     color: $color_header;
 }
 
+p {
+	font-family: $text_p_stack;
+    line-height: 1.4rem;
+    text-align: justify;
+    word-spacing: 0.005rem;
+}
+
 #nav {
     position: fixed;
     width: 100%;
@@ -107,4 +114,71 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 
+// ==========================================================
 
+.design {
+    position: absolute;
+    background: $color_yellow;
+    top: 0;
+    left: 50%;
+    width: $website_border_size;
+    
+    &::after {
+    	@include diamond();
+    	bottom: -0.4rem;
+    	left: -0.345rem;
+    }
+}
+
+#design_bottom {
+    bottom: 0;
+}
+
+// ==========================================================
+
+.single, .category {
+
+	& h1 {
+		padding-bottom: 4rem;
+    	padding-top: 8rem;
+	    text-align: center;
+	}
+	
+}
+
+#theexcerpt {
+    position: relative;
+    font-style: italic;
+	
+	&::before {
+		@include diamond();
+	    top: -0.4rem;
+	    right: 30%;
+	}
+
+	&::after {
+		@include diamond();
+	    bottom: -0.4rem;
+	    left: 30%;
+	}
+	
+	p::first-line {
+		text-indent: 2rem;
+	}
+}
+
+.line-description {
+	position: relative;
+	display: inline-block;
+	padding: 0.5rem 0.5rem;
+	text-align: center;
+	background: $color_yellow;
+	color: white;
+	
+	&::before {
+		@include diamond();
+		background: $color_white;
+	    top: -0.4rem;
+	    left: -0.4rem;
+	}
+}
