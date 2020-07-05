@@ -2,12 +2,11 @@
 $posts = get_most_recent_posts($nbr_of_post,$offset);
 ?>
 
-
 <?php if ( wp_is_mobile() ) : ?>
     
     <?php if($direction=="horizontal") { ?>
         <div id="mb-horizontal-posts">
-        	<span class="legend title">Recent posts</span>
+        	<span class="legend title"><?= $title ?></span>
         	<ul>
         		<?php foreach($posts as $post) { ?>
             		<li>
@@ -29,7 +28,7 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
 	<?php if($direction=="vertical") { ?>
 
     	<div id="mb-vertical-posts">
-    		<span class="legend title">Older posts</span>
+    		<span class="legend title"><?= $title ?></span>
         	<ul>
         		<?php foreach($posts as $post) { ?>
             		<li>

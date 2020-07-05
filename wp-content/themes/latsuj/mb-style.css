@@ -391,31 +391,35 @@ a.posts {
   border-top: 0.125rem solid #fcd116;
 }
 
-/* line 105, sass/mb-style.scss */
+/* line 104, sass/mb-style.scss */
+#mb-vertical-posts, #mb-horizontal-posts {
+  position: relative;
+}
+/* line 107, sass/mb-style.scss */
 #mb-vertical-posts li, #mb-horizontal-posts li {
   position: relative;
   padding: 0.2rem;
   margin-bottom: 2rem;
 }
-/* line 111, sass/mb-style.scss */
+/* line 113, sass/mb-style.scss */
 #mb-vertical-posts .post_informations, #mb-horizontal-posts .post_informations {
   position: relative;
   margin: 0 5%;
   display: inline-block;
   text-align: center;
 }
-/* line 117, sass/mb-style.scss */
+/* line 119, sass/mb-style.scss */
 #mb-vertical-posts .post_informations span, #mb-horizontal-posts .post_informations span {
   margin: 20% 0;
   display: block;
   font-size: 0.8rem;
 }
 
-/* line 126, sass/mb-style.scss */
+/* line 128, sass/mb-style.scss */
 #mb-horizontal-posts a {
   height: 8rem;
 }
-/* line 129, sass/mb-style.scss */
+/* line 131, sass/mb-style.scss */
 #mb-horizontal-posts a .image {
   width: 50%;
   height: 100%;
@@ -425,26 +429,26 @@ a.posts {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 136, sass/mb-style.scss */
+/* line 138, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations {
   width: 40%;
 }
 
-/* line 143, sass/mb-style.scss */
+/* line 145, sass/mb-style.scss */
 #mb-vertical-posts ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 148, sass/mb-style.scss */
+/* line 150, sass/mb-style.scss */
 #mb-vertical-posts ul li {
   width: 45%;
 }
-/* line 152, sass/mb-style.scss */
+/* line 154, sass/mb-style.scss */
 #mb-vertical-posts ul a {
   height: 16rem;
 }
-/* line 155, sass/mb-style.scss */
+/* line 157, sass/mb-style.scss */
 #mb-vertical-posts ul a .image {
   height: 50%;
   background-position: center;
@@ -453,7 +457,7 @@ a.posts {
   text-decoration: none;
 }
 
-/* line 163, sass/mb-style.scss */
+/* line 165, sass/mb-style.scss */
 #mb-see-all {
   text-align: center;
   display: flex;
@@ -461,36 +465,36 @@ a.posts {
   justify-content: center;
 }
 
-/* line 170, sass/mb-style.scss */
+/* line 172, sass/mb-style.scss */
 #nav {
   background: #fcd116;
 }
-/* line 173, sass/mb-style.scss */
+/* line 175, sass/mb-style.scss */
 #nav .options {
   color: #fff;
 }
 
-/* line 178, sass/mb-style.scss */
+/* line 180, sass/mb-style.scss */
 .design {
   height: 6rem;
 }
 
-/* line 182, sass/mb-style.scss */
+/* line 184, sass/mb-style.scss */
 #firstcategory, #secondcategory {
   top: 2.5rem;
 }
 
-/* line 187, sass/mb-style.scss */
+/* line 189, sass/mb-style.scss */
 .single h1, .category h1 {
   width: 100%;
   margin: 0 0%;
 }
 
-/* line 193, sass/mb-style.scss */
+/* line 195, sass/mb-style.scss */
 #theexcerpt {
   margin: 0 5%;
 }
-/* line 196, sass/mb-style.scss */
+/* line 198, sass/mb-style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -501,25 +505,32 @@ a.posts {
   padding: 2rem 0;
 }
 
-/* line 203, sass/mb-style.scss */
+/* line 205, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
 }
-/* line 206, sass/mb-style.scss */
+/* line 208, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 211, sass/mb-style.scss */
+/* line 213, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 216, sass/mb-style.scss */
+/* line 218, sass/mb-style.scss */
 article h2 {
   margin: 2rem 5%;
 }
-/* line 220, sass/mb-style.scss */
+/* line 222, sass/mb-style.scss */
 article p {
   padding: 0 5%;
+}
+
+/* line 227, sass/mb-style.scss */
+footer {
+  width: 100%;
+  height: 400px;
+  background: #fcd116;
 }

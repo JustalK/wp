@@ -133,6 +133,16 @@ function get_most_recent_posts_by_category($category_ID,$number_post) {
     return wp_get_recent_posts($args);
 }
 
+function get_related_posts($ids) {
+    $args = array(
+        'post_type' => 'post',
+        'include' => $ids,
+        'orderby' => 'date',
+        'order' => 'DESC'
+    );
+    return wp_get_recent_posts($args);
+}
+
 function get_random_posts_by_category($category_ID,$number_post) {
     $args = array(
         'post_type' => 'post',

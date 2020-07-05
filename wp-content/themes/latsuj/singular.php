@@ -39,10 +39,8 @@ endif;
 </article>
 
 <?php 
-    wpse_get_partial('template-parts/most_recent_posts', array(
-        'nbr_of_post' => 4,
-        'offset' => 4,
-        'direction' => 'vertical'
+    wpse_get_partial('template-parts/related_posts', array(
+        'id' => get_the_ID()
     )); 
 ?>
 

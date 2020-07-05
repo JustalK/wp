@@ -16,13 +16,15 @@ $total_posts = count_all_published_post();
     wpse_get_partial('template-parts/most_recent_posts', array(
         'nbr_of_post' => 4,
         'offset' => 0,
-        'direction' => 'horizontal'
+        'direction' => 'horizontal',
+        'title' => 'Recent Posts'
     )); 
     wpse_get_partial('template-parts/most_recent_posts', array(
         'nbr_of_post' => 4,
         'offset' => 4,
-        'direction' => 'vertical'
-    )); 
+        'direction' => 'vertical',
+        'title' => 'Older Posts'
+    ));
     
     ?>
 	<a id="mb-see-all" href="#">See all <i class="material-icons">chevron_right</i></a>
