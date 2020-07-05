@@ -80,4 +80,31 @@ h1, h2, h3, h4, h5, h6 {
     color: $color_header;
 }
 
+#nav {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    height: 3rem;
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+
+	.options {
+	    font-family: $text_header_stack;
+		text-transform: uppercase;
+	    display: flex;
+	    align-items: center;
+	    text-decoration: none;
+	    padding: 0 1rem;
+		color: $color_yellow;
+		font-size: 1.2rem;
+		justify-content: space-between;
+	    width: 6rem;
+	    
+	    & i {
+	    	color: white;
+	    }
+	}
+}
+
 

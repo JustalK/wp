@@ -9,7 +9,6 @@ $total_posts = count_all_published_post();
 
 <?php if ( wp_is_mobile() ) : ?>
 
-<div>
 	<?php 
 	
 	wpse_get_partial('template-parts/header');
@@ -26,9 +25,7 @@ $total_posts = count_all_published_post();
     )); 
     
     ?>
-
 	<a id="mb-see-all" href="#">See all <i class="material-icons">chevron_right</i></a>
-</div>
 
 
 <?php else : ?>
@@ -36,7 +33,6 @@ $total_posts = count_all_published_post();
 <span id="design_side_left" class="design_side">&nbsp;</span>
 <span id="design_side_right" class="design_side">&nbsp;</span>
 
-<div>
     <?php wpse_get_partial('template-parts/header'); ?>
 	<?php wpse_get_partial('template-parts/categories_listing'); ?> 
     <?php wpse_get_partial('template-parts/last_posts', array(
@@ -72,7 +68,6 @@ $total_posts = count_all_published_post();
         'total_post' => $total_posts
     )); ?>
 	
-</div>
 
 <?php endif; ?>
 

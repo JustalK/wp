@@ -13,52 +13,6 @@ Version: 1.0
 
 // ==========================================================
 
-#home {
-	position: fixed;
-    right: 1rem;
-    top: 1rem;
-    z-index: 10;
-    font-family: "GothamSSm-Black", Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    
-    & i {
-    	color: white;
-    }
-    
-    & span {
-	    font-family: "GothamSSm-Black", Arial, sans-serif;
-	    text-transform: uppercase;
-	    color: #fcd116;
-	    font-size: 1.2rem;
-	    margin-right: 0.5rem;
-    }
-}
-
-#back {
-	position: fixed;
-    left: 1rem;
-    top: 1rem;
-    z-index: 10;
-    font-family: "GothamSSm-Black", Arial, sans-serif;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    
-    & i {
-    	color: white;
-    }
-    
-    & span {
-	    font-family: "GothamSSm-Black", Arial, sans-serif;
-	    text-transform: uppercase;
-	    color: #fcd116;
-	    font-size: 1.2rem;
-	    margin-left: 0.5rem;
-    }
-}
-
 h1 {
     font-size: $text_header_proportion;
 	text-align: center;
@@ -452,20 +406,5 @@ hr {
 	& .line-numbers .line-numbers-rows {
 		width: 1.2em !important;
 		left: -1.75em !important;
-	}
-}
-
-
-// ==========================================================
-// ==========================================================
-// ==========================================================
-
-@media only screen and (max-width: 600px) {	
-	
-	#mb-see-all {
-		text-align: center;
-    	display: flex;
-    	align-items: center;
-    	justify-content: center;	
 	}
 }

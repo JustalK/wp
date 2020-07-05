@@ -158,6 +158,34 @@ h1, h2, h3, h4, h5, h6 {
   color: #111;
 }
 
+/* line 83, sass/shared.scss */
+#nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  height: 3rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 10;
+}
+/* line 92, sass/shared.scss */
+#nav .options {
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0 1rem;
+  color: #fcd116;
+  font-size: 1.2rem;
+  justify-content: space-between;
+  width: 6rem;
+}
+/* line 104, sass/shared.scss */
+#nav .options i {
+  color: white;
+}
+
 /* line 14, sass/mb-style.scss */
 header {
   margin: 2rem 5%;
@@ -317,4 +345,17 @@ a.posts {
   background-size: cover;
   background-repeat: no-repeat;
   text-decoration: none;
+}
+
+/* line 163, sass/mb-style.scss */
+#mb-see-all {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 170, sass/mb-style.scss */
+#nav {
+  background: #bf2b2b;
 }
