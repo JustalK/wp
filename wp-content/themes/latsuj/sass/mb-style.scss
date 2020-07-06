@@ -78,7 +78,7 @@ a {
 }
 
 #categories_listing {
-	& li {
+	& a {
 	    position: relative;
 		border: $website_border_size solid $color_yellow;
 		border-top: none;

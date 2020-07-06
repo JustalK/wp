@@ -8,7 +8,7 @@ $two_first_categories = array_slice($categories,0,2);
 	<span class="legend title">All categories</span>
 	<ul>
 		<?php foreach($categories as $category) { ?>
-			<li><i class="material-icons"><?= get_term_meta($category->cat_ID, 'cat_icon', true); ?></i><span><?= $category->cat_name ?></span><i class="material-icons">chevron_right</i></li>
+			<li><a href="<?= get_category_link($category->cat_ID) ?>"><i class="material-icons"><?= get_term_meta($category->cat_ID, 'cat_icon', true); ?></i><span><?= $category->cat_name ?></span><i class="material-icons">chevron_right</i></a></li>
 		<?php } ?>
 	</ul>
 </div>
