@@ -19,6 +19,36 @@
 	@include font("material","MaterialIcons-Regular","MaterialIcons-Regular",normal,normal);
 }
 
+@font-face {
+	@include font("design","fa-brands-400","fa-brands-400",400,normal);
+}
+
+.fa {
+  font-family: 'fa-brands-400';
+}
+
+.fa {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1; }
+
+
+.fa-facebook:before {
+  content: "\f09a"; }
+
+.fa-facebook-f:before {
+  content: "\f39e"; }
+
+.fa-facebook-messenger:before {
+  content: "\f39f"; }
+
+.fa-facebook-square:before {
+  content: "\f082"; }
+
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;

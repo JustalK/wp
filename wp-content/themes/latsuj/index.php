@@ -9,6 +9,10 @@ $total_posts = count_all_published_post();
 
 <?php if ( wp_is_mobile() ) : ?>
 
+	<i class="fa fa-facebook"></i>
+	<i class="fa fa-facebook"></i>
+	<i class="fa fa-facebook"></i>
+
 	<?php 
 	
 	wpse_get_partial('template-parts/header');
