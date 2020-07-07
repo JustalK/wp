@@ -6,6 +6,8 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
     
     <?php if($direction=="horizontal") { ?>
         <div id="mb-horizontal-posts">
+        	<div class="stripe top"></div>
+        	<div class="stripe bottom"></div>
         	<span class="legend title"><?= $title ?></span>
         	<ul>
         		<?php foreach($posts as $post) { ?>
@@ -28,6 +30,8 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
 	<?php if($direction=="vertical") { ?>
 
     	<div id="mb-vertical-posts">
+        	<div class="stripe top"></div>
+        	<div class="stripe bottom"></div>
     		<span class="legend title"><?= $title ?></span>
         	<ul>
         		<?php foreach($posts as $post) { ?>

@@ -5,6 +5,8 @@ $two_first_categories = array_slice($categories,0,2);
 
 <?php if ( wp_is_mobile() ) : ?>
 <div id="categories_listing">
+	<div class="stripe top"></div>
+	<div class="stripe bottom"></div>
 	<span class="legend title">All categories</span>
 	<ul>
 		<?php foreach($categories as $category) { ?>

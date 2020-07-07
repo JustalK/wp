@@ -167,11 +167,17 @@ p {
 }
 
 /* line 90, sass/shared.scss */
+span {
+  font-family: "Maitree-Regular", Arial, sans-serif;
+  word-spacing: 0.005rem;
+}
+
+/* line 95, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 94, sass/shared.scss */
+/* line 99, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -181,7 +187,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 103, sass/shared.scss */
+/* line 108, sass/shared.scss */
 #nav .options {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
@@ -194,12 +200,12 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 115, sass/shared.scss */
+/* line 120, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 123, sass/shared.scss */
+/* line 128, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -207,7 +213,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 130, sass/shared.scss */
+/* line 135, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -222,24 +228,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 137, sass/shared.scss */
+/* line 142, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 145, sass/shared.scss */
+/* line 150, sass/shared.scss */
 .single h1, .category h1 {
   padding-bottom: 4rem;
   padding-top: 8rem;
   text-align: center;
 }
 
-/* line 153, sass/shared.scss */
+/* line 158, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 157, sass/shared.scss */
+/* line 162, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -253,7 +259,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 163, sass/shared.scss */
+/* line 168, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -267,12 +273,12 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 169, sass/shared.scss */
+/* line 174, sass/shared.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
 
-/* line 174, sass/shared.scss */
+/* line 179, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -281,7 +287,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 182, sass/shared.scss */
+/* line 187, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;

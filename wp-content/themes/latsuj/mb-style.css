@@ -167,11 +167,17 @@ p {
 }
 
 /* line 90, sass/shared.scss */
+span {
+  font-family: "Maitree-Regular", Arial, sans-serif;
+  word-spacing: 0.005rem;
+}
+
+/* line 95, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 94, sass/shared.scss */
+/* line 99, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -181,7 +187,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 103, sass/shared.scss */
+/* line 108, sass/shared.scss */
 #nav .options {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
@@ -194,12 +200,12 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 115, sass/shared.scss */
+/* line 120, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 123, sass/shared.scss */
+/* line 128, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -207,7 +213,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 130, sass/shared.scss */
+/* line 135, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -222,24 +228,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 137, sass/shared.scss */
+/* line 142, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 145, sass/shared.scss */
+/* line 150, sass/shared.scss */
 .single h1, .category h1 {
   padding-bottom: 4rem;
   padding-top: 8rem;
   text-align: center;
 }
 
-/* line 153, sass/shared.scss */
+/* line 158, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 157, sass/shared.scss */
+/* line 162, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -253,7 +259,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 163, sass/shared.scss */
+/* line 168, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -267,12 +273,12 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 169, sass/shared.scss */
+/* line 174, sass/shared.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
 
-/* line 174, sass/shared.scss */
+/* line 179, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -281,7 +287,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 182, sass/shared.scss */
+/* line 187, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -327,15 +333,26 @@ h3 {
 .legend {
   display: block;
   text-align: center;
-  background: #efefef;
-  color: #fcd116;
+  background: #fcd116;
+  color: #fff;
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
-  margin: 2rem 0;
+  margin: 4rem 0;
   padding: 1rem;
+  position: relative;
+  z-index: 10;
 }
 
-/* line 46, sass/mb-style.scss */
+/* line 48, sass/mb-style.scss */
+.stripe {
+  width: 100%;
+  height: 2rem;
+  top: 0;
+  background: #fcd116;
+  position: absolute;
+}
+
+/* line 56, sass/mb-style.scss */
 .red {
   position: absolute;
   height: 100%;
@@ -345,7 +362,7 @@ h3 {
   right: 0;
 }
 
-/* line 55, sass/mb-style.scss */
+/* line 65, sass/mb-style.scss */
 .blue {
   position: absolute;
   height: 100%;
@@ -355,16 +372,16 @@ h3 {
   left: 0;
 }
 
-/* line 64, sass/mb-style.scss */
+/* line 74, sass/mb-style.scss */
 ul {
   margin: 1rem 5%;
 }
 
-/* line 68, sass/mb-style.scss */
+/* line 78, sass/mb-style.scss */
 a {
   color: #545454;
 }
-/* line 71, sass/mb-style.scss */
+/* line 81, sass/mb-style.scss */
 a.posts {
   position: relative;
   z-index: 10;
@@ -373,7 +390,19 @@ a.posts {
   background: #fff;
 }
 
-/* line 81, sass/mb-style.scss */
+/* line 90, sass/mb-style.scss */
+#categories_listing {
+  position: relative;
+}
+/* line 93, sass/mb-style.scss */
+#categories_listing .bottom {
+  transform: skewY(5deg) translateY(-1rem);
+}
+/* line 97, sass/mb-style.scss */
+#categories_listing .top {
+  transform: skewY(5deg) translateY(2rem);
+}
+/* line 101, sass/mb-style.scss */
 #categories_listing a {
   position: relative;
   border: 0.125rem solid #fcd116;
@@ -381,50 +410,71 @@ a.posts {
   padding: 1rem;
   display: flex;
   align-items: center;
+  font-family: "Maitree-Regular", Arial, sans-serif;
 }
-/* line 89, sass/mb-style.scss */
+/* line 110, sass/mb-style.scss */
 #categories_listing a span {
   padding: 0 0.4rem;
 }
-/* line 93, sass/mb-style.scss */
+/* line 114, sass/mb-style.scss */
+#categories_listing a i {
+  color: #fcd116;
+}
+/* line 117, sass/mb-style.scss */
 #categories_listing a i:last-child {
   position: absolute;
   right: 1rem;
 }
-/* line 99, sass/mb-style.scss */
+/* line 124, sass/mb-style.scss */
 #categories_listing li:first-child {
   border-top: 0.125rem solid #fcd116;
 }
+/* line 127, sass/mb-style.scss */
+#categories_listing li:first-child i {
+  color: #ff514d;
+}
+/* line 133, sass/mb-style.scss */
+#categories_listing li:last-child i {
+  color: #61affe;
+}
 
-/* line 104, sass/mb-style.scss */
+/* line 139, sass/mb-style.scss */
 #mb-vertical-posts, #mb-horizontal-posts {
   position: relative;
 }
-/* line 107, sass/mb-style.scss */
+/* line 142, sass/mb-style.scss */
+#mb-vertical-posts .bottom, #mb-horizontal-posts .bottom {
+  transform: skewY(5deg) translateY(2rem);
+}
+/* line 146, sass/mb-style.scss */
+#mb-vertical-posts .top, #mb-horizontal-posts .top {
+  transform: skewY(5deg) translateY(-1rem);
+}
+/* line 150, sass/mb-style.scss */
 #mb-vertical-posts li, #mb-horizontal-posts li {
   position: relative;
   padding: 0.2rem;
   margin-bottom: 2rem;
 }
-/* line 113, sass/mb-style.scss */
+/* line 156, sass/mb-style.scss */
 #mb-vertical-posts .post_informations, #mb-horizontal-posts .post_informations {
   position: relative;
   margin: 0 5%;
   display: inline-block;
   text-align: center;
 }
-/* line 119, sass/mb-style.scss */
+/* line 162, sass/mb-style.scss */
 #mb-vertical-posts .post_informations span, #mb-horizontal-posts .post_informations span {
   margin: 20% 0;
   display: block;
   font-size: 0.8rem;
 }
 
-/* line 128, sass/mb-style.scss */
+/* line 171, sass/mb-style.scss */
 #mb-horizontal-posts a {
   height: 8rem;
 }
-/* line 131, sass/mb-style.scss */
+/* line 174, sass/mb-style.scss */
 #mb-horizontal-posts a .image {
   width: 50%;
   height: 100%;
@@ -434,26 +484,26 @@ a.posts {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 138, sass/mb-style.scss */
+/* line 181, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations {
   width: 40%;
 }
 
-/* line 145, sass/mb-style.scss */
+/* line 188, sass/mb-style.scss */
 #mb-vertical-posts ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 150, sass/mb-style.scss */
+/* line 193, sass/mb-style.scss */
 #mb-vertical-posts ul li {
   width: 45%;
 }
-/* line 154, sass/mb-style.scss */
+/* line 197, sass/mb-style.scss */
 #mb-vertical-posts ul a {
   height: 16rem;
 }
-/* line 157, sass/mb-style.scss */
+/* line 200, sass/mb-style.scss */
 #mb-vertical-posts ul a .image {
   height: 50%;
   background-position: center;
@@ -462,7 +512,7 @@ a.posts {
   text-decoration: none;
 }
 
-/* line 165, sass/mb-style.scss */
+/* line 208, sass/mb-style.scss */
 #mb-see-all {
   text-align: center;
   display: flex;
@@ -470,36 +520,36 @@ a.posts {
   justify-content: center;
 }
 
-/* line 172, sass/mb-style.scss */
+/* line 215, sass/mb-style.scss */
 #nav {
   background: #fcd116;
 }
-/* line 175, sass/mb-style.scss */
+/* line 218, sass/mb-style.scss */
 #nav .options {
   color: #fff;
 }
 
-/* line 180, sass/mb-style.scss */
+/* line 223, sass/mb-style.scss */
 .design {
   height: 6rem;
 }
 
-/* line 184, sass/mb-style.scss */
+/* line 227, sass/mb-style.scss */
 #firstcategory, #secondcategory {
   top: 2.5rem;
 }
 
-/* line 189, sass/mb-style.scss */
+/* line 232, sass/mb-style.scss */
 .single h1, .category h1 {
   width: 100%;
   margin: 0 0%;
 }
 
-/* line 195, sass/mb-style.scss */
+/* line 238, sass/mb-style.scss */
 #theexcerpt {
   margin: 0 5%;
 }
-/* line 198, sass/mb-style.scss */
+/* line 241, sass/mb-style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -510,30 +560,30 @@ a.posts {
   padding: 2rem 0;
 }
 
-/* line 205, sass/mb-style.scss */
+/* line 248, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
 }
-/* line 208, sass/mb-style.scss */
+/* line 251, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 213, sass/mb-style.scss */
+/* line 256, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 218, sass/mb-style.scss */
+/* line 261, sass/mb-style.scss */
 article h2 {
   margin: 2rem 5%;
 }
-/* line 222, sass/mb-style.scss */
+/* line 265, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 227, sass/mb-style.scss */
+/* line 270, sass/mb-style.scss */
 footer {
   width: 100%;
   height: 400px;
