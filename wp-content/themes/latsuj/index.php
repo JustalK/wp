@@ -9,9 +9,11 @@ $total_posts = count_all_published_post();
 
 <?php if ( wp_is_mobile() ) : ?>
 
-	<i class="fa fa-facebook"></i>
-	<i class="fa fa-facebook"></i>
-	<i class="fa fa-facebook"></i>
+	<div id="socials">
+		<i class="fa fa-facebook-square"></i>
+		<i class="fa fa-github-square"></i>
+		<i class="fa fa-youtube-square"></i>
+	</div>
 
 	<?php 
 	

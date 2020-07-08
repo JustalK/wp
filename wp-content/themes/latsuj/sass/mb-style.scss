@@ -15,6 +15,17 @@ header {
     margin: 2rem $mobile_website_margin;
 }
 
+#socials {
+	position: absolute;
+    right: 5%;
+    top: 0.5rem;
+    width: 6rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    z-index: 20;
+}
+
 h1 {
     font-size: $mobile_text_header_proportion;
 	text-align: center;

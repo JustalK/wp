@@ -36,10 +36,6 @@
 /* line 26, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
-}
-
-/* line 30, sass/shared.scss */
-.fa {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -48,25 +44,20 @@
   text-rendering: auto;
   line-height: 1;
 }
-
-/* line 40, sass/shared.scss */
-.fa-facebook:before {
-  content: "\f09a";
+/* line 36, sass/shared.scss */
+.fa.fa-github-square:before {
+  content: "\f092";
+  color: #fcd116;
 }
-
-/* line 43, sass/shared.scss */
-.fa-facebook-f:before {
-  content: "\f39e";
-}
-
-/* line 46, sass/shared.scss */
-.fa-facebook-messenger:before {
-  content: "\f39f";
-}
-
-/* line 49, sass/shared.scss */
-.fa-facebook-square:before {
+/* line 41, sass/shared.scss */
+.fa.fa-facebook-square:before {
   content: "\f082";
+  color: #61affe;
+}
+/* line 46, sass/shared.scss */
+.fa.fa-youtube-square:before {
+  content: "\f431";
+  color: #ff514d;
 }
 
 /* line 52, sass/shared.scss */

@@ -107,10 +107,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 /* line 26, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
-}
-
-/* line 30, sass/shared.scss */
-.fa {
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
   display: inline-block;
@@ -119,25 +115,20 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-rendering: auto;
   line-height: 1;
 }
-
-/* line 40, sass/shared.scss */
-.fa-facebook:before {
-  content: "\f09a";
+/* line 36, sass/shared.scss */
+.fa.fa-github-square:before {
+  content: "\f092";
+  color: #fcd116;
 }
-
-/* line 43, sass/shared.scss */
-.fa-facebook-f:before {
-  content: "\f39e";
-}
-
-/* line 46, sass/shared.scss */
-.fa-facebook-messenger:before {
-  content: "\f39f";
-}
-
-/* line 49, sass/shared.scss */
-.fa-facebook-square:before {
+/* line 41, sass/shared.scss */
+.fa.fa-facebook-square:before {
   content: "\f082";
+  color: #61affe;
+}
+/* line 46, sass/shared.scss */
+.fa.fa-youtube-square:before {
+  content: "\f431";
+  color: #ff514d;
 }
 
 /* line 52, sass/shared.scss */
@@ -352,37 +343,49 @@ header {
 }
 
 /* line 18, sass/mb-style.scss */
+#socials {
+  position: absolute;
+  right: 5%;
+  top: 0.5rem;
+  width: 6rem;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  z-index: 20;
+}
+
+/* line 29, sass/mb-style.scss */
 h1 {
   font-size: 2rem;
   text-align: center;
 }
 
-/* line 23, sass/mb-style.scss */
+/* line 34, sass/mb-style.scss */
 h2 {
   font-size: 0.8rem;
 }
 
-/* line 27, sass/mb-style.scss */
+/* line 38, sass/mb-style.scss */
 h3 {
   font-size: 0.33333rem;
 }
 
-/* line 31, sass/mb-style.scss */
+/* line 42, sass/mb-style.scss */
 #resume {
   margin: 2rem 5%;
 }
-/* line 34, sass/mb-style.scss */
+/* line 45, sass/mb-style.scss */
 #resume::first-letter {
   color: #ff514d;
   font-weight: bold;
   font-size: 1.5rem;
 }
-/* line 40, sass/mb-style.scss */
+/* line 51, sass/mb-style.scss */
 #resume::first-line {
   text-indent: 2rem;
 }
 
-/* line 45, sass/mb-style.scss */
+/* line 56, sass/mb-style.scss */
 .legend {
   display: block;
   text-align: center;
@@ -396,7 +399,7 @@ h3 {
   z-index: 10;
 }
 
-/* line 58, sass/mb-style.scss */
+/* line 69, sass/mb-style.scss */
 .stripe {
   width: 100%;
   height: 2rem;
@@ -405,7 +408,7 @@ h3 {
   position: absolute;
 }
 
-/* line 66, sass/mb-style.scss */
+/* line 77, sass/mb-style.scss */
 .border {
   position: absolute;
   height: 100%;
@@ -413,25 +416,25 @@ h3 {
   background: #fcd116;
   top: 0;
 }
-/* line 73, sass/mb-style.scss */
+/* line 84, sass/mb-style.scss */
 .border.red {
   right: 0;
 }
-/* line 77, sass/mb-style.scss */
+/* line 88, sass/mb-style.scss */
 .border .blue {
   left: 0;
 }
 
-/* line 83, sass/mb-style.scss */
+/* line 94, sass/mb-style.scss */
 ul {
   margin: 1rem 5%;
 }
 
-/* line 87, sass/mb-style.scss */
+/* line 98, sass/mb-style.scss */
 a {
   color: #545454;
 }
-/* line 90, sass/mb-style.scss */
+/* line 101, sass/mb-style.scss */
 a.posts {
   position: relative;
   z-index: 10;
@@ -440,19 +443,19 @@ a.posts {
   background: #fff;
 }
 
-/* line 99, sass/mb-style.scss */
+/* line 110, sass/mb-style.scss */
 #categories_listing {
   position: relative;
 }
-/* line 102, sass/mb-style.scss */
+/* line 113, sass/mb-style.scss */
 #categories_listing .bottom {
   transform: skewY(5deg) translateY(-1rem);
 }
-/* line 106, sass/mb-style.scss */
+/* line 117, sass/mb-style.scss */
 #categories_listing .top {
   transform: skewY(5deg) translateY(2rem);
 }
-/* line 110, sass/mb-style.scss */
+/* line 121, sass/mb-style.scss */
 #categories_listing a {
   position: relative;
   border: 0.125rem solid #fcd116;
@@ -462,51 +465,51 @@ a.posts {
   align-items: center;
   font-family: "Maitree-Regular", Arial, sans-serif;
 }
-/* line 119, sass/mb-style.scss */
+/* line 130, sass/mb-style.scss */
 #categories_listing a span {
   padding: 0 0.4rem;
 }
-/* line 123, sass/mb-style.scss */
+/* line 134, sass/mb-style.scss */
 #categories_listing a i {
   color: #fcd116;
 }
-/* line 126, sass/mb-style.scss */
+/* line 137, sass/mb-style.scss */
 #categories_listing a i:last-child {
   position: absolute;
   right: 1rem;
 }
-/* line 133, sass/mb-style.scss */
+/* line 144, sass/mb-style.scss */
 #categories_listing li:first-child {
   border-top: 0.125rem solid #fcd116;
 }
-/* line 136, sass/mb-style.scss */
+/* line 147, sass/mb-style.scss */
 #categories_listing li:first-child i {
   color: #ff514d;
 }
-/* line 142, sass/mb-style.scss */
+/* line 153, sass/mb-style.scss */
 #categories_listing li:last-child i {
   color: #61affe;
 }
 
-/* line 148, sass/mb-style.scss */
+/* line 159, sass/mb-style.scss */
 #mb-vertical-posts, #mb-horizontal-posts {
   position: relative;
 }
-/* line 151, sass/mb-style.scss */
+/* line 162, sass/mb-style.scss */
 #mb-vertical-posts .bottom, #mb-horizontal-posts .bottom {
   transform: skewY(5deg) translateY(2rem);
 }
-/* line 155, sass/mb-style.scss */
+/* line 166, sass/mb-style.scss */
 #mb-vertical-posts .top, #mb-horizontal-posts .top {
   transform: skewY(5deg) translateY(-1rem);
 }
-/* line 159, sass/mb-style.scss */
+/* line 170, sass/mb-style.scss */
 #mb-vertical-posts li, #mb-horizontal-posts li {
   position: relative;
   padding: 0.2rem;
   margin-bottom: 2rem;
 }
-/* line 165, sass/mb-style.scss */
+/* line 176, sass/mb-style.scss */
 #mb-vertical-posts .post_informations, #mb-horizontal-posts .post_informations {
   position: relative;
   padding: 0 5%;
@@ -515,17 +518,17 @@ a.posts {
   text-align: center;
   color: #61affe;
 }
-/* line 173, sass/mb-style.scss */
+/* line 184, sass/mb-style.scss */
 #mb-vertical-posts .post_informations span, #mb-horizontal-posts .post_informations span {
   margin: 20% 0;
   display: block;
   font-size: 0.8rem;
 }
-/* line 179, sass/mb-style.scss */
+/* line 190, sass/mb-style.scss */
 #mb-vertical-posts .post_informations h2, #mb-horizontal-posts .post_informations h2 {
   color: #ff514d;
 }
-/* line 183, sass/mb-style.scss */
+/* line 194, sass/mb-style.scss */
 #mb-vertical-posts .post_informations .square, #mb-horizontal-posts .post_informations .square {
   position: absolute;
   background: white;
@@ -535,11 +538,11 @@ a.posts {
   transform: translate(-50%, -50%) rotateZ(45deg);
 }
 
-/* line 195, sass/mb-style.scss */
+/* line 206, sass/mb-style.scss */
 #mb-horizontal-posts a {
   height: 8rem;
 }
-/* line 198, sass/mb-style.scss */
+/* line 209, sass/mb-style.scss */
 #mb-horizontal-posts a .image {
   width: 50%;
   height: 100%;
@@ -549,36 +552,36 @@ a.posts {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 205, sass/mb-style.scss */
+/* line 216, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations {
   width: 40%;
 }
-/* line 208, sass/mb-style.scss */
+/* line 219, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations .square {
   left: 0;
   top: 50%;
 }
 
-/* line 217, sass/mb-style.scss */
+/* line 228, sass/mb-style.scss */
 #mb-vertical-posts ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 222, sass/mb-style.scss */
+/* line 233, sass/mb-style.scss */
 #mb-vertical-posts ul li {
   width: 45%;
 }
-/* line 226, sass/mb-style.scss */
+/* line 237, sass/mb-style.scss */
 #mb-vertical-posts ul a {
   height: 16rem;
 }
-/* line 229, sass/mb-style.scss */
+/* line 240, sass/mb-style.scss */
 #mb-vertical-posts ul a .square {
   left: 50%;
   top: 0;
 }
-/* line 234, sass/mb-style.scss */
+/* line 245, sass/mb-style.scss */
 #mb-vertical-posts ul a .image {
   height: 50%;
   background-position: center;
@@ -587,7 +590,7 @@ a.posts {
   text-decoration: none;
 }
 
-/* line 242, sass/mb-style.scss */
+/* line 253, sass/mb-style.scss */
 #mb-see-all {
   text-align: center;
   display: flex;
@@ -595,36 +598,36 @@ a.posts {
   justify-content: center;
 }
 
-/* line 249, sass/mb-style.scss */
+/* line 260, sass/mb-style.scss */
 #nav {
   background: #fcd116;
 }
-/* line 252, sass/mb-style.scss */
+/* line 263, sass/mb-style.scss */
 #nav .options {
   color: #fff;
 }
 
-/* line 257, sass/mb-style.scss */
+/* line 268, sass/mb-style.scss */
 .design {
   height: 6rem;
 }
 
-/* line 261, sass/mb-style.scss */
+/* line 272, sass/mb-style.scss */
 #firstcategory, #secondcategory {
   top: 2.5rem;
 }
 
-/* line 266, sass/mb-style.scss */
+/* line 277, sass/mb-style.scss */
 .single h1, .category h1 {
   width: 100%;
   margin: 0 0%;
 }
 
-/* line 272, sass/mb-style.scss */
+/* line 283, sass/mb-style.scss */
 #theexcerpt {
   margin: 0 5%;
 }
-/* line 275, sass/mb-style.scss */
+/* line 286, sass/mb-style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -635,30 +638,30 @@ a.posts {
   padding: 2rem 0;
 }
 
-/* line 282, sass/mb-style.scss */
+/* line 293, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
 }
-/* line 285, sass/mb-style.scss */
+/* line 296, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 290, sass/mb-style.scss */
+/* line 301, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 295, sass/mb-style.scss */
+/* line 306, sass/mb-style.scss */
 article h2 {
   margin: 2rem 5%;
 }
-/* line 299, sass/mb-style.scss */
+/* line 310, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 304, sass/mb-style.scss */
+/* line 315, sass/mb-style.scss */
 footer {
   width: 100%;
   height: 400px;
