@@ -268,3 +268,8 @@ a {
   top: -0.4rem;
   left: -0.4rem;
 }
+
+/* line 228, sass/shared.scss */
+.wp-block-code {
+  margin: 2rem 0;
+}

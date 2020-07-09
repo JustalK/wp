@@ -164,16 +164,7 @@ article p {
     background: $color_cyan;
     border-bottom: 1px solid $color_blue;
     border-top: 1px solid $color_blue;
-    color: black;
 	padding: 40px $website_margin;
-    margin: 2rem 0;
-    
-    & .description {
-		display: block;
-    	margin-bottom: 2rem;
-    	font-size: 1.5rem;
-    	font-family: $text_header_stack;
-    }
 }
 
 .wp-block-image {

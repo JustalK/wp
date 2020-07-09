@@ -64,14 +64,23 @@ h3 {
     padding: 1rem;
     position: relative;
     z-index:10;
-}
-
-.stripe {
-    width: 100%;
-    height: 2rem;
-    top: 0;
-    background: $color_yellow;
-    position: absolute;
+    
+	&::after, &::before {
+	    content: ' ';
+	    width: 100%;
+	    height: 2rem;
+	    top: 0;
+	    left: 0;
+	    background: $color_yellow;
+	    position: absolute;
+	    z-index: -1;
+	}
+	&::after {
+	    transform: skewY(5deg) translateY(2rem);
+	}
+	&::before {
+	    transform: skewY(5deg) translateY(-1rem);
+	}
 }
 
 .border {
@@ -108,16 +117,6 @@ a {
 }
 
 #categories_listing {
-    position: relative;
-    
-    & .bottom {
-	    transform: skewY(5deg) translateY(-1rem);
-    }
-    
-    & .top {
-	    transform: skewY(5deg) translateY(2rem);
-    }
-    
 	& a {
 	    position: relative;
 		border: $website_border_size solid $color_yellow;
@@ -310,6 +309,12 @@ article {
 	& p {
     	padding: 0 $mobile_website_margin;
     }
+}
+
+.wp-block-code {
+	& p {
+		margin: 0 $mobile_website_margin;
+	}
 }
 
 footer {

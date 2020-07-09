@@ -7,17 +7,7 @@ get_header();
 	<span id="design_side_right" class="design_side">&nbsp;</span>
 <?php } ?>
 
-
-<div id="nav">
-    <a class="options" href="javascript:history.back()">
-    	<i class="material-icons">arrow_back</i>
-    	<span>Back</span>	
-    </a>
-    <a class="options" href="<?= home_url(); ?>">
-    	<span>Home</span>
-    	<i class="material-icons">home</i>
-    </a>
-</div>
+<?php wpse_get_partial('template-parts/nav'); ?>
 
 <article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<span id="design_top" class="design">&nbsp;</span> <span

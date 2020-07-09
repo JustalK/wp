@@ -14,16 +14,7 @@ $random_posts = get_random_posts_by_category($cat_id,4);
 	<span id="design_side_right" class="design_side">&nbsp;</span>
 <?php } ?>
 
-<div id="nav">
-    <a class="options" href="javascript:history.back()">
-    	<i class="material-icons">arrow_back</i>
-    	<span>Back</span>	
-    </a>
-    <a class="options" href="<?= home_url(); ?>">
-    	<span>Home</span>
-    	<i class="material-icons">home</i>
-    </a>
-</div>
+<?php wpse_get_partial('template-parts/nav'); ?>
 
 <div id="category">
 	<span id="design_top" class="design">&nbsp;</span> <span
@@ -31,27 +22,25 @@ $random_posts = get_random_posts_by_category($cat_id,4);
 		
 	<h1><?= $category->cat_name; ?></h1>
 	
-	<div id="thedate">
-		Category
-	</div>
 	<div id="theexcerpt">
     	<p>
     		<?= $category->category_description; ?>
     	</p>
 	</div>
 	
-    <?php wpse_get_partial('template-parts/most_recent_posts', array(
-        'first_post' => $posts[0],
-        'second_post' => $posts[1],
-        'third_post' => $posts[2]
-    )); ?>   
+    <?php 
+    wpse_get_partial('template-parts/most_recent_posts', array(
+        'nbr_of_post' => 3,
+        'offset' => 0,
+        'direction' => 'horizontal',
+        'title' => 'Recent Posts'
+    )); ?>
     <?php wpse_get_partial('template-parts/slider', array(
         'description' => "Older posts",
         'first_post' => $posts[3],
         'second_post' => $posts[4],
         'third_post' => $posts[5]
     )); ?>
-    
     <?php wpse_get_partial('template-parts/preview_posts', array(
         'post' => $random_posts[0]
     )); ?>

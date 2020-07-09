@@ -340,6 +340,11 @@ a {
   left: -0.4rem;
 }
 
+/* line 228, sass/shared.scss */
+.wp-block-code {
+  margin: 2rem 0;
+}
+
 /* line 16, sass/style.scss */
 h1 {
   font-size: 3rem;
@@ -541,42 +546,33 @@ article p {
   background: #ebf3fb;
   border-bottom: 1px solid #61affe;
   border-top: 1px solid #61affe;
-  color: black;
   padding: 40px 25%;
-  margin: 2rem 0;
-}
-/* line 171, sass/style.scss */
-.wp-block-code .description {
-  display: block;
-  margin-bottom: 2rem;
-  font-size: 1.5rem;
-  font-family: "GothamSSm-Black", Arial, sans-serif;
 }
 
-/* line 179, sass/style.scss */
+/* line 170, sass/style.scss */
 .wp-block-image {
   margin: 0 25%;
 }
-/* line 182, sass/style.scss */
+/* line 173, sass/style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 189, sass/style.scss */
+/* line 180, sass/style.scss */
 ul {
   margin: 0 25%;
 }
 
-/* line 193, sass/style.scss */
+/* line 184, sass/style.scss */
 .design {
   height: 4rem;
 }
 
-/* line 201, sass/style.scss */
+/* line 192, sass/style.scss */
 #theexcerpt {
   margin: 0;
 }
-/* line 204, sass/style.scss */
+/* line 195, sass/style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -585,59 +581,59 @@ ul {
   padding: 2rem 5%;
 }
 
-/* line 209, sass/style.scss */
+/* line 200, sass/style.scss */
 #last-posts {
   width: 50%;
   height: 22rem;
   margin: 1rem 25%;
 }
-/* line 214, sass/style.scss */
+/* line 205, sass/style.scss */
 #last-posts a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 221, sass/style.scss */
+/* line 212, sass/style.scss */
 #most_recent-posts {
   width: 50%;
   height: 22rem;
   margin: 2rem 25%;
 }
-/* line 226, sass/style.scss */
+/* line 217, sass/style.scss */
 #most_recent-posts a {
   display: block;
   width: 90%;
   height: 100%;
 }
-/* line 231, sass/style.scss */
+/* line 222, sass/style.scss */
 #most_recent-posts a.secondary_post {
   height: 44%;
   width: 100%;
 }
-/* line 236, sass/style.scss */
+/* line 227, sass/style.scss */
 #most_recent-posts a.bottom_post {
   position: absolute;
   bottom: 0;
 }
 
-/* line 248, sass/style.scss */
+/* line 239, sass/style.scss */
 .home .design_side {
   transform: translateY(10rem);
 }
 
-/* line 253, sass/style.scss */
+/* line 244, sass/style.scss */
 header {
   margin: 1rem 20%;
 }
-/* line 256, sass/style.scss */
+/* line 247, sass/style.scss */
 header p.left {
   position: absolute;
   width: 20%;
   bottom: 5%;
   left: 5%;
 }
-/* line 263, sass/style.scss */
+/* line 254, sass/style.scss */
 header p.right {
   position: absolute;
   width: 20%;
@@ -646,7 +642,7 @@ header p.right {
   direction: rtl;
 }
 
-/* line 272, sass/style.scss */
+/* line 263, sass/style.scss */
 #categories_listing {
   position: relative;
   height: 9rem;
@@ -656,13 +652,13 @@ header p.right {
   width: 50%;
   padding: 0 5%;
 }
-/* line 281, sass/style.scss */
+/* line 272, sass/style.scss */
 #categories_listing a {
   width: 47.5%;
   display: block;
 }
 
-/* line 287, sass/style.scss */
+/* line 278, sass/style.scss */
 .arrow {
   position: absolute;
   top: 50%;
@@ -670,18 +666,18 @@ header p.right {
   color: #fcd116;
   cursor: pointer;
 }
-/* line 294, sass/style.scss */
+/* line 285, sass/style.scss */
 .arrow.left {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
 }
-/* line 299, sass/style.scss */
+/* line 290, sass/style.scss */
 .arrow.right {
   right: 0;
   transform: translateY(-50%) translateX(50%);
 }
 
-/* line 305, sass/style.scss */
+/* line 296, sass/style.scss */
 hr {
   width: 10%;
   margin-top: 3rem;
@@ -691,27 +687,27 @@ hr {
   border-style: solid;
 }
 
-/* line 314, sass/style.scss */
+/* line 305, sass/style.scss */
 .hcb_wrap {
   background: #f7f6f6;
 }
-/* line 317, sass/style.scss */
+/* line 308, sass/style.scss */
 .hcb_wrap pre.prism {
   margin: 25px 25%;
 }
-/* line 321, sass/style.scss */
+/* line 312, sass/style.scss */
 .hcb_wrap pre::before {
   opacity: 0;
 }
-/* line 325, sass/style.scss */
+/* line 316, sass/style.scss */
 .hcb_wrap .line-numbers-rows > span::before {
   text-align: left !important;
 }
-/* line 329, sass/style.scss */
+/* line 320, sass/style.scss */
 .hcb_wrap pre.line-numbers {
   padding-left: 1.75em !important;
 }
-/* line 333, sass/style.scss */
+/* line 324, sass/style.scss */
 .hcb_wrap .line-numbers .line-numbers-rows {
   width: 1.2em !important;
   left: -1.75em !important;
