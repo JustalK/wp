@@ -152,7 +152,6 @@ a {
 }
 /* line 138, sass/shared.scss */
 #nav .options {
-  font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   display: flex;
   align-items: center;
@@ -163,12 +162,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 150, sass/shared.scss */
+/* line 149, sass/shared.scss */
+#nav .options span {
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+}
+/* line 153, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 158, sass/shared.scss */
+/* line 161, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -176,7 +179,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 165, sass/shared.scss */
+/* line 168, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -191,24 +194,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 172, sass/shared.scss */
+/* line 175, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 180, sass/shared.scss */
+/* line 183, sass/shared.scss */
 .single h1, .category h1 {
   padding-bottom: 4rem;
   padding-top: 8rem;
   text-align: center;
 }
 
-/* line 188, sass/shared.scss */
+/* line 191, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 192, sass/shared.scss */
+/* line 195, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -222,7 +225,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 198, sass/shared.scss */
+/* line 201, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -236,12 +239,12 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 204, sass/shared.scss */
+/* line 207, sass/shared.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
 
-/* line 209, sass/shared.scss */
+/* line 212, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -250,7 +253,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 217, sass/shared.scss */
+/* line 220, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;

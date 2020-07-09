@@ -1,8 +1,5 @@
 <?php
 get_header();
-?>
-
-<?php
 
 $category = get_category( get_query_var( 'cat' ) );
 $cat_id = $category->cat_ID;
@@ -12,16 +9,21 @@ $random_posts = get_random_posts_by_category($cat_id,4);
 
 ?>
 
-<span id="design_side_left" class="design_side">&nbsp;</span>
-<span id="design_side_right" class="design_side">&nbsp;</span>
-<a id="back" href="javascript:history.back()">
-	<img src="<?php echo get_template_directory_uri(); ?>/img/back.png">
-	<span>Back</span>	
-</a>
-<a id="home" href="<?= home_url(); ?>">
-	<span>Home</span>	
-	<img src="<?php echo get_template_directory_uri(); ?>/img/home.png">
-</a>
+<?php if ( !wp_is_mobile() ) { ?>
+	<span id="design_side_left" class="design_side">&nbsp;</span>
+	<span id="design_side_right" class="design_side">&nbsp;</span>
+<?php } ?>
+
+<div id="nav">
+    <a class="options" href="javascript:history.back()">
+    	<i class="material-icons">arrow_back</i>
+    	<span>Back</span>	
+    </a>
+    <a class="options" href="<?= home_url(); ?>">
+    	<span>Home</span>
+    	<i class="material-icons">home</i>
+    </a>
+</div>
 
 <div id="category">
 	<span id="design_top" class="design">&nbsp;</span> <span

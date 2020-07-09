@@ -2,8 +2,11 @@
 get_header();
 ?>
 
-<span id="design_side_left" class="design_side">&nbsp;</span>
-<span id="design_side_right" class="design_side">&nbsp;</span>
+<?php if ( !wp_is_mobile() ) { ?>
+	<span id="design_side_left" class="design_side">&nbsp;</span>
+	<span id="design_side_right" class="design_side">&nbsp;</span>
+<?php } ?>
+
 
 <div id="nav">
     <a class="options" href="javascript:history.back()">
