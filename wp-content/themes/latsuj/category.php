@@ -1,12 +1,7 @@
 <?php
-get_header();
-
-$category = get_category( get_query_var( 'cat' ) );
-$cat_id = $category->cat_ID;
-
-$posts = get_most_recent_posts_by_category($cat_id,6);
-$random_posts = get_random_posts_by_category($cat_id,4);
-
+    get_header();
+    $category = get_category( get_query_var( 'cat' ) );
+    $cat_id = $category->cat_ID;
 ?>
 
 <?php wpse_get_partial('template-parts/nav'); ?>
@@ -38,9 +33,7 @@ $random_posts = get_random_posts_by_category($cat_id,4);
             'direction' => 'vertical',
             'title' => 'Older Posts'
         ));
-        wpse_get_partial('template-parts/preview_posts', array(
-            'post' => $random_posts[0]
-        ));
+        wpse_get_partial('template-parts/preview_posts');
         ?>
     
     </div>
@@ -70,19 +63,17 @@ $random_posts = get_random_posts_by_category($cat_id,4);
         )); ?>
         <?php wpse_get_partial('template-parts/slider', array(
             'description' => "Older posts",
-            'first_post' => $posts[3],
-            'second_post' => $posts[4],
-            'third_post' => $posts[5]
+            'nbr_of_post' => 3,
+            'offset' => 3,
+            'order' => "date"
         )); ?>
-        <?php wpse_get_partial('template-parts/preview_posts', array(
-            'post' => $random_posts[0]
-        )); ?>
+        <?php wpse_get_partial('template-parts/preview_posts'); ?>
         
         <?php wpse_get_partial('template-parts/slider', array(
             'description' => "Random posts",
-            'first_post' => $random_posts[1],
-            'second_post' => $random_posts[2],
-            'third_post' => $random_posts[3]
+            'nbr_of_post' => 3,
+            'offset' => 1,
+            'order' => "rand"
         )); ?>
     
     </div>

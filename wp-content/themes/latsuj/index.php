@@ -1,10 +1,5 @@
 <?php
- 
-get_header();
-
-$posts = get_most_recent_posts(7);
-$random_posts = get_random_posts(4);
-$total_posts = count_all_published_post();
+    get_header();
 ?>
 
 <?php if ( wp_is_mobile() ) : ?>
@@ -43,9 +38,7 @@ $total_posts = count_all_published_post();
 
     <?php wpse_get_partial('template-parts/header'); ?>
 	<?php wpse_get_partial('template-parts/categories_listing'); ?> 
-    <?php wpse_get_partial('template-parts/last_posts', array(
-        'post' => $posts[0]
-    )); ?>
+    <?php wpse_get_partial('template-parts/last_posts'); ?>
     
     <?php wpse_get_partial('template-parts/most_recent_posts', array(
         'nbr_of_post' => 3,
@@ -54,33 +47,23 @@ $total_posts = count_all_published_post();
     
     <?php wpse_get_partial('template-parts/slider', array(
         'description' => "Older posts",
-        'first_post' => $posts[4],
-        'second_post' => $posts[5],
-        'third_post' => $posts[6],
-        'loop_init' => 4,
-        'order' => "date",
-        'total_post' => $total_posts
+        'nbr_of_post' => 3,
+        'offset' => 4,
+        'order' => "date"
     )); ?>
     
-    <?php wpse_get_partial('template-parts/preview_posts', array(
-        'post' => $random_posts[0]
-    )); ?>
+    <?php wpse_get_partial('template-parts/preview_posts'); ?>
     
     <?php wpse_get_partial('template-parts/slider', array(
         'description' => "Random posts",
-        'first_post' => $random_posts[1],
-        'second_post' => $random_posts[2],
-        'third_post' => $random_posts[3],
-        'loop_init' => 0,
-        'order' => "rand",
-        'total_post' => $total_posts
+        'nbr_of_post' => 3,
+        'offset' => 0,
+        'order' => "rand"
     )); ?>
 	
 
 <?php endif; ?>
 
 <?php
-
 get_footer();
- 
 ?>

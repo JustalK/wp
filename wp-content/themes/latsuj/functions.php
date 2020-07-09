@@ -165,10 +165,11 @@ function get_most_recent_posts($number_post,$offset=0) {
     return wp_get_recent_posts($args);
 }
 
-function get_random_posts($number_post) {
+function get_random_posts($number_post,$offset=0) {
     $args = array(
         'post_type' => 'post',
         'numberposts' => $number_post,
+        'offset' => $offset,
         'orderby' => 'rand',
         'order' => 'DESC'
     );

@@ -1,7 +1,11 @@
+<?php
+    $random_posts = get_random_posts(1)[0];
+?>
+
 <div id="random_single" class="wp-block-code">
-    <span class="legend"><?= $post["post_title"]; ?></span>
+    <span class="legend"><?= $random_posts["post_title"]; ?></span>
     
     <p>
-		<?= $post["post_excerpt"]; ?><a href="<?= the_permalink($post["ID"]) ?>">[ Read more ]</a>
+		<?= $random_posts["post_excerpt"]; ?><a href="<?= the_permalink($random_posts["ID"]) ?>">[ Read more ]</a>
 	</p>
 </div>
