@@ -18,8 +18,6 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
                     			<div class="square"></div>
                     		</div>
                     	</a>
-                    	<div class="border red"></div>
-                    	<div class="border blue"></div>
             		</li>
         		<?php } ?>
         	</ul>
@@ -42,8 +40,6 @@ $posts = get_most_recent_posts($nbr_of_post,$offset);
                     			<div class="square"></div>
                     		</div>
                     	</a>
-                    	<div class="border red"></div>
-                    	<div class="border blue"></div>
             		</li>
         		<?php } ?>
         	</ul>
