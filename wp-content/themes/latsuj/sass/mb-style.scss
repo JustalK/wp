@@ -319,6 +319,28 @@ article {
 
 footer {
 	width: 100%;
-    height: 400px;
     background: $color_yellow;
+    
+    & .legend{
+        margin: 3rem 0 1rem;
+    }
+    
+    & .copyright {
+	    text-align: center;
+	    display: block;
+	    padding: 2rem;
+    }
+}
+
+#bsocials {
+    position: relative;
+    padding: 0 20%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.8rem;
+    z-index: 20;
+    
+    & .fa-github-square:before {
+    	color: black;
+    }
 }

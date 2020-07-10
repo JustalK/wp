@@ -675,6 +675,29 @@ article p {
 /* line 320, sass/mb-style.scss */
 footer {
   width: 100%;
-  height: 400px;
   background: #fcd116;
+}
+/* line 324, sass/mb-style.scss */
+footer .legend {
+  margin: 3rem 0 1rem;
+}
+/* line 328, sass/mb-style.scss */
+footer .copyright {
+  text-align: center;
+  display: block;
+  padding: 2rem;
+}
+
+/* line 335, sass/mb-style.scss */
+#bsocials {
+  position: relative;
+  padding: 0 20%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.8rem;
+  z-index: 20;
+}
+/* line 343, sass/mb-style.scss */
+#bsocials .fa-github-square:before {
+  color: black;
 }
