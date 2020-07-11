@@ -1,4 +1,7 @@
 document.addEventListener("DOMContentLoaded", function() {
+    let body = document.body;
+    body.classList.add("show");
+    
     let menu = document.getElementById("menu");
     let sliderLock = false;
     let designSideLeft = document.getElementById("design_side_left");

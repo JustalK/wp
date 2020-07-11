@@ -165,6 +165,14 @@ article p {
     border-bottom: 1px solid $color_blue;
     border-top: 1px solid $color_blue;
 	padding: 40px $website_margin;
+	
+	& .legend {
+	    display: block;
+		font-family: $text_header_stack;
+	    text-transform: uppercase;
+	    padding-bottom: 2rem;
+	    color: $color_yellow;
+	}
 }
 
 .wp-block-image {
@@ -333,9 +341,9 @@ hr {
 	
 	& .legend {
 		font-size: 1rem;
-	    font-family: "GothamSSm-Black", Arial, sans-serif;
+	    font-family: $text_header_stack;
 	    text-transform: uppercase;
-	    color: #fcd116;
+	    color: $color_yellow;
 	}
 	
 	& span {

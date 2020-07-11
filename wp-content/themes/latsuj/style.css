@@ -69,6 +69,16 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   display: block;
 }
 
+/* line 7, sass/shared.scss */
+body p, body i, body h1, body h2, body h3, body h4, body span {
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+}
+/* line 12, sass/shared.scss */
+body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4, body.show span {
+  opacity: 1;
+}
+
 @font-face {
   font-family: "GothamSSm-Book";
   src: url("./font/gothamSS/GothamSSm-Book.eot");
@@ -104,7 +114,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-weight: 400;
   font-style: normal;
 }
-/* line 26, sass/shared.scss */
+/* line 39, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
   -moz-osx-font-smoothing: grayscale;
@@ -115,23 +125,23 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   text-rendering: auto;
   line-height: 1;
 }
-/* line 36, sass/shared.scss */
+/* line 49, sass/shared.scss */
 .fa.fa-github-square:before {
   content: "\f092";
   color: #fcd116;
 }
-/* line 41, sass/shared.scss */
+/* line 54, sass/shared.scss */
 .fa.fa-facebook-square:before {
   content: "\f082";
   color: #61affe;
 }
-/* line 46, sass/shared.scss */
+/* line 59, sass/shared.scss */
 .fa.fa-youtube-square:before {
   content: "\f431";
   color: #ff514d;
 }
 
-/* line 52, sass/shared.scss */
+/* line 65, sass/shared.scss */
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;
@@ -155,7 +165,7 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
   font-feature-settings: 'liga';
 }
 
-/* line 79, sass/shared.scss */
+/* line 92, sass/shared.scss */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -163,19 +173,19 @@ body {
   margin: 0;
 }
 
-/* line 86, sass/shared.scss */
+/* line 99, sass/shared.scss */
 header {
   position: relative;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 90, sass/shared.scss */
+/* line 103, sass/shared.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 97, sass/shared.scss */
+/* line 110, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -185,14 +195,14 @@ header h1 {
   color: #fcd116;
 }
 
-/* line 107, sass/shared.scss */
+/* line 120, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 113, sass/shared.scss */
+/* line 126, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -200,18 +210,18 @@ p {
   word-spacing: 0.005rem;
 }
 
-/* line 120, sass/shared.scss */
+/* line 133, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 125, sass/shared.scss */
+/* line 138, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 129, sass/shared.scss */
+/* line 142, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -221,7 +231,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 138, sass/shared.scss */
+/* line 151, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -233,16 +243,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 149, sass/shared.scss */
+/* line 162, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 153, sass/shared.scss */
+/* line 166, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 161, sass/shared.scss */
+/* line 174, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -250,7 +260,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 168, sass/shared.scss */
+/* line 181, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -265,24 +275,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 175, sass/shared.scss */
+/* line 188, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 183, sass/shared.scss */
+/* line 196, sass/shared.scss */
 .single h1, .category h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 191, sass/shared.scss */
+/* line 204, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 195, sass/shared.scss */
+/* line 208, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -296,7 +306,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 201, sass/shared.scss */
+/* line 214, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -310,12 +320,12 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 207, sass/shared.scss */
+/* line 220, sass/shared.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
 
-/* line 212, sass/shared.scss */
+/* line 225, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -324,7 +334,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 220, sass/shared.scss */
+/* line 233, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -340,7 +350,7 @@ a {
   left: -0.4rem;
 }
 
-/* line 228, sass/shared.scss */
+/* line 241, sass/shared.scss */
 .wp-block-code {
   margin: 2rem 0;
 }
@@ -548,31 +558,39 @@ article p {
   border-top: 1px solid #61affe;
   padding: 40px 25%;
 }
+/* line 169, sass/style.scss */
+.wp-block-code .legend {
+  display: block;
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  padding-bottom: 2rem;
+  color: #fcd116;
+}
 
-/* line 170, sass/style.scss */
+/* line 178, sass/style.scss */
 .wp-block-image {
   margin: 0 25%;
 }
-/* line 173, sass/style.scss */
+/* line 181, sass/style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 180, sass/style.scss */
+/* line 188, sass/style.scss */
 ul {
   margin: 0 25%;
 }
 
-/* line 184, sass/style.scss */
+/* line 192, sass/style.scss */
 .design {
   height: 4rem;
 }
 
-/* line 192, sass/style.scss */
+/* line 200, sass/style.scss */
 #theexcerpt {
   margin: 0;
 }
-/* line 195, sass/style.scss */
+/* line 203, sass/style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -581,59 +599,59 @@ ul {
   padding: 2rem 5%;
 }
 
-/* line 200, sass/style.scss */
+/* line 208, sass/style.scss */
 #last-posts {
   width: 50%;
   height: 22rem;
   margin: 1rem 25%;
 }
-/* line 205, sass/style.scss */
+/* line 213, sass/style.scss */
 #last-posts a {
   display: block;
   width: 100%;
   height: 100%;
 }
 
-/* line 212, sass/style.scss */
+/* line 220, sass/style.scss */
 #most_recent-posts {
   width: 50%;
   height: 22rem;
   margin: 2rem 25%;
 }
-/* line 217, sass/style.scss */
+/* line 225, sass/style.scss */
 #most_recent-posts a {
   display: block;
   width: 90%;
   height: 100%;
 }
-/* line 222, sass/style.scss */
+/* line 230, sass/style.scss */
 #most_recent-posts a.secondary_post {
   height: 44%;
   width: 100%;
 }
-/* line 227, sass/style.scss */
+/* line 235, sass/style.scss */
 #most_recent-posts a.bottom_post {
   position: absolute;
   bottom: 0;
 }
 
-/* line 239, sass/style.scss */
+/* line 247, sass/style.scss */
 .home .design_side {
   transform: translateY(10rem);
 }
 
-/* line 244, sass/style.scss */
+/* line 252, sass/style.scss */
 header {
   margin: 1rem 20%;
 }
-/* line 247, sass/style.scss */
+/* line 255, sass/style.scss */
 header p.left {
   position: absolute;
   width: 20%;
   bottom: 5%;
   left: 5%;
 }
-/* line 254, sass/style.scss */
+/* line 262, sass/style.scss */
 header p.right {
   position: absolute;
   width: 20%;
@@ -642,7 +660,7 @@ header p.right {
   direction: rtl;
 }
 
-/* line 263, sass/style.scss */
+/* line 271, sass/style.scss */
 #categories_listing {
   position: relative;
   height: 9rem;
@@ -652,13 +670,13 @@ header p.right {
   width: 50%;
   padding: 0 5%;
 }
-/* line 272, sass/style.scss */
+/* line 280, sass/style.scss */
 #categories_listing a {
   width: 47.5%;
   display: block;
 }
 
-/* line 278, sass/style.scss */
+/* line 286, sass/style.scss */
 .arrow {
   position: absolute;
   top: 50%;
@@ -666,18 +684,18 @@ header p.right {
   color: #fcd116;
   cursor: pointer;
 }
-/* line 285, sass/style.scss */
+/* line 293, sass/style.scss */
 .arrow.left {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
 }
-/* line 290, sass/style.scss */
+/* line 298, sass/style.scss */
 .arrow.right {
   right: 0;
   transform: translateY(-50%) translateX(50%);
 }
 
-/* line 296, sass/style.scss */
+/* line 304, sass/style.scss */
 hr {
   width: 10%;
   margin-top: 3rem;
@@ -687,50 +705,50 @@ hr {
   border-style: solid;
 }
 
-/* line 305, sass/style.scss */
+/* line 313, sass/style.scss */
 .hcb_wrap {
   background: #f7f6f6;
 }
-/* line 308, sass/style.scss */
+/* line 316, sass/style.scss */
 .hcb_wrap pre.prism {
   margin: 25px 25%;
 }
-/* line 312, sass/style.scss */
+/* line 320, sass/style.scss */
 .hcb_wrap pre::before {
   opacity: 0;
 }
-/* line 316, sass/style.scss */
+/* line 324, sass/style.scss */
 .hcb_wrap .line-numbers-rows > span::before {
   text-align: left !important;
 }
-/* line 320, sass/style.scss */
+/* line 328, sass/style.scss */
 .hcb_wrap pre.line-numbers {
   padding-left: 1.75em !important;
 }
-/* line 324, sass/style.scss */
+/* line 332, sass/style.scss */
 .hcb_wrap .line-numbers .line-numbers-rows {
   width: 1.2em !important;
   left: -1.75em !important;
 }
 
-/* line 330, sass/style.scss */
+/* line 338, sass/style.scss */
 .site-footer {
   margin: 1rem 25% 3rem;
   text-align: center;
 }
-/* line 334, sass/style.scss */
+/* line 342, sass/style.scss */
 .site-footer .legend {
   font-size: 1rem;
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #fcd116;
 }
-/* line 341, sass/style.scss */
+/* line 349, sass/style.scss */
 .site-footer span {
   font-size: 0.8rem;
 }
 
-/* line 346, sass/style.scss */
+/* line 354, sass/style.scss */
 #bsocials {
   font-size: 3rem;
   margin: 1rem 0;

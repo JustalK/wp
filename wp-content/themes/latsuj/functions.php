@@ -188,7 +188,7 @@ function get_loop_posts(){
     $loop = $_GET["loop"];
     $order = $_GET["order"];
     $category_ID = $_GET["category"]!="undefined" ? intval($_GET["category"]) : NULL;
-    $total = count_all_published_post();
+    $total = count_all_published_post($category_ID);
     
     $posts = [];
     $args = array(

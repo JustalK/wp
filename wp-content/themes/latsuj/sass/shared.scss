@@ -3,6 +3,19 @@
 
 // ==============================================================================================>
 
+body {
+	& p, & i, & h1, & h2, & h3, & h4, & span {
+		opacity: 0;
+		transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
+	}
+	
+	&.show p, &.show i, &.show h1, &.show h2, &.show h3, &.show h4, &.show span {
+		opacity: 1;
+	}
+}
+
+// ==============================================================================================>
+
 @font-face {
 	@include font("gothamSS","GothamSSm-Book","GothamSSm Book",normal,normal);
 }
