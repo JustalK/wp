@@ -4,15 +4,11 @@ $total_posts = count_all_published_post();
 ?>
 <span class="line-description"><?= $description ?></span>
 <div class="slider" data-loop="<?= $offset ?>" data-order="<?= $order ?>" data-action="get_loop_posts" data-total_loop="<?= $total_post ?>">
-	<img class="arrow left" src="<?php echo get_template_directory_uri(); ?>/img/arrow.jpeg">
-	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],'full'); ?>')">
-		<h3><?= $posts[0]["post_title"]; ?></h3>
-	</a>
-	<a class="posts" href="<?= the_permalink($posts[1]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[1]["ID"],'full'); ?>')">
-		<h3><?= $posts[1]["post_title"]; ?></h3>
-	</a>
-	<a class="posts" href="<?= the_permalink($posts[2]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[2]["ID"],'full'); ?>')">
-		<h3><?= $posts[2]["post_title"]; ?></h3>
-	</a>
-	<img class="arrow right" src="<?php echo get_template_directory_uri(); ?>/img/arrow.jpeg">
+	<i class="material-icons arrow left">chevron_left</i>
+    <?php foreach($posts as $post) { ?>
+    	<a class="posts" href="<?= the_permalink($post["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($post["ID"],'full'); ?>')">
+    		<h3><?= $post["post_title"]; ?></h3>
+    	</a>
+	<?php } ?>
+    <i class="material-icons arrow right">chevron_right</i>
 </div>
