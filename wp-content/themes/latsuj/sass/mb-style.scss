@@ -186,8 +186,9 @@ a {
 			font-size: 0.8rem;
 	    }
 	    
-	    & h2 {
+	    & h2, & h3 {
 			color: $color_red;
+			font-size: $mobile_text_header_proportion / 2.5;
 	    }
 	    
     	& .square {

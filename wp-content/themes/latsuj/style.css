@@ -712,3 +712,26 @@ hr {
   width: 1.2em !important;
   left: -1.75em !important;
 }
+
+/* line 330, sass/style.scss */
+.site-footer {
+  margin: 1rem 25% 3rem;
+  text-align: center;
+}
+/* line 334, sass/style.scss */
+.site-footer .legend {
+  font-size: 1rem;
+  font-family: "GothamSSm-Black", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #fcd116;
+}
+/* line 341, sass/style.scss */
+.site-footer span {
+  font-size: 0.8rem;
+}
+
+/* line 346, sass/style.scss */
+#bsocials {
+  font-size: 3rem;
+  margin: 1rem 0;
+}

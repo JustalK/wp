@@ -1,7 +1,5 @@
 <?php
     get_header();
-    $category = get_category( get_query_var( 'cat' ) );
-    $cat_id = $category->cat_ID;
 ?>
 
 <?php wpse_get_partial('template-parts/nav'); ?>

@@ -1,5 +1,8 @@
 <?php 
-$posts = get_most_recent_posts($nbr_of_post,$offset);
+$category = get_category( get_query_var( 'cat' ) );
+$cat_id = is_null($category) ? NULL : $category->cat_ID;
+
+$posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
 ?>
 
 <?php if ( wp_is_mobile() ) : ?>

@@ -122,17 +122,6 @@ function get_second_category($id=null) {
 add_filter('first_category', 'get_first_category');
 add_filter('second_category', 'get_second_category');
 
-function get_most_recent_posts_by_category($category_ID,$number_post) {
-    $args = array(
-        'post_type' => 'post',
-        'category' => $category_ID,
-        'numberposts' => $number_post,
-        'orderby' => 'date',
-        'order' => 'DESC'
-    );
-    return wp_get_recent_posts($args);
-}
-
 function get_related_posts($ids) {
     $args = array(
         'post_type' => 'post',
@@ -143,20 +132,10 @@ function get_related_posts($ids) {
     return wp_get_recent_posts($args);
 }
 
-function get_random_posts_by_category($category_ID,$number_post) {
+function get_most_recent_posts($number_post,$offset=0,$category_ID=NULL) {
     $args = array(
         'post_type' => 'post',
         'category' => $category_ID,
-        'numberposts' => $number_post,
-        'orderby' => 'rand',
-        'order' => 'DESC'
-    );
-    return wp_get_recent_posts($args);
-}
-
-function get_most_recent_posts($number_post,$offset=0) {
-    $args = array(
-        'post_type' => 'post',
         'numberposts' => $number_post,
         'offset' => $offset,
         'orderby' => 'date',
@@ -165,10 +144,11 @@ function get_most_recent_posts($number_post,$offset=0) {
     return wp_get_recent_posts($args);
 }
 
-function get_random_posts($number_post,$offset=0) {
+function get_random_posts($number_post,$offset=0,$category_ID=NULL) {
     $args = array(
         'post_type' => 'post',
         'numberposts' => $number_post,
+        'category' => $category_ID,
         'offset' => $offset,
         'orderby' => 'rand',
         'order' => 'DESC'
@@ -185,8 +165,9 @@ function get_all_categories() {
     return get_categories($args);
 }
 
-function count_all_published_post() {
-    return wp_count_posts()->publish;
+function count_all_published_post($category_ID=NULL) {
+    if(is_null($category_ID)) return wp_count_posts()->publish;
+    return get_category($category_ID)->count;
 }
 
 function wpse_get_partial($template_name, $data = []) {
@@ -206,14 +187,15 @@ add_action( 'wp_enqueue_scripts', 'ajax_enqueue' );
 function get_loop_posts(){
     $loop = $_GET["loop"];
     $order = $_GET["order"];
+    $category_ID = $_GET["category"]!="undefined" ? intval($_GET["category"]) : NULL;
     $total = count_all_published_post();
     
     $posts = [];
-    
     $args = array(
         'post_type' => 'post',
         'numberposts' => 1,
         'orderby' => $order,
+        'category' => $category_ID,
         'order' => 'DESC'
     );
     

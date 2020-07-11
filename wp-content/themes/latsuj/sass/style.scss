@@ -326,3 +326,24 @@ hr {
 		left: -1.75em !important;
 	}
 }
+
+.site-footer {
+	margin: 1rem $website_margin 3rem;
+	text-align: center;
+	
+	& .legend {
+		font-size: 1rem;
+	    font-family: "GothamSSm-Black", Arial, sans-serif;
+	    text-transform: uppercase;
+	    color: #fcd116;
+	}
+	
+	& span {
+		font-size: 0.8rem;
+	}
+}
+
+#bsocials {
+	font-size: 3rem;
+    margin: 1rem 0;
+}

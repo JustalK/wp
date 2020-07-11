@@ -531,10 +531,11 @@ a.posts {
   font-size: 0.8rem;
 }
 /* line 189, sass/mb-style.scss */
-#mb-vertical-posts .post_informations h2, #mb-horizontal-posts .post_informations h2 {
+#mb-vertical-posts .post_informations h2, #mb-vertical-posts .post_informations h3, #mb-horizontal-posts .post_informations h2, #mb-horizontal-posts .post_informations h3 {
   color: #ff514d;
+  font-size: 0.8rem;
 }
-/* line 193, sass/mb-style.scss */
+/* line 194, sass/mb-style.scss */
 #mb-vertical-posts .post_informations .square, #mb-horizontal-posts .post_informations .square {
   position: absolute;
   background: white;
@@ -544,11 +545,11 @@ a.posts {
   transform: translate(-50%, -50%) rotateZ(45deg);
 }
 
-/* line 205, sass/mb-style.scss */
+/* line 206, sass/mb-style.scss */
 #mb-horizontal-posts a {
   height: 8rem;
 }
-/* line 208, sass/mb-style.scss */
+/* line 209, sass/mb-style.scss */
 #mb-horizontal-posts a .image {
   width: 50%;
   height: 100%;
@@ -558,36 +559,36 @@ a.posts {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 215, sass/mb-style.scss */
+/* line 216, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations {
   width: 40%;
 }
-/* line 218, sass/mb-style.scss */
+/* line 219, sass/mb-style.scss */
 #mb-horizontal-posts a .post_informations .square {
   left: 0;
   top: 50%;
 }
 
-/* line 227, sass/mb-style.scss */
+/* line 228, sass/mb-style.scss */
 #mb-vertical-posts ul {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
 }
-/* line 232, sass/mb-style.scss */
+/* line 233, sass/mb-style.scss */
 #mb-vertical-posts ul li {
   width: 45%;
 }
-/* line 236, sass/mb-style.scss */
+/* line 237, sass/mb-style.scss */
 #mb-vertical-posts ul a {
   height: 16rem;
 }
-/* line 239, sass/mb-style.scss */
+/* line 240, sass/mb-style.scss */
 #mb-vertical-posts ul a .square {
   left: 50%;
   top: 0;
 }
-/* line 244, sass/mb-style.scss */
+/* line 245, sass/mb-style.scss */
 #mb-vertical-posts ul a .image {
   height: 50%;
   background-position: center;
@@ -596,7 +597,7 @@ a.posts {
   text-decoration: none;
 }
 
-/* line 252, sass/mb-style.scss */
+/* line 253, sass/mb-style.scss */
 #mb-see-all {
   text-align: center;
   display: flex;
@@ -604,36 +605,36 @@ a.posts {
   justify-content: center;
 }
 
-/* line 259, sass/mb-style.scss */
+/* line 260, sass/mb-style.scss */
 #nav {
   background: #fcd116;
 }
-/* line 262, sass/mb-style.scss */
+/* line 263, sass/mb-style.scss */
 #nav .options {
   color: #fff;
 }
 
-/* line 267, sass/mb-style.scss */
+/* line 268, sass/mb-style.scss */
 .design {
   height: 6rem;
 }
 
-/* line 271, sass/mb-style.scss */
+/* line 272, sass/mb-style.scss */
 #firstcategory, #secondcategory {
   top: 2.5rem;
 }
 
-/* line 276, sass/mb-style.scss */
+/* line 277, sass/mb-style.scss */
 .single h1, .category h1 {
   width: 100%;
   margin: 0 0%;
 }
 
-/* line 282, sass/mb-style.scss */
+/* line 283, sass/mb-style.scss */
 #theexcerpt {
   margin: 0 5%;
 }
-/* line 285, sass/mb-style.scss */
+/* line 286, sass/mb-style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -644,51 +645,51 @@ a.posts {
   padding: 2rem 0;
 }
 
-/* line 292, sass/mb-style.scss */
+/* line 293, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
 }
-/* line 295, sass/mb-style.scss */
+/* line 296, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 300, sass/mb-style.scss */
+/* line 301, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 305, sass/mb-style.scss */
+/* line 306, sass/mb-style.scss */
 article h2 {
   margin: 2rem 5%;
 }
-/* line 309, sass/mb-style.scss */
+/* line 310, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 315, sass/mb-style.scss */
+/* line 316, sass/mb-style.scss */
 .wp-block-code p {
   margin: 0 5%;
 }
 
-/* line 320, sass/mb-style.scss */
+/* line 321, sass/mb-style.scss */
 footer {
   width: 100%;
   background: #fcd116;
 }
-/* line 324, sass/mb-style.scss */
+/* line 325, sass/mb-style.scss */
 footer .legend {
   margin: 3rem 0 1rem;
 }
-/* line 328, sass/mb-style.scss */
+/* line 329, sass/mb-style.scss */
 footer .copyright {
   text-align: center;
   display: block;
   padding: 2rem;
 }
 
-/* line 335, sass/mb-style.scss */
+/* line 336, sass/mb-style.scss */
 #bsocials {
   position: relative;
   padding: 0 20%;
@@ -697,7 +698,7 @@ footer .copyright {
   font-size: 1.8rem;
   z-index: 20;
 }
-/* line 343, sass/mb-style.scss */
+/* line 344, sass/mb-style.scss */
 #bsocials .fa-github-square:before {
   color: black;
 }
