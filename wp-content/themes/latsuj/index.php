@@ -5,9 +5,9 @@
 <?php if ( wp_is_mobile() ) : ?>
 
 	<div id="socials">
-		<i class="fa fa-facebook-square"></i>
-		<i class="fa fa-github-square"></i>
-		<i class="fa fa-youtube-square"></i>
+		<a href="https://www.facebook.com/Team-KD-106019544520538" target="_blank"><i class="fa fa-facebook-square"></i></a>
+		<a href="https://github.com/Latsuj" target="_blank"><i class="fa fa-github-square"></i></a>
+		<a href="https://www.youtube.com/channel/UCvmYjxbiFavUv9lipG1pezg" target="_blank"><i class="fa fa-youtube-square"></i></a>
 	</div>
 
 	<?php 
