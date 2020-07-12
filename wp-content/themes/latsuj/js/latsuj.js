@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let parent = e.currentTarget.parentNode;
         let a = parent.getElementsByTagName('a');
         let action = parent.dataset.action;
-        let category_ID = parent.dataset.category!=undefined ? parent.dataset.category : "undefined";
+        let category_ID = parent.dataset.category==undefined || parent.dataset.category=="" ? "undefined" : parent.dataset.category;
         let order = parent.dataset.order;
         let loop = nextLoop(e,parent.dataset.total_loop,parent.dataset.loop,a.length);
         parent.dataset.loop = loop;
@@ -70,6 +70,7 @@ document.addEventListener("DOMContentLoaded", function() {
     
     function sliderAjax(loop,action,order,category_ID) {
         let xmlhttp = new XMLHttpRequest();
+        console.log(category_ID);
         xmlhttp.open("POST", my_ajax_object.ajax_url+"?action="+action+"&loop="+loop+"&order="+order+"&category="+category_ID, true);
         xmlhttp.send();
         return xmlhttp;
