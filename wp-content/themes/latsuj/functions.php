@@ -159,7 +159,7 @@ function get_random_posts($number_post,$offset=0,$category_ID=NULL) {
 function get_all_categories() {
     $args = array(
         'hide_empty' => 0,
-        'orderby' => 'name',
+        'orderby' => 'count',
         'order' => 'DESC'
     );
     return get_categories($args);
