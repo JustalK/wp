@@ -41,11 +41,12 @@
 
 @mixin posts-title($size) {
 	position: absolute;
-	bottom: 0;
+	bottom: 50%;
+	transform: translateY(50%);
 	text-align: center;
 	font-size: $size;
 	width: 100%;
 	padding: 1rem 0;
-	background: #ffffff73;
-	color: $color_white;
+	color: $color_yellow;
+	z-index: 3;
 }
