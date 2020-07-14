@@ -42,11 +42,14 @@
 @mixin posts-title($size) {
 	position: absolute;
 	bottom: 50%;
-	transform: translateY(50%);
+	transform: translateY(50%) skewY(-10deg);
 	text-align: center;
 	font-size: $size;
-	width: 100%;
+	width: 70%;
+	margin-left: 15%;
 	padding: 1rem 0;
-	color: $color_yellow;
+	color: $color_white;
+	background: $color_yellow;
+    transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
 	z-index: 3;
 }

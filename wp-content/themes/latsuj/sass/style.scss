@@ -90,13 +90,14 @@ article.post {
 	transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
 	overflow: hidden;
 	filter: drop-shadow(2px 4px 4px #111);
+    transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
 	
 	&.invisible {
 		opacity: 0;
 	}
 	
 	& h2 {
-    	@include posts-title($text_header_proportion / 2);
+    	@include posts-title($text_header_proportion / 2.5);
 	}
 	
 	&.secondary_post h2 {
@@ -117,6 +118,24 @@ article.post {
 	    transform: rotateZ(15deg);
 	    background: #00000078;
 	    z-index: 2;
+    	transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
+	}
+	
+	&:hover {
+		filter: drop-shadow(2px 4px 8px #111);
+		transform: translate3d(0, 0, 2px);
+		
+		& h2,& h3 {
+			transform: translateY(50%) skewY(-10deg) translateX(-150%);
+		}
+		
+		&::before {
+	    	transform: rotateZ(15deg) translateX(75%);
+	    }
+	    
+	    &::after {
+	    	opacity: 0;
+	    }
 	}
 	
 	&::after {
@@ -126,6 +145,7 @@ article.post {
 	    background: #cc080836;
 	    position: absolute;
 	    z-index: 1;
+    	transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
 	}
 }
 
@@ -151,6 +171,7 @@ article p {
     height: 10rem;
 	display: inline-flex;
     justify-content: space-between;
+    perspective: 100px;
     
     &::before {
 		@include diamond();
@@ -232,6 +253,7 @@ ul {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
     margin: 1rem $website_category_margin;
+    perspective: 100px;
     
     & a {
 	    display: block;
@@ -244,6 +266,7 @@ ul {
 	width: 100% - 2 * $website_category_margin;
     height: 22rem;
     margin: 2rem $website_category_margin;
+    perspective: 100px;
 
 	& a {
 	    display: block;
@@ -299,6 +322,7 @@ header {
     margin: 1rem 20%;
     width: 50%;
     padding: 0 5%;
+    perspective: 100px;
     
     & a {
 	    width: 47.5%;
