@@ -336,15 +336,24 @@ header {
     font-size: 6rem;
     color: $color_yellow;
     cursor: pointer;
+    transition: all 0.35s cubic-bezier(0.75,0,0.25,1);
 	
 	&.left {
     	left: 0;
     	transform: translateY(-50%) translateX(-50%);
+    	
+    	&:hover {
+    		color: $color_blue;
+    	}
 	}
 	
 	&.right {
     	right: 0;
     	transform: translateY(-50%) translateX(50%);
+    	    	
+    	&:hover {
+    		color: $color_red;
+    	}
 	}
 }
 

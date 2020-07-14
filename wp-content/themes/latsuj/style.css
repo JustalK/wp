@@ -742,19 +742,28 @@ header p.right {
   font-size: 6rem;
   color: #fcd116;
   cursor: pointer;
+  transition: all 0.35s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 340, sass/style.scss */
+/* line 341, sass/style.scss */
 .arrow.left {
   left: 0;
   transform: translateY(-50%) translateX(-50%);
 }
 /* line 345, sass/style.scss */
+.arrow.left:hover {
+  color: #61affe;
+}
+/* line 350, sass/style.scss */
 .arrow.right {
   right: 0;
   transform: translateY(-50%) translateX(50%);
 }
+/* line 354, sass/style.scss */
+.arrow.right:hover {
+  color: #ff514d;
+}
 
-/* line 351, sass/style.scss */
+/* line 360, sass/style.scss */
 hr {
   width: 10%;
   margin-top: 3rem;
@@ -764,50 +773,50 @@ hr {
   border-style: solid;
 }
 
-/* line 360, sass/style.scss */
+/* line 369, sass/style.scss */
 .hcb_wrap {
   background: #f7f6f6;
 }
-/* line 363, sass/style.scss */
+/* line 372, sass/style.scss */
 .hcb_wrap pre.prism {
   margin: 25px 25%;
 }
-/* line 367, sass/style.scss */
+/* line 376, sass/style.scss */
 .hcb_wrap pre::before {
   opacity: 0;
 }
-/* line 371, sass/style.scss */
+/* line 380, sass/style.scss */
 .hcb_wrap .line-numbers-rows > span::before {
   text-align: left !important;
 }
-/* line 375, sass/style.scss */
+/* line 384, sass/style.scss */
 .hcb_wrap pre.line-numbers {
   padding-left: 1.75em !important;
 }
-/* line 379, sass/style.scss */
+/* line 388, sass/style.scss */
 .hcb_wrap .line-numbers .line-numbers-rows {
   width: 1.2em !important;
   left: -1.75em !important;
 }
 
-/* line 385, sass/style.scss */
+/* line 394, sass/style.scss */
 .site-footer {
   margin: 1rem 25% 3rem;
   text-align: center;
 }
-/* line 389, sass/style.scss */
+/* line 398, sass/style.scss */
 .site-footer .legend {
   font-size: 1rem;
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #fcd116;
 }
-/* line 396, sass/style.scss */
+/* line 405, sass/style.scss */
 .site-footer span {
   font-size: 0.8rem;
 }
 
-/* line 401, sass/style.scss */
+/* line 410, sass/style.scss */
 #bsocials {
   font-size: 3rem;
   margin: 1rem 0;
