@@ -33,19 +33,30 @@ h3 {
 	overflow: hidden;
 }
 
-.design_side {
-    position: absolute;
-	width: 50%;
-    height: 100%;
-    background-image: url(./img/background_left_01.png);
-    background-repeat-x: no-repeat;
-    z-index: 1;
-    pointer-events: none;
-    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
-    
-    &.right {
-    	transform: translate3d(12rem,0,0);
-    }
+body {
+	.design_side {
+	    position: absolute;
+		width: 50%;
+	    height: 100%;
+	    background-image: url(./img/background_left_01.png);
+	    background-repeat-x: no-repeat;
+	    z-index: 1;
+	    pointer-events: none;
+	    transform: translateY(-100%);
+	    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
+	    
+	    &.right {
+	    	transform: translate3d(12rem,0,0);
+	    }
+	}
+	
+	&.show .design_side {
+		transform: translateY(0);
+	}
+	
+	&.home .design_side {
+		transform: translateY(10rem);;
+	}
 }
 
 #design_side_right {
@@ -205,17 +216,49 @@ article p {
 // ==========================================================
 
 .wp-block-code {
-    background: $color_cyan;
-    border-bottom: 1px solid $color_blue;
-    border-top: 1px solid $color_blue;
-	padding: 40px $website_margin;
+    position:relative;
+	padding: 0 $website_margin - 5%;
+	margin: 7rem 0 8rem;
+	
+	&::before {
+		content: " ";
+	    position: absolute;
+	    background: $color_yellow;
+		width: 100%;
+	    height: 100%;
+	    left: 0;
+	    top: -3rem;
+	    transform: skewY(5deg);
+	    z-index: -1;
+	    padding: 4rem 0;
+	}
 	
 	& .legend {
 	    display: block;
 		font-family: $text_header_stack;
 	    text-transform: uppercase;
 	    padding-bottom: 2rem;
-	    color: $color_yellow;
+	    color: $color_white;
+	}
+	
+	& p {
+		position: relative; 
+		
+		& a {
+			position: absolute;
+		    right: 0;
+		    background: $color_yellow;
+		    color: $color_white;
+		    padding: 0.5rem;
+		    box-shadow: 0px 0px 6px white;
+		    bottom: -3rem;
+   	 		transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
+		    
+		    &:hover {
+		    	background: $color_white;
+		    	color: $color_yellow;
+		    }
+		}
 	}
 }
 
@@ -289,28 +332,22 @@ ul {
 // ==========================================================
 // ==========================================================
 
-.home {
-	& .design_side {
-		transform: translateY(10rem);
-	}
-}
-
 header {
 	margin: 1rem $website_category_margin - 5%;
 	
-	& p.left {
+	& p {	
 		position: absolute;
 	    width: 20%;
 	    bottom: 5%;
-	    left: 5%;
-	}
-	
-	& p.right {
-		position: absolute;
-	    width: 20%;
-	    bottom: 5%;
-	    right: 5%;
-	    direction:rtl;
+
+		&.left {
+		    left: 5%;
+		}
+		
+		&.right {
+		    right: 5%;
+		    direction:rtl;
+		}
 	}
 }
 
