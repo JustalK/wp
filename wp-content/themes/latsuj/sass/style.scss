@@ -101,7 +101,7 @@ article.post {
 	transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
 	overflow: hidden;
 	filter: drop-shadow(2px 4px 4px #111);
-    transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
+    transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1), transform 0.5s cubic-bezier(0.75,0,0.25,1);
 	
 	&.invisible {
 		opacity: 0;

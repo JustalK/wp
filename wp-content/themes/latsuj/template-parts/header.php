@@ -1,5 +1,5 @@
 <header>
-	<img src="<?= get_template_directory_uri(); ?>/img/background_index.png">
+	<img src="<?= getUrlSizeImageById(191); ?>">
 	<h1><?= get_bloginfo("name") ?></h1>
 	<?php if(!wp_is_mobile()) { ?>
 		<p class="left"><?= get_option("left_resume") ?></p>

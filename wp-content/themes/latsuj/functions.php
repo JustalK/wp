@@ -170,6 +170,30 @@ function count_all_published_post($category_ID=NULL) {
     return get_category($category_ID)->count;
 }
 
+function getUrlSizeImageById($id) {
+    return wp_get_attachment_image_src($id,getSizeImage())[0];
+}
+
+function getUrlSizeImageByPostId($id) {
+    return get_the_post_thumbnail_url($id,getSizeImage());
+}
+
+function getUrlSizeImageBySlug( $slug ) {
+    $args = array(
+        'post_type' => 'attachment',
+        'name' => sanitize_title($slug),
+        'posts_per_page' => 1,
+        'post_status' => 'inherit',
+    );
+    $_header = get_posts( $args );
+    $header = $_header ? array_pop($_header) : null;
+    return $header ? wp_get_attachment_image_src($header->ID,getSizeImage())[0] : '';
+}
+
+function getSizeImage() {
+    return wp_is_mobile() ? "thumbnail" : "medium";
+}
+
 function wpse_get_partial($template_name, $data = []) {
     $template = locate_template($template_name . '.php', false);
     extract($data);
@@ -204,7 +228,7 @@ function get_loop_posts(){
         $post = wp_get_recent_posts($args)[0];
         $post["url"] = get_the_permalink($post["ID"]);
         $post["innerHTML"] = $post["post_title"];
-        $post["backgroundImage"] = get_the_post_thumbnail_url($post["ID"],'full');
+        $post["backgroundImage"] = getUrlSizeImageByPostId($post["ID"]);
         $posts[] = $post;
     }
     
@@ -223,7 +247,7 @@ function get_loop_categories(){
     for($i=$total_categories;$i--;) {
         $categories[$i]->url = get_category_link($categories[$i]->cat_ID);
         $categories[$i]->innerHTML = $categories[$i]->cat_name;
-        $categories[$i]->backgroundImage = "./images/".$categories[$i]->cat_name.".jpg";
+        $categories[$i]->backgroundImage = getUrlSizeImageBySlug($categories[$i]->slug);
     }
     
     echo get_loop_elements(2,$loop,$categories);

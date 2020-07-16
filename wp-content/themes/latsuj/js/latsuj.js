@@ -90,7 +90,7 @@ document.addEventListener("DOMContentLoaded", function() {
             setTimeout(function() {
                 a[i].classList.remove("invisible");
                 sliderLock=false;
-            }, i*100);
+            }, i*200);
         }
     }
 })
