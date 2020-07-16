@@ -281,7 +281,7 @@ a {
 }
 
 /* line 196, sass/shared.scss */
-.single h1, .category h1 {
+.single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
@@ -587,17 +587,18 @@ a.posts {
 /* line 237, sass/mb-style.scss */
 #mb-vertical-posts ul li {
   width: 45%;
+  overflow: hidden;
 }
-/* line 241, sass/mb-style.scss */
+/* line 242, sass/mb-style.scss */
 #mb-vertical-posts ul a {
   height: 16rem;
 }
-/* line 244, sass/mb-style.scss */
+/* line 245, sass/mb-style.scss */
 #mb-vertical-posts ul a .square {
   left: 50%;
   top: 0;
 }
-/* line 249, sass/mb-style.scss */
+/* line 250, sass/mb-style.scss */
 #mb-vertical-posts ul a .image {
   height: 50%;
   background-position: center;
@@ -606,44 +607,49 @@ a.posts {
   text-decoration: none;
 }
 
-/* line 257, sass/mb-style.scss */
+/* line 258, sass/mb-style.scss */
 #mb-see-all {
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
+  margin: 2rem 20% 6rem;
+  padding: 0.5rem;
+  color: #fcd116;
+  font-size: 1rem;
+  border: 1px solid #fcd116;
 }
 
-/* line 264, sass/mb-style.scss */
+/* line 270, sass/mb-style.scss */
 #nav {
   background: #fcd116;
 }
-/* line 267, sass/mb-style.scss */
+/* line 273, sass/mb-style.scss */
 #nav .options {
   color: #fff;
 }
 
-/* line 272, sass/mb-style.scss */
+/* line 278, sass/mb-style.scss */
 .design {
   height: 6rem;
 }
 
-/* line 276, sass/mb-style.scss */
+/* line 282, sass/mb-style.scss */
 #firstcategory, #secondcategory {
   top: 2.5rem;
 }
 
-/* line 281, sass/mb-style.scss */
-.single h1, .category h1 {
+/* line 287, sass/mb-style.scss */
+.single h1, .category h1, .page-template-all h1 {
   width: 100%;
   margin: 0 0%;
 }
 
-/* line 287, sass/mb-style.scss */
+/* line 293, sass/mb-style.scss */
 #theexcerpt {
   margin: 0 5%;
 }
-/* line 290, sass/mb-style.scss */
+/* line 296, sass/mb-style.scss */
 #theexcerpt p {
   border-top: 0.125rem solid #fcd116;
   border-bottom: 0.125rem solid #fcd116;
@@ -654,51 +660,51 @@ a.posts {
   padding: 2rem 0;
 }
 
-/* line 297, sass/mb-style.scss */
+/* line 303, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
 }
-/* line 300, sass/mb-style.scss */
+/* line 306, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
 
-/* line 305, sass/mb-style.scss */
+/* line 311, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 310, sass/mb-style.scss */
+/* line 316, sass/mb-style.scss */
 article h2 {
   margin: 2rem 5%;
 }
-/* line 314, sass/mb-style.scss */
+/* line 320, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 320, sass/mb-style.scss */
+/* line 326, sass/mb-style.scss */
 .wp-block-code p {
   margin: 0 5%;
 }
 
-/* line 325, sass/mb-style.scss */
+/* line 331, sass/mb-style.scss */
 footer {
   width: 100%;
   background: #fcd116;
 }
-/* line 329, sass/mb-style.scss */
+/* line 335, sass/mb-style.scss */
 footer .legend {
   margin: 3rem 0 1rem;
 }
-/* line 333, sass/mb-style.scss */
+/* line 339, sass/mb-style.scss */
 footer .copyright {
   text-align: center;
   display: block;
   padding: 2rem;
 }
 
-/* line 340, sass/mb-style.scss */
+/* line 346, sass/mb-style.scss */
 #bsocials {
   position: relative;
   padding: 0 20%;
@@ -707,7 +713,7 @@ footer .copyright {
   font-size: 1.8rem;
   z-index: 20;
 }
-/* line 348, sass/mb-style.scss */
+/* line 354, sass/mb-style.scss */
 #bsocials .fa-github-square:before {
   color: black;
 }

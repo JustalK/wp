@@ -236,6 +236,7 @@ a {
     	
     	& li {
     	    width: 45%;
+    	    overflow: hidden;
     	}
     	
     	& a {
@@ -258,7 +259,12 @@ a {
 	text-align: center;
 	display: flex;
 	align-items: center;
-	justify-content: center;	
+	justify-content: center;
+	margin: 2rem 20% 6rem;
+    padding: 0.5rem;
+    color: $color_yellow;
+    font-size: 1rem;
+    border: 1px solid $color_yellow;	
 }
 
 #nav {
@@ -277,7 +283,7 @@ a {
 	top: 2.5rem;
 }
 
-.single, .category {
+.single, .category, .page-template-all {
 	& h1 {
 		width: 100% - 2 * $mobile_website_margin + 10%;
 	    margin: 0 $mobile_website_margin - 5%;	

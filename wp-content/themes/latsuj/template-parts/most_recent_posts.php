@@ -9,7 +9,7 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
     
     <?php if($direction=="horizontal") { ?>
         <div id="mb-horizontal-posts">
-        	<span class="legend title"><?= $title ?></span>
+        	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
         	<ul>
         		<?php foreach($posts as $post) { ?>
             		<li>
@@ -29,7 +29,7 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
     
 	<?php if($direction=="vertical") { ?>
     	<div id="mb-vertical-posts">
-    		<span class="legend title"><?= $title ?></span>
+        	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
         	<ul>
         		<?php foreach($posts as $post) { ?>
         			<?php $category = get_the_category($post["ID"]);

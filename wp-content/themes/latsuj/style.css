@@ -281,7 +281,7 @@ a {
 }
 
 /* line 196, sass/shared.scss */
-.single h1, .category h1 {
+.single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;

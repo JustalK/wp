@@ -28,7 +28,7 @@
     ));
     
     ?>
-	<a id="mb-see-all" href="#">See all <i class="material-icons">chevron_right</i></a>
+	<a id="mb-see-all" href="<?php echo esc_url( get_permalink( get_page_by_path( 'posts' ) ) ); ?>">See all <i class="material-icons">chevron_right</i></a>
 
 
 <?php else : ?>

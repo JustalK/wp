@@ -1,5 +1,5 @@
 <div id="nav">
-	<?php if(is_singular()) {?>
+	<?php if(is_singular() && !is_page("posts")) { ?>
 		<?php 
             $categories = get_the_category(get_the_ID()); 
             $category_with_most_posts = $categories[0];
