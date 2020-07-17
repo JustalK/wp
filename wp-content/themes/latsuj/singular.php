@@ -20,7 +20,7 @@ if (have_posts()) :
         the_title();
         the_date();
         the_excerpt();
-        the_post_thumbnail("medium");
+        the_post_thumbnail("full");
         the_content();
     endwhile
     ;
@@ -32,11 +32,9 @@ endif;
 </article>
 
 <div id="share">
-	<div id="fb-root"></div>
-    <div class="fb-share-button" 
-    data-href="https://www.your-domain.com/your-page.html" 
-    data-layout="button_count">
-    </div>
+    <a class="fshare" href="https://www.facebook.com/sharer/sharer.php?u=https://teamkd.online/my-wife/my-filipino-wife-ep-005/" target="_blank">
+      <i class="fa fa-facebook-square"></i> Share
+    </a>
 </div>
 
 <?php 

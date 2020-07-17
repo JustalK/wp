@@ -283,18 +283,13 @@ function addingMeta() {
     <meta property="og:type"          content="website" />
     <meta property="og:title"         content="<?= $post->post_title ?>" />
     <meta property="og:description"   content="<?= $post->post_excerpt ?>" />
-    <meta property="og:image"         content="<?= getUrlSizeImageByPostId($post->ID) ?>" />
+    <meta property="og:image"         content="<?= get_the_post_thumbnail_url($post->ID,"full") ?>" />
+    <meta property="fb:app_id" 		  content="2561616047423116" />
 
   	<?php
 
 }
 add_action( 'wp_head', 'addingMeta' );
-
-function enqueue_facebook_javascript_sdk(): void {
-    wp_enqueue_script( 'facebook-javascript-sdk', 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0', array(), null );
-    return;
-}
-add_action( 'wp_enqueue_scripts', 'enqueue_facebook_javascript_sdk' );
 
 
 

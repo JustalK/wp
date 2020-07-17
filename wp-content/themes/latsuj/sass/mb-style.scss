@@ -360,4 +360,14 @@ footer {
 	padding: 3rem 5% 1rem;
 	display: flex;
     justify-content: center;
+    
+    .fshare {
+		background: #1877f2;
+	    padding: 0.5rem;
+	    color: white;
+	    
+	    & i::before {
+	    	color:white;
+	    }
+    }
 }

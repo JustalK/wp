@@ -724,3 +724,13 @@ footer .copyright {
   display: flex;
   justify-content: center;
 }
+/* line 364, sass/mb-style.scss */
+#share .fshare {
+  background: #1877f2;
+  padding: 0.5rem;
+  color: white;
+}
+/* line 369, sass/mb-style.scss */
+#share .fshare i::before {
+  color: white;
+}
