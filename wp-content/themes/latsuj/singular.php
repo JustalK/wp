@@ -31,6 +31,14 @@ endif;
 ?>
 </article>
 
+<div id="share">
+	<div id="fb-root"></div>
+    <div class="fb-share-button" 
+    data-href="https://www.your-domain.com/your-page.html" 
+    data-layout="button_count">
+    </div>
+</div>
+
 <?php 
     wpse_get_partial('template-parts/related_posts', array(
         'id' => get_the_ID()

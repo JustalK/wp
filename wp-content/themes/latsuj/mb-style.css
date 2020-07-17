@@ -717,3 +717,10 @@ footer .copyright {
 #bsocials .fa-github-square:before {
   color: black;
 }
+
+/* line 359, sass/mb-style.scss */
+#share {
+  padding: 3rem 5% 1rem;
+  display: flex;
+  justify-content: center;
+}

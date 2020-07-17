@@ -271,5 +271,30 @@ function custom_excerpt_length( $length ) {
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
+function addingMeta() {
+    global $post;
+    
+    // Page conditional if needed
+    // if( is_page() ){}
+    
+    ?>
+
+    <meta property="og:url"           content="<?= the_permalink($post->ID) ?>" />
+    <meta property="og:type"          content="website" />
+    <meta property="og:title"         content="<?= $post->post_title ?>" />
+    <meta property="og:description"   content="<?= $post->post_excerpt ?>" />
+    <meta property="og:image"         content="<?= getUrlSizeImageByPostId($post->ID) ?>" />
+
+  	<?php
+
+}
+add_action( 'wp_head', 'addingMeta' );
+
+function enqueue_facebook_javascript_sdk(): void {
+    wp_enqueue_script( 'facebook-javascript-sdk', 'https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v3.0', array(), null );
+    return;
+}
+add_action( 'wp_enqueue_scripts', 'enqueue_facebook_javascript_sdk' );
+
 
 
