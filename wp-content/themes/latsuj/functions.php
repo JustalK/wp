@@ -52,9 +52,8 @@ function saveCategoryFields() {
 }
 add_action ( 'edited_category', 'saveCategoryFields');
 
-
-
 add_theme_support( 'post-thumbnails' );
+add_image_size( 'post-thumbnail', 400, 300, true);
 
 function custom_theme_assets() {
     if(wp_is_mobile()) wp_enqueue_style( 'mb-style', get_template_directory_uri()."/mb-style.css" );
@@ -138,6 +137,7 @@ function get_most_recent_posts($number_post,$offset=0,$category_ID=NULL) {
         'category' => $category_ID,
         'numberposts' => $number_post,
         'offset' => $offset,
+        'post_status' => 'publish',
         'orderby' => 'date',
         'order' => 'DESC'
     );
@@ -150,6 +150,7 @@ function get_random_posts($number_post,$offset=0,$category_ID=NULL) {
         'numberposts' => $number_post,
         'category' => $category_ID,
         'offset' => $offset,
+        'post_status' => 'publish',
         'orderby' => 'rand',
         'order' => 'DESC'
     );
@@ -191,7 +192,7 @@ function getUrlSizeImageBySlug( $slug ) {
 }
 
 function getSizeImage() {
-    return wp_is_mobile() ? "thumbnail" : "medium";
+    return wp_is_mobile() ? "post-thumbnail" : "medium";
 }
 
 function wpse_get_partial($template_name, $data = []) {
@@ -219,6 +220,7 @@ function get_loop_posts(){
         'post_type' => 'post',
         'numberposts' => 1,
         'orderby' => $order,
+        'post_status' => 'publish',
         'category' => $category_ID,
         'order' => 'DESC'
     );
@@ -268,7 +270,6 @@ function custom_excerpt_length( $length ) {
     return 500;
 }
 add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
-
 
 
 

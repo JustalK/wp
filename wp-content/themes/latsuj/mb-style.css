@@ -608,7 +608,7 @@ a.posts {
 }
 
 /* line 258, sass/mb-style.scss */
-#mb-see-all {
+#mb-see-all, .see-more {
   text-align: center;
   display: flex;
   align-items: center;

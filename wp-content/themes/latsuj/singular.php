@@ -20,7 +20,7 @@ if (have_posts()) :
         the_title();
         the_date();
         the_excerpt();
-        the_post_thumbnail();
+        the_post_thumbnail("medium");
         the_content();
     endwhile
     ;
