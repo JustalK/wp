@@ -36,6 +36,10 @@ body {
 	@include font("design","fa-brands-400","fa-brands-400",400,normal);
 }
 
+@font-face {
+	@include font("design","fa-regular-400","fa-regular-400",400,normal);
+}
+
 .fa {
 	font-family: 'fa-brands-400';
   	-moz-osx-font-smoothing: grayscale;
@@ -59,7 +63,33 @@ body {
 	&.fa-youtube-square:before {
 		content: "\f431"; 
   		color: $color_red;
+	}
+}
+
+.far {
+	font-family: 'fa-regular-400';
+  	-moz-osx-font-smoothing: grayscale;
+  	-webkit-font-smoothing: antialiased;
+  	display: inline-block;
+  	font-style: normal;
+  	font-variant: normal;
+  	text-rendering: auto;
+	line-height: 1; 
+	
+	&.fa-heart:before {
+		content: "\f004"; 
+  		color: $color_red;
 	} 
+	
+	&.fa-philippines:before {
+		content: "\f57e"; 
+  		color: $color_yellow;
+	}
+	
+	&.fa-computer:before {
+		content: "\f108"; 
+  		color: $color_blue;
+	}
 }
 
 .material-icons {
@@ -217,8 +247,16 @@ a {
 	    left: 30%;
 	}
 	
-	p::first-line {
-		text-indent: 2rem;
+	p {
+		&::first-line {
+			text-indent: 2rem;
+		}
+		
+		&::first-letter {
+			color: $color_red;
+			font-weight: bold;
+    		font-size: 1.5rem;
+		}
 	}
 }
 
@@ -237,3 +275,5 @@ a {
 	    left: -0.4rem;
 	}
 }
+
+

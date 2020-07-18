@@ -54,7 +54,7 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
 
 <div id="most_recent-posts">
     <div class="columns column23 left">
-    	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= getUrlSizeImageByPostId($posts[0]["ID"]); ?>')">
+    	<a class="posts" href="<?= the_permalink($posts[0]["ID"]) ?>" style="background-image: url('<?= get_the_post_thumbnail_url($posts[0]["ID"],"full"); ?>')">
     		<h2><?= $posts[0]["post_title"]; ?></h2>
     	</a>
     </div>

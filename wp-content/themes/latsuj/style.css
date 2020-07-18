@@ -114,7 +114,14 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   font-weight: 400;
   font-style: normal;
 }
-/* line 39, sass/shared.scss */
+@font-face {
+  font-family: "fa-regular-400";
+  src: url("./font/design/fa-regular-400.eot");
+  src: local("fa-regular-400"), local("fa-regular-400"), url("./font/design/fa-regular-400.eot?#iefix") format("embedded-opentype"), url("./font/design/fa-regular-400.woff2") format("woff2"), url("./font/design/fa-regular-400.woff") format("woff"), url("./font/design/fa-regular-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+/* line 43, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
   -moz-osx-font-smoothing: grayscale;
@@ -125,23 +132,50 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   text-rendering: auto;
   line-height: 1;
 }
-/* line 49, sass/shared.scss */
+/* line 53, sass/shared.scss */
 .fa.fa-github-square:before {
   content: "\f092";
   color: #fcd116;
 }
-/* line 54, sass/shared.scss */
+/* line 58, sass/shared.scss */
 .fa.fa-facebook-square:before {
   content: "\f082";
   color: #61affe;
 }
-/* line 59, sass/shared.scss */
+/* line 63, sass/shared.scss */
 .fa.fa-youtube-square:before {
   content: "\f431";
   color: #ff514d;
 }
 
-/* line 65, sass/shared.scss */
+/* line 69, sass/shared.scss */
+.far {
+  font-family: 'fa-regular-400';
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+/* line 79, sass/shared.scss */
+.far.fa-heart:before {
+  content: "\f004";
+  color: #ff514d;
+}
+/* line 84, sass/shared.scss */
+.far.fa-philippines:before {
+  content: "\f57e";
+  color: #fcd116;
+}
+/* line 89, sass/shared.scss */
+.far.fa-computer:before {
+  content: "\f108";
+  color: #61affe;
+}
+
+/* line 95, sass/shared.scss */
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;
@@ -165,7 +199,7 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   font-feature-settings: 'liga';
 }
 
-/* line 92, sass/shared.scss */
+/* line 122, sass/shared.scss */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -173,19 +207,19 @@ body {
   margin: 0;
 }
 
-/* line 99, sass/shared.scss */
+/* line 129, sass/shared.scss */
 header {
   position: relative;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 103, sass/shared.scss */
+/* line 133, sass/shared.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 110, sass/shared.scss */
+/* line 140, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -195,14 +229,14 @@ header h1 {
   color: #fcd116;
 }
 
-/* line 120, sass/shared.scss */
+/* line 150, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 126, sass/shared.scss */
+/* line 156, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -210,18 +244,18 @@ p {
   word-spacing: 0.005rem;
 }
 
-/* line 133, sass/shared.scss */
+/* line 163, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 138, sass/shared.scss */
+/* line 168, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 142, sass/shared.scss */
+/* line 172, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -231,7 +265,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 151, sass/shared.scss */
+/* line 181, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -243,16 +277,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 162, sass/shared.scss */
+/* line 192, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 166, sass/shared.scss */
+/* line 196, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 174, sass/shared.scss */
+/* line 204, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -260,7 +294,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 181, sass/shared.scss */
+/* line 211, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -275,24 +309,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 188, sass/shared.scss */
+/* line 218, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 196, sass/shared.scss */
+/* line 226, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 204, sass/shared.scss */
+/* line 234, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 208, sass/shared.scss */
+/* line 238, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -306,7 +340,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 214, sass/shared.scss */
+/* line 244, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -320,12 +354,18 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 220, sass/shared.scss */
+/* line 251, sass/shared.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
+/* line 255, sass/shared.scss */
+#theexcerpt p::first-letter {
+  color: #ff514d;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-/* line 225, sass/shared.scss */
+/* line 263, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -334,7 +374,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 233, sass/shared.scss */
+/* line 271, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;

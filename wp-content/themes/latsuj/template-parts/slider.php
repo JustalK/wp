@@ -5,6 +5,7 @@ $cat_data = is_null($category) ? "" : 'data-category="'.$cat_id.'"';
 
 $posts = $order=="rand" ? get_random_posts($nbr_of_post,$offset,$cat_id) : get_most_recent_posts($nbr_of_post,$offset,$cat_id);
 $total_posts = count_all_published_post($cat_id);
+
 ?>
 <span class="line-description"><?= $description ?></span>
 <div class="slider" data-loop="<?= $offset ?>" data-order="<?= $order ?>" <?= $cat_data ?> data-action="get_loop_posts" data-total_loop="<?= $total_posts ?>">

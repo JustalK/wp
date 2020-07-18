@@ -249,7 +249,7 @@ function get_loop_categories(){
     for($i=$total_categories;$i--;) {
         $categories[$i]->url = get_category_link($categories[$i]->cat_ID);
         $categories[$i]->innerHTML = $categories[$i]->cat_name;
-        $categories[$i]->backgroundImage = getUrlSizeImageBySlug($categories[$i]->slug);
+        $categories[$i]->backgroundImage = getUrlSizeImageBySlug("cat-".$categories[$i]->slug);
     }
     
     echo get_loop_elements(2,$loop,$categories);
@@ -274,19 +274,18 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 function addingMeta() {
     global $post;
     
-    // Page conditional if needed
-    // if( is_page() ){}
+    if(is_singular()){
+        ?>
     
-    ?>
-
-    <meta property="og:url"           content="<?= the_permalink($post->ID) ?>" />
-    <meta property="og:type"          content="website" />
-    <meta property="og:title"         content="<?= $post->post_title ?>" />
-    <meta property="og:description"   content="<?= $post->post_excerpt ?>" />
-    <meta property="og:image"         content="<?= get_the_post_thumbnail_url($post->ID,"full") ?>" />
-    <meta property="fb:app_id" 		  content="2561616047423116" />
-
-  	<?php
+        <meta property="og:url"           content="<?= the_permalink($post->ID) ?>" />
+        <meta property="og:type"          content="website" />
+        <meta property="og:title"         content="<?= $post->post_title ?>" />
+        <meta property="og:description"   content="<?= $post->post_excerpt ?>" />
+        <meta property="og:image"         content="<?= get_the_post_thumbnail_url($post->ID,"full") ?>" />
+        <meta property="fb:app_id" 		  content="2561616047423116" />
+    
+      	<?php
+    }
 
 }
 add_action( 'wp_head', 'addingMeta' );
