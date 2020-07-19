@@ -19,7 +19,10 @@
         'offset' => 0,
         'direction' => 'horizontal',
         'title' => 'Recent Posts'
-    )); 
+    ));
+    wpse_get_partial('template-parts/youtube_listing', array(
+        'title' => 'Youtube'
+    ));
     wpse_get_partial('template-parts/most_recent_posts', array(
         'nbr_of_post' => 4,
         'offset' => 4,
