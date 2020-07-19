@@ -354,18 +354,18 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 251, sass/shared.scss */
+/* line 59, sass/mixins.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
-/* line 255, sass/shared.scss */
+/* line 63, sass/mixins.scss */
 #theexcerpt p::first-letter {
   color: #ff514d;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-/* line 263, sass/shared.scss */
+/* line 253, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -374,7 +374,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 271, sass/shared.scss */
+/* line 261, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -424,7 +424,7 @@ h2 {
 
 /* line 42, sass/mb-style.scss */
 h3 {
-  font-size: 0.33333rem;
+  font-size: 0.8rem;
 }
 
 /* line 46, sass/mb-style.scss */
@@ -715,7 +715,7 @@ a.posts {
 }
 
 /* line 316, sass/mb-style.scss */
-article h2 {
+article h2, article h3 {
   margin: 2rem 5%;
 }
 /* line 320, sass/mb-style.scss */
@@ -763,19 +763,30 @@ footer .copyright {
   margin-bottom: 6rem;
 }
 
-/* line 364, sass/mb-style.scss */
+/* line 59, sass/mixins.scss */
+#random_single p::first-line {
+  text-indent: 2rem;
+}
+/* line 63, sass/mixins.scss */
+#random_single p::first-letter {
+  color: #ff514d;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* line 367, sass/mb-style.scss */
 #share {
   padding: 3rem 5% 1rem;
   display: flex;
   justify-content: center;
 }
-/* line 369, sass/mb-style.scss */
+/* line 372, sass/mb-style.scss */
 #share .fshare {
   background: #1877f2;
   padding: 0.5rem;
   color: white;
 }
-/* line 374, sass/mb-style.scss */
+/* line 377, sass/mb-style.scss */
 #share .fshare i::before {
   color: white;
 }

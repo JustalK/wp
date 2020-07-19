@@ -52,6 +52,8 @@
         'order' => "date"
     )); ?>
     
+    <?php wpse_get_partial('template-parts/youtube_listing'); ?>
+    
     <?php wpse_get_partial('template-parts/preview_posts'); ?>
     
     <?php wpse_get_partial('template-parts/slider', array(

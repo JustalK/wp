@@ -283,18 +283,18 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 251, sass/shared.scss */
+/* line 59, sass/mixins.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
-/* line 255, sass/shared.scss */
+/* line 63, sass/mixins.scss */
 #theexcerpt p::first-letter {
   color: #ff514d;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-/* line 263, sass/shared.scss */
+/* line 253, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -303,7 +303,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 271, sass/shared.scss */
+/* line 261, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;

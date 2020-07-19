@@ -40,7 +40,7 @@ h2 {
 }
 
 h3 {
-    font-size: $mobile_text_header_proportion / 6;
+    font-size: $mobile_text_header_proportion / 2.5;
 } 
 
 #resume {
@@ -313,7 +313,7 @@ a {
 }
 
 article {
-    & h2 {
+    & h2, h3 {
     	margin: 2rem $mobile_website_margin;
 	}
 	
@@ -360,6 +360,9 @@ footer {
 	margin-bottom: 6rem;
 }
 
+#random_single {
+	@include alinea();
+}
 
 #share {
 	padding: 3rem 5% 1rem;
