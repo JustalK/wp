@@ -272,3 +272,17 @@ a {
 }
 
 
+.wp-block-image {
+    position: relative;
+    
+	& .fa-download {
+		position: absolute;
+	    padding: 10px;
+	    background: #fff;
+	    bottom: 0;
+	    right: 0;
+	    text-align: center;
+	}
+}
+
+

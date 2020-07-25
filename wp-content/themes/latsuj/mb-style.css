@@ -395,6 +395,20 @@ a {
   left: -0.4rem;
 }
 
+/* line 275, sass/shared.scss */
+.wp-block-image {
+  position: relative;
+}
+/* line 278, sass/shared.scss */
+.wp-block-image .fa-download {
+  position: absolute;
+  padding: 10px;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
 /* line 14, sass/mb-style.scss */
 header {
   margin: 2rem 5%;
@@ -714,52 +728,43 @@ a.posts {
 .wp-block-image > img {
   height: initial;
 }
-/* line 311, sass/mb-style.scss */
-.wp-block-image .fa-download {
-  position: absolute;
-  padding: 10px;
-  background: #fff;
-  bottom: 0;
-  right: 0;
-  text-align: center;
-}
 
-/* line 321, sass/mb-style.scss */
+/* line 312, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 326, sass/mb-style.scss */
+/* line 317, sass/mb-style.scss */
 article h2, article h3 {
   margin: 2rem 5%;
 }
-/* line 330, sass/mb-style.scss */
+/* line 321, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 336, sass/mb-style.scss */
+/* line 327, sass/mb-style.scss */
 .wp-block-code p {
   margin: 0 5%;
 }
 
-/* line 341, sass/mb-style.scss */
+/* line 332, sass/mb-style.scss */
 footer {
   width: 100%;
   background: #fcd116;
 }
-/* line 345, sass/mb-style.scss */
+/* line 336, sass/mb-style.scss */
 footer .legend {
   margin: 3rem 0 1rem;
 }
-/* line 349, sass/mb-style.scss */
+/* line 340, sass/mb-style.scss */
 footer .copyright {
   text-align: center;
   display: block;
   padding: 2rem;
 }
 
-/* line 356, sass/mb-style.scss */
+/* line 347, sass/mb-style.scss */
 #bsocials {
   position: relative;
   padding: 0 20%;
@@ -768,12 +773,12 @@ footer .copyright {
   font-size: 1.8rem;
   z-index: 20;
 }
-/* line 364, sass/mb-style.scss */
+/* line 355, sass/mb-style.scss */
 #bsocials .fa-github-square:before {
   color: black;
 }
 
-/* line 369, sass/mb-style.scss */
+/* line 360, sass/mb-style.scss */
 #all-posts {
   margin-bottom: 6rem;
 }
@@ -789,19 +794,19 @@ footer .copyright {
   font-size: 1.5rem;
 }
 
-/* line 377, sass/mb-style.scss */
+/* line 368, sass/mb-style.scss */
 #share {
   padding: 3rem 5% 1rem;
   display: flex;
   justify-content: center;
 }
-/* line 382, sass/mb-style.scss */
+/* line 373, sass/mb-style.scss */
 #share .fshare {
   background: #1877f2;
   padding: 0.5rem;
   color: white;
 }
-/* line 387, sass/mb-style.scss */
+/* line 378, sass/mb-style.scss */
 #share .fshare i::before {
   color: white;
 }

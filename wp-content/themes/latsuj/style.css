@@ -395,6 +395,20 @@ a {
   left: -0.4rem;
 }
 
+/* line 275, sass/shared.scss */
+.wp-block-image {
+  position: relative;
+}
+/* line 278, sass/shared.scss */
+.wp-block-image .fa-download {
+  position: absolute;
+  padding: 10px;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
 /* line 16, sass/style.scss */
 h1 {
   font-size: 3rem;
