@@ -116,7 +116,7 @@ article.post {
 	}
 	
 	& h3 {
-    	@include posts-title($text_header_proportion / 6);
+    	@include posts-title($text_header_proportion / 4.5);
 	}
 	
 	&::before {
@@ -222,7 +222,7 @@ article p {
 .wp-block-code {
     position:relative;
 	padding: 0 $website_margin - 5%;
-	margin: 7rem 0 8rem;
+	margin: 8rem 0;
 	
 	&::before {
 		content: " ";
@@ -336,14 +336,22 @@ ul {
 	display: flex;
     justify-content: space-between;
     height: 10rem;
-    margin: 1rem 25%;
+    margin: 0rem 20%;
+    padding: 0 5% 2rem;
     perspective: 100px;
+	border-bottom: $website_border_size solid $color_yellow;
     width: 50%;
     
     & a {
 	    display: block;
 	    width: 100%;
 	    height: 100%;
+	}
+	
+	&::after {
+		@include diamond();
+	    bottom: -0.45rem;
+	    left: 30%;
 	}
 }
 
