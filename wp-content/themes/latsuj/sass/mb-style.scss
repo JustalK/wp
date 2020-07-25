@@ -302,10 +302,20 @@ a {
 
 .wp-block-image {
     margin: 0 $mobile_website_margin;
+    position: relative;
     
     & > img {
     	height: initial;
     }
+    
+	& .fa-download {
+		position: absolute;
+	    padding: 10px;
+	    background: #fff;
+	    bottom: 0;
+	    right: 0;
+	    text-align: center;
+	}
 }
 
 .line-description {

@@ -90,6 +90,11 @@ body {
 		content: "\f108"; 
   		color: $color_blue;
 	}
+	
+	&.fa-download:before {
+		content: "\f019"; 
+  		color: $color_red;
+	}
 }
 
 .material-icons {
@@ -221,7 +226,7 @@ a {
 
 // ==========================================================
 
-.single, .category,, .page-template-all {
+.single, .category, .page-template-all {
 
 	& h1 {
 		padding-bottom: 4rem;

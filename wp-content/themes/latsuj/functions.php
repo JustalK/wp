@@ -92,7 +92,9 @@ function wrapping_date($content) {
 }
 
 function wrapping_the_post_thumbnail($content) {
-    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.'</div>';
+    global $post;
+    $thumbnail = get_the_post_thumbnail_url($post->ID,"full");
+    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
     return $content;
 }
 

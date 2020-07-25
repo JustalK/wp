@@ -174,8 +174,13 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   content: "\f108";
   color: #61affe;
 }
+/* line 94, sass/shared.scss */
+.far.fa-download:before {
+  content: "\f019";
+  color: #ff514d;
+}
 
-/* line 95, sass/shared.scss */
+/* line 100, sass/shared.scss */
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;
@@ -199,7 +204,7 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   font-feature-settings: 'liga';
 }
 
-/* line 122, sass/shared.scss */
+/* line 127, sass/shared.scss */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -207,19 +212,19 @@ body {
   margin: 0;
 }
 
-/* line 129, sass/shared.scss */
+/* line 134, sass/shared.scss */
 header {
   position: relative;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 133, sass/shared.scss */
+/* line 138, sass/shared.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 140, sass/shared.scss */
+/* line 145, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -229,14 +234,14 @@ header h1 {
   color: #fcd116;
 }
 
-/* line 150, sass/shared.scss */
+/* line 155, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 156, sass/shared.scss */
+/* line 161, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -244,18 +249,18 @@ p {
   word-spacing: 0.005rem;
 }
 
-/* line 163, sass/shared.scss */
+/* line 168, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 168, sass/shared.scss */
+/* line 173, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 172, sass/shared.scss */
+/* line 177, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -265,7 +270,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 181, sass/shared.scss */
+/* line 186, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -277,16 +282,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 192, sass/shared.scss */
+/* line 197, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 196, sass/shared.scss */
+/* line 201, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 204, sass/shared.scss */
+/* line 209, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -294,7 +299,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 211, sass/shared.scss */
+/* line 216, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -309,24 +314,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 218, sass/shared.scss */
+/* line 223, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 226, sass/shared.scss */
+/* line 231, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 234, sass/shared.scss */
+/* line 239, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 238, sass/shared.scss */
+/* line 243, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -340,7 +345,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 244, sass/shared.scss */
+/* line 249, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -365,7 +370,7 @@ a {
   font-size: 1.5rem;
 }
 
-/* line 253, sass/shared.scss */
+/* line 258, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -374,7 +379,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 261, sass/shared.scss */
+/* line 266, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -703,48 +708,58 @@ a.posts {
 /* line 303, sass/mb-style.scss */
 .wp-block-image {
   margin: 0 5%;
+  position: relative;
 }
-/* line 306, sass/mb-style.scss */
+/* line 307, sass/mb-style.scss */
 .wp-block-image > img {
   height: initial;
 }
-
 /* line 311, sass/mb-style.scss */
+.wp-block-image .fa-download {
+  position: absolute;
+  padding: 10px;
+  background: #fff;
+  bottom: 0;
+  right: 0;
+  text-align: center;
+}
+
+/* line 321, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 316, sass/mb-style.scss */
+/* line 326, sass/mb-style.scss */
 article h2, article h3 {
   margin: 2rem 5%;
 }
-/* line 320, sass/mb-style.scss */
+/* line 330, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 326, sass/mb-style.scss */
+/* line 336, sass/mb-style.scss */
 .wp-block-code p {
   margin: 0 5%;
 }
 
-/* line 331, sass/mb-style.scss */
+/* line 341, sass/mb-style.scss */
 footer {
   width: 100%;
   background: #fcd116;
 }
-/* line 335, sass/mb-style.scss */
+/* line 345, sass/mb-style.scss */
 footer .legend {
   margin: 3rem 0 1rem;
 }
-/* line 339, sass/mb-style.scss */
+/* line 349, sass/mb-style.scss */
 footer .copyright {
   text-align: center;
   display: block;
   padding: 2rem;
 }
 
-/* line 346, sass/mb-style.scss */
+/* line 356, sass/mb-style.scss */
 #bsocials {
   position: relative;
   padding: 0 20%;
@@ -753,12 +768,12 @@ footer .copyright {
   font-size: 1.8rem;
   z-index: 20;
 }
-/* line 354, sass/mb-style.scss */
+/* line 364, sass/mb-style.scss */
 #bsocials .fa-github-square:before {
   color: black;
 }
 
-/* line 359, sass/mb-style.scss */
+/* line 369, sass/mb-style.scss */
 #all-posts {
   margin-bottom: 6rem;
 }
@@ -774,19 +789,19 @@ footer .copyright {
   font-size: 1.5rem;
 }
 
-/* line 367, sass/mb-style.scss */
+/* line 377, sass/mb-style.scss */
 #share {
   padding: 3rem 5% 1rem;
   display: flex;
   justify-content: center;
 }
-/* line 372, sass/mb-style.scss */
+/* line 382, sass/mb-style.scss */
 #share .fshare {
   background: #1877f2;
   padding: 0.5rem;
   color: white;
 }
-/* line 377, sass/mb-style.scss */
+/* line 387, sass/mb-style.scss */
 #share .fshare i::before {
   color: white;
 }
