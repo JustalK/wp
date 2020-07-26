@@ -961,3 +961,33 @@ hr {
   font-size: 3rem;
   margin: 1rem 0;
 }
+
+/* line 479, sass/style.scss */
+#share {
+  position: fixed;
+  bottom: 0.5rem;
+  right: 1rem;
+  z-index: 10;
+}
+/* line 485, sass/style.scss */
+#share a {
+  padding: 0.5rem 1rem;
+  background: #fcd116;
+  color: white;
+  font-family: "Maitree-Regular", Arial, sans-serif;
+  transition: all 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+}
+/* line 492, sass/style.scss */
+#share a i::before {
+  transition: all 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+  color: white;
+}
+/* line 497, sass/style.scss */
+#share a:hover {
+  background: #61affe;
+  color: #fcd116;
+}
+/* line 501, sass/style.scss */
+#share a:hover i::before {
+  color: #fcd116;
+}
