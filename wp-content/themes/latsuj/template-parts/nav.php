@@ -8,14 +8,18 @@
         	<i class="material-icons">arrow_back</i>
         	<span><?= $category_with_most_posts->cat_name ?></span>	
         </a>
+        <a class="options" href="<?= home_url(); ?>">
+        	<span>Home</span>
+        	<i class="material-icons">home</i>
+        </a>
     <?php } else { ?>
+        <a class="options" href="<?= home_url(); ?>">
+        	<i class="material-icons">home</i>
+        	<span>Home</span>
+        </a>
 		<a class="options" href="javascript:history.back()">
-        	<i class="material-icons">arrow_back</i>
         	<span>Back</span>	
+        	<i class="material-icons">arrow_forward</i>
         </a>
     <?php } ?>
-    <a class="options" href="<?= home_url(); ?>">
-    	<span>Home</span>
-    	<i class="material-icons">home</i>
-    </a>
 </div>
