@@ -150,6 +150,10 @@ header {
 		font-size: 4.75rem;
 		color: $color_yellow;
 	}
+	
+	p::first-line {
+		text-indent: initial;
+	}
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -163,6 +167,7 @@ p {
     line-height: 1.4rem;
     text-align: justify;
     word-spacing: 0.005rem;
+    @include alinea();
 }
 
 span {
@@ -252,7 +257,9 @@ a {
 	    left: 30%;
 	}
 	
-	@include alinea();
+	p {
+		@include alinea();
+	}
 }
 
 .line-description {

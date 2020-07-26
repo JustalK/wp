@@ -362,7 +362,9 @@ footer {
 }
 
 #random_single {
-	@include alinea();
+	p {
+		@include alinea();
+	}
 }
 
 #share {

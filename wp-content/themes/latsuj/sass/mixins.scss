@@ -55,16 +55,14 @@
 }
 
 @mixin alinea() {
-	p {
-		&::first-line {
-			text-indent: 2rem;
-		}
+	&::first-line {
+		text-indent: 2rem;
+	}
 		
-		&::first-letter {
-			color: $color_red;
-			font-weight: bold;
-    		font-size: 1.5rem;
-		}
+	&::first-letter {
+		color: $color_red;
+		font-weight: bold;
+		font-size: 1.5rem;
 	}
 }
 

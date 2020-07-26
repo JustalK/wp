@@ -233,34 +233,48 @@ header h1 {
   font-size: 4.75rem;
   color: #fcd116;
 }
+/* line 154, sass/shared.scss */
+header p::first-line {
+  text-indent: initial;
+}
 
-/* line 155, sass/shared.scss */
+/* line 159, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 161, sass/shared.scss */
+/* line 165, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
   text-align: justify;
   word-spacing: 0.005rem;
 }
+/* line 58, sass/mixins.scss */
+p::first-line {
+  text-indent: 2rem;
+}
+/* line 62, sass/mixins.scss */
+p::first-letter {
+  color: #ff514d;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
 
-/* line 168, sass/shared.scss */
+/* line 173, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 173, sass/shared.scss */
+/* line 178, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 177, sass/shared.scss */
+/* line 182, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -270,7 +284,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 186, sass/shared.scss */
+/* line 191, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -282,16 +296,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 197, sass/shared.scss */
+/* line 202, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 201, sass/shared.scss */
+/* line 206, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 209, sass/shared.scss */
+/* line 214, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -299,7 +313,7 @@ a {
   left: 50%;
   width: 0.125rem;
 }
-/* line 216, sass/shared.scss */
+/* line 221, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -314,24 +328,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 223, sass/shared.scss */
+/* line 228, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 231, sass/shared.scss */
+/* line 236, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 239, sass/shared.scss */
+/* line 244, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 243, sass/shared.scss */
+/* line 248, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -345,7 +359,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 249, sass/shared.scss */
+/* line 254, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -359,18 +373,18 @@ a {
   bottom: -0.4rem;
   left: 30%;
 }
-/* line 59, sass/mixins.scss */
+/* line 58, sass/mixins.scss */
 #theexcerpt p::first-line {
   text-indent: 2rem;
 }
-/* line 63, sass/mixins.scss */
+/* line 62, sass/mixins.scss */
 #theexcerpt p::first-letter {
   color: #ff514d;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-/* line 258, sass/shared.scss */
+/* line 265, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -379,7 +393,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 266, sass/shared.scss */
+/* line 273, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -395,11 +409,11 @@ a {
   left: -0.4rem;
 }
 
-/* line 275, sass/shared.scss */
+/* line 282, sass/shared.scss */
 .wp-block-image {
   position: relative;
 }
-/* line 278, sass/shared.scss */
+/* line 285, sass/shared.scss */
 .wp-block-image .fa-download {
   position: absolute;
   padding: 10px;
@@ -783,30 +797,30 @@ footer .copyright {
   margin-bottom: 6rem;
 }
 
-/* line 59, sass/mixins.scss */
+/* line 58, sass/mixins.scss */
 #random_single p::first-line {
   text-indent: 2rem;
 }
-/* line 63, sass/mixins.scss */
+/* line 62, sass/mixins.scss */
 #random_single p::first-letter {
   color: #ff514d;
   font-weight: bold;
   font-size: 1.5rem;
 }
 
-/* line 368, sass/mb-style.scss */
+/* line 370, sass/mb-style.scss */
 #share {
   padding: 3rem 5% 1rem;
   display: flex;
   justify-content: center;
 }
-/* line 373, sass/mb-style.scss */
+/* line 375, sass/mb-style.scss */
 #share .fshare {
   background: #1877f2;
   padding: 0.5rem;
   color: white;
 }
-/* line 378, sass/mb-style.scss */
+/* line 380, sass/mb-style.scss */
 #share .fshare i::before {
   color: white;
 }
