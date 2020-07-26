@@ -32,7 +32,7 @@ endif;
 </article>
 
 <div id="share">
-    <a class="fshare" href="https://www.facebook.com/sharer/sharer.php?u=https://teamkd.online/my-wife/my-filipino-wife-ep-005/" target="_blank">
+    <a class="fshare" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink(); ?>" target="_blank">
       <i class="fa fa-facebook-square"></i> Share
     </a>
 </div>
