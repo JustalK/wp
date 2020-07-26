@@ -65,6 +65,23 @@ body {
     right: 0;
 }
 
+#nav .options:hover {
+	transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
+	
+	& i {
+		transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
+		color: $color_yellow;
+	}
+	
+	&:nth-child(1) {
+	 	color: $color_red;
+	}
+	
+	&:nth-child(2) {
+	 	color: $color_blue;
+	}
+}
+
 // ==========================================================
 
 #side_left {
