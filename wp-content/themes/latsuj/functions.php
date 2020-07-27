@@ -208,6 +208,7 @@ function wpse_get_partial($template_name, $data = []) {
 function ajax_enqueue() {
     wp_enqueue_script( 'ajax-script', get_template_directory_uri() . '/js/latsuj.js' );
     wp_localize_script( 'ajax-script', 'my_ajax_object', array( 'ajax_url' => admin_url( 'admin-ajax.php' ) ) );
+    wp_localize_script( 'ajax-script', 'my_service_worker', array( 'url' => get_template_directory_uri() . '/js/service-worker.js' ) );
 }
 add_action( 'wp_enqueue_scripts', 'ajax_enqueue' );
 
@@ -291,6 +292,12 @@ function addingMeta() {
 
 }
 add_action( 'wp_head', 'addingMeta' );
+
+
+function register_my_service_worker () {
+    echo "<script>navigator.serviceWorker.register('".get_site_url()."/service-worker.js')</script>";
+}
+add_action ( 'wp_head', 'register_my_service_worker' );
 
 
 

@@ -93,4 +93,18 @@ document.addEventListener("DOMContentLoaded", function() {
             }, i*200);
         }
     }
+    
+    
+ // Register the service worker
+    /**
+    if ('serviceWorker' in navigator) {
+    	navigator.serviceWorker.register(my_service_worker.url).then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+    }).catch(function(err) {
+        // registration failed :(
+        	console.log('ServiceWorker registration failed: ', err);
+        });
+    }
+    **/
 })
