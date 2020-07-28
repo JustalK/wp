@@ -283,7 +283,7 @@ a {
 	top: 2.5rem;
 }
 
-.single, .category, .page-template-all {
+.single, .category, .page-template-all  {
 	& h1 {
 		width: 100% - 2 * $mobile_website_margin + 10%;
 	    margin: 0 $mobile_website_margin - 5%;	

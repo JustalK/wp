@@ -47,3 +47,32 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   left: 0;
   top: 50%;
 }
+/* line 52, sass/offline.scss */
+.page-template-offline #mb-horizontal-posts li:nth-child(2n)::before, .page-template-offline #mb-horizontal-posts li:nth-child(2n)::after {
+  display: none;
+}
+/* line 57, sass/offline.scss */
+.page-template-offline #mb-horizontal-posts li.hidden {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  overflow: hidden;
+}
+/* line 66, sass/offline.scss */
+.page-template-offline h1 {
+  width: 100%;
+  margin: 0 0%;
+}
+/* line 71, sass/offline.scss */
+.page-template-offline h2, .page-template-offline h3 {
+  margin: 2rem 0;
+}
+/* line 75, sass/offline.scss */
+.page-template-offline p {
+  padding: 0;
+}
+/* line 79, sass/offline.scss */
+.page-template-offline #theexcerpt {
+  margin: 0;
+}

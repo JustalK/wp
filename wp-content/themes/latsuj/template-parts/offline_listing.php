@@ -21,6 +21,12 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
                     			<div class="square"></div>
                     		</div>
                     	</div>
+                    </li>
+                    <li class="hidden">
+                    	<div>
+                    		<div id="theexcerpt"><p><?= get_the_excerpt($post["ID"]); ?></p></div>
+                    		<?= $post["post_content"]; ?>
+                    	</div>
             		</li>
         		<?php } ?>
         	</ul>

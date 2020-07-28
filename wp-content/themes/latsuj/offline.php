@@ -24,3 +24,7 @@
     <?php wpse_get_partial('template-parts/header'); ?>
 
 <?php endif; ?>
+
+<?php
+    get_footer();
+?>
