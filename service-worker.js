@@ -2,7 +2,7 @@ var cacheVersion = 2;
 var currentCache = {
   offline: 'offline-cache' + cacheVersion
 };
-const offlineUrl = 'http://localhost:800/my-wife/my-filipino-wife-ep-005/';
+const offlineUrl = 'http://localhost:800/offline/';
 
 this.addEventListener('install', event => {
   event.waitUntil(
@@ -31,6 +31,8 @@ this.addEventListener('fetch', event => {
 	        // Respond with everything else if we can
 	        event.respondWith(caches.match(event.request)
 	                        .then(function (response) {
+	                        	console.log(response);
+	                        	console.log(event.request);
 	                        return response || fetch(event.request);
 	                    })
 	            );

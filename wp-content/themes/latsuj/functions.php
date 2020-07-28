@@ -58,6 +58,7 @@ add_image_size( 'post-thumbnail', 400, 300, true);
 function custom_theme_assets() {
     if(wp_is_mobile()) wp_enqueue_style( 'mb-style', get_template_directory_uri()."/mb-style.css" );
     else wp_enqueue_style( 'style', get_stylesheet_uri() );
+    if(is_page('offline')) wp_enqueue_style( 'offline', get_template_directory_uri()."/offline.css" );
 }
 function remove_admin_login_header() {
     remove_action('wp_head', '_admin_bar_bump_cb');

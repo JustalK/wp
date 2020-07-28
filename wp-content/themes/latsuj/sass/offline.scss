@@ -1,0 +1,52 @@
+@import 'constants';
+@import 'mixins';
+
+body p, body i, body h1, body h2, body h3, body h4, body span {
+	opacity: 1 !important;
+}
+
+.page-template-offline {
+	
+	& header {
+    	margin: 5rem 5% 2rem;
+	}
+	
+	#nav-offline {
+	    position: fixed;
+	    width: 100%;
+	    top: 0;
+	    z-index: 100;
+	    text-align: center;
+	    background: $color_yellow;
+	    color: $color_white;
+	    padding: 1rem 0;
+	    font-family: $text_header_stack;
+	}
+	
+	#mb-horizontal-posts {
+	    & .posts {
+			height: 8rem;
+			position: relative;
+		    z-index: 10;
+		    display: block;
+		    border: 0.125rem solid $color_yellow;
+		    background: $color_white;
+	    	
+	    	& .image {
+			    width: 50%;
+			    height: 100%;
+			    float: left;
+			    @include full-background();
+	    	}
+	    	
+	    	& .post_informations {
+				width: 40%;
+				
+				& .square {
+				    left: 0;
+				    top: 50%;
+				}
+	    	}
+	    }
+	}
+}
