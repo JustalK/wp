@@ -8,7 +8,7 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   margin: 5rem 5% 2rem;
 }
 /* line 14, sass/offline.scss */
-.page-template-offline #nav-offline {
+.page-template-offline .nav-offline {
   position: fixed;
   width: 100%;
   top: 0;
@@ -19,7 +19,12 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   padding: 1rem 0;
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 27, sass/offline.scss */
+/* line 25, sass/offline.scss */
+.page-template-offline .nav-offline.bottom {
+  top: initial;
+  bottom: 0;
+}
+/* line 32, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts .posts {
   height: 8rem;
   position: relative;
@@ -28,7 +33,7 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   border: 0.125rem solid #fcd116;
   background: #fff;
 }
-/* line 35, sass/offline.scss */
+/* line 40, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts .posts .image {
   width: 50%;
   height: 100%;
@@ -38,20 +43,20 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   background-repeat: no-repeat;
   text-decoration: none;
 }
-/* line 42, sass/offline.scss */
+/* line 47, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts .posts .post_informations {
   width: 40%;
 }
-/* line 45, sass/offline.scss */
+/* line 50, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts .posts .post_informations .square {
   left: 0;
   top: 50%;
 }
-/* line 52, sass/offline.scss */
+/* line 57, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts li:nth-child(2n)::before, .page-template-offline #mb-horizontal-posts li:nth-child(2n)::after {
   display: none;
 }
-/* line 57, sass/offline.scss */
+/* line 62, sass/offline.scss */
 .page-template-offline #mb-horizontal-posts li.hidden {
   opacity: 0;
   height: 0;
@@ -59,20 +64,20 @@ body p, body i, body h1, body h2, body h3, body h4, body span {
   margin: 0;
   overflow: hidden;
 }
-/* line 66, sass/offline.scss */
+/* line 71, sass/offline.scss */
 .page-template-offline h1 {
   width: 100%;
   margin: 0 0%;
 }
-/* line 71, sass/offline.scss */
+/* line 76, sass/offline.scss */
 .page-template-offline h2, .page-template-offline h3 {
   margin: 2rem 0;
 }
-/* line 75, sass/offline.scss */
+/* line 80, sass/offline.scss */
 .page-template-offline p {
   padding: 0;
 }
-/* line 79, sass/offline.scss */
+/* line 84, sass/offline.scss */
 .page-template-offline #theexcerpt {
   margin: 0;
 }

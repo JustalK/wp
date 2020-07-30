@@ -9,7 +9,8 @@ this.addEventListener('install', event => {
     caches.open(currentCache.offline).then(function(cache) {
       return cache.addAll([
           offlineUrl,
-          'http://localhost:800/wp-content/themes/latsuj/js/latsuj.js?ver=5.4.2'
+          'http://localhost:800/wp-content/themes/latsuj/js/latsuj.js?ver=5.4.2',
+          'http://localhost:800/wp-content/themes/latsuj/offline.css?ver=5.4.2'
       ]);
     })
   );

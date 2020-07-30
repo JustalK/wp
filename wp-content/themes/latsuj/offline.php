@@ -5,7 +5,7 @@
 ?>
 
 <?php if ( wp_is_mobile() ) : ?>
-  <span id="nav-offline">YOU ARE OFFLINE</span>
+  <span class="nav-offline">YOU ARE OFFLINE</span>
 
   <?php wpse_get_partial('template-parts/header'); ?>
   <?php
@@ -16,6 +16,7 @@
     ));
     ?>
 
+  <span class="nav-offline bottom">CLOSE ARTICLE</span>
 <?php else : ?>
 
 <span id="design_side_left" class="design_side">&nbsp;</span>
@@ -29,14 +30,13 @@
 document.addEventListener("DOMContentLoaded", function() {
     const posts = document.querySelectorAll(".posts");
     const posts_content = document.querySelectorAll(".posts_content");
+    let posts_open =0;
 
     const show_text = function(e) {
       const selected_posts = e.currentTarget;
       const id = selected_posts.dataset.id;
-
       posts_content[id].classList.remove("hidden");
-      
-      console.log(e.currentTarget);
+      posts_open++;
     }
 
     for(let i=posts.length;i--;) {
