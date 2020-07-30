@@ -1,60 +1,36 @@
-<?php 
+<?php
 $category = get_category( get_query_var( 'cat' ) );
 $cat_id = is_null($category) ? NULL : $category->cat_ID;
 
 $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
+$id=0;
 ?>
 
 <?php if ( wp_is_mobile() ) : ?>
-    
-    <?php if($direction=="horizontal") { ?>
-        <div id="mb-horizontal-posts">
-        	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
-        	<ul>
-        		<?php foreach($posts as $post) { ?>
-            		<li>
-                    	<div class="posts">
-                    		<div class="image" style="background-image: url('<?= getUrlSizeImageByPostId($post["ID"]); ?>')"></div>
-                    		<div class="post_informations">
-                    			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
-                    			<h2><?= $post["post_title"]; ?></h2>
-                    			<div class="square"></div>
-                    		</div>
-                    	</div>
-                    </li>
-                    <li class="hidden">
-                    	<div>
-                    		<div id="theexcerpt"><p><?= get_the_excerpt($post["ID"]); ?></p></div>
-                    		<?= $post["post_content"]; ?>
-                    	</div>
-            		</li>
-        		<?php } ?>
-        	</ul>
-        </div>
-    <?php } ?>
-    
-	<?php if($direction=="vertical") { ?>
-    	<div id="mb-vertical-posts">
-        	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
-        	<ul>
-        		<?php foreach($posts as $post) { ?>
-        			<?php $category = get_the_category($post["ID"]);
-        			?>
-            		<li>
-            			<a class="posts" href="<?= the_permalink($post["ID"]) ?>">
-                    		<div class="image" style="background-image: url('<?= getUrlSizeImageByPostId($post["ID"]); ?>')"></div>
-                    		<div class="post_informations">
-                    			<span><?= $category[0]->cat_name ?></span>
-                    			<h2><?= $post["post_title"]; ?></h2>
-                    			<div class="square"></div>
-                    		</div>
-                    	</a>
-            		</li>
-        		<?php } ?>
-        	</ul>
-    	</div>
 
-	<?php } ?>
+      <div id="mb-horizontal-posts">
+      	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
+      	<ul>
+      		<?php foreach($posts as $post) { ?>
+          		<li>
+                  	<div class="posts" data-id="<?= $id ?>">
+                  		<div class="image" style="background-image: url('<?= getUrlSizeImageByPostId($post["ID"]); ?>')"></div>
+                  		<div class="post_informations">
+                  			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
+                  			<h2><?= $post["post_title"]; ?></h2>
+                  			<div class="square"></div>
+                  		</div>
+                  	</div>
+                  </li>
+                  <li class="posts_content hidden" data-pos="<?= $count ?>">
+                  	<div>
+                  		<div id="theexcerpt"><p><?= get_the_excerpt($post["ID"]); ?></p></div>
+                  		<?= $post["post_content"]; ?>
+                  	</div>
+          		</li>
+      		<?php $id++; } ?>
+      	</ul>
+      </div>
 
 <?php else : ?>
 
@@ -75,4 +51,3 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
 </div>
 
 <?php endif; ?>
-
