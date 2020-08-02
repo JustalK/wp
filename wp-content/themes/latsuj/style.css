@@ -70,13 +70,30 @@ article, aside, details, figcaption, figure, footer, header, hgroup, main, menu,
 }
 
 /* line 7, sass/shared.scss */
-body p, body i, body h1, body h2, body h3, body h4, body span {
+body h1, body h2, body h3, body h4 {
   opacity: 0;
   transition: opacity 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+  transition-delay: 0.5s;
 }
-/* line 12, sass/shared.scss */
-body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4, body.show span {
+/* line 13, sass/shared.scss */
+body #theexcerpt, body i {
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+  transition-delay: 1s;
+}
+/* line 19, sass/shared.scss */
+body span {
+  opacity: 0;
+  transition: opacity 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+  transition-delay: 1s;
+}
+/* line 25, sass/shared.scss */
+body.show #theexcerpt, body.show i, body.show h1, body.show h2, body.show h3, body.show h4, body.show span {
   opacity: 1;
+}
+/* line 29, sass/shared.scss */
+body.show .design {
+  transform: translateY(0);
 }
 
 @font-face {
@@ -121,7 +138,7 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   font-weight: 400;
   font-style: normal;
 }
-/* line 43, sass/shared.scss */
+/* line 60, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
   -moz-osx-font-smoothing: grayscale;
@@ -132,23 +149,23 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   text-rendering: auto;
   line-height: 1;
 }
-/* line 53, sass/shared.scss */
+/* line 70, sass/shared.scss */
 .fa.fa-github-square:before {
   content: "\f092";
   color: #fcd116;
 }
-/* line 58, sass/shared.scss */
+/* line 75, sass/shared.scss */
 .fa.fa-facebook-square:before {
   content: "\f082";
   color: #61affe;
 }
-/* line 63, sass/shared.scss */
+/* line 80, sass/shared.scss */
 .fa.fa-youtube-square:before {
   content: "\f431";
   color: #ff514d;
 }
 
-/* line 69, sass/shared.scss */
+/* line 86, sass/shared.scss */
 .far {
   font-family: 'fa-regular-400';
   -moz-osx-font-smoothing: grayscale;
@@ -159,28 +176,28 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   text-rendering: auto;
   line-height: 1;
 }
-/* line 79, sass/shared.scss */
+/* line 96, sass/shared.scss */
 .far.fa-heart:before {
   content: "\f004";
   color: #ff514d;
 }
-/* line 84, sass/shared.scss */
+/* line 101, sass/shared.scss */
 .far.fa-philippines:before {
   content: "\f57e";
   color: #fcd116;
 }
-/* line 89, sass/shared.scss */
+/* line 106, sass/shared.scss */
 .far.fa-computer:before {
   content: "\f108";
   color: #61affe;
 }
-/* line 94, sass/shared.scss */
+/* line 111, sass/shared.scss */
 .far.fa-download:before {
   content: "\f019";
   color: #ff514d;
 }
 
-/* line 100, sass/shared.scss */
+/* line 117, sass/shared.scss */
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;
@@ -204,7 +221,7 @@ body.show p, body.show i, body.show h1, body.show h2, body.show h3, body.show h4
   font-feature-settings: 'liga';
 }
 
-/* line 127, sass/shared.scss */
+/* line 144, sass/shared.scss */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -212,19 +229,19 @@ body {
   margin: 0;
 }
 
-/* line 134, sass/shared.scss */
+/* line 151, sass/shared.scss */
 header {
   position: relative;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 138, sass/shared.scss */
+/* line 155, sass/shared.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 145, sass/shared.scss */
+/* line 162, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -233,19 +250,19 @@ header h1 {
   font-size: 4.75rem;
   color: #fcd116;
 }
-/* line 154, sass/shared.scss */
+/* line 171, sass/shared.scss */
 header p::first-line {
   text-indent: initial;
 }
 
-/* line 159, sass/shared.scss */
+/* line 176, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 165, sass/shared.scss */
+/* line 182, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -263,18 +280,18 @@ p::first-letter {
   font-size: 1.5rem;
 }
 
-/* line 173, sass/shared.scss */
+/* line 190, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 178, sass/shared.scss */
+/* line 195, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 182, sass/shared.scss */
+/* line 199, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -284,7 +301,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 191, sass/shared.scss */
+/* line 208, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -296,24 +313,27 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 202, sass/shared.scss */
+/* line 219, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 206, sass/shared.scss */
+/* line 223, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 214, sass/shared.scss */
+/* line 231, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
   top: 0;
   left: 50%;
   width: 0.125rem;
+  transition: transform 0.25s cubic-bezier(0.75, 0, 0.25, 1);
+  transition-delay: 0.1s;
+  transform: translateY(-100%);
 }
-/* line 221, sass/shared.scss */
+/* line 241, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -328,24 +348,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 228, sass/shared.scss */
+/* line 248, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 236, sass/shared.scss */
+/* line 256, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 244, sass/shared.scss */
+/* line 264, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 248, sass/shared.scss */
+/* line 268, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -359,7 +379,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 254, sass/shared.scss */
+/* line 274, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -384,7 +404,7 @@ a {
   font-size: 1.5rem;
 }
 
-/* line 265, sass/shared.scss */
+/* line 285, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -393,7 +413,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 273, sass/shared.scss */
+/* line 293, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -409,11 +429,11 @@ a {
   left: -0.4rem;
 }
 
-/* line 282, sass/shared.scss */
+/* line 302, sass/shared.scss */
 .wp-block-image {
   position: relative;
 }
-/* line 285, sass/shared.scss */
+/* line 305, sass/shared.scss */
 .wp-block-image .fa-download {
   position: absolute;
   padding: 10px;

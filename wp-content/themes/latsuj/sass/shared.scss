@@ -4,13 +4,30 @@
 // ==============================================================================================>
 
 body {
-	& p, & i, & h1, & h2, & h3, & h4, & span {
+	& h1, & h2, & h3, & h4 {
 		opacity: 0;
 		transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
+		transition-delay: 0.5s;
 	}
-	
-	&.show p, &.show i, &.show h1, &.show h2, &.show h3, &.show h4, &.show span {
+
+	#theexcerpt, & i {
+		opacity: 0;
+		transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
+		transition-delay: 1s;
+	}
+
+	& span {
+		opacity: 0;
+		transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1);
+		transition-delay: 1s;
+	}
+
+	&.show #theexcerpt, &.show i, &.show h1, &.show h2, &.show h3, &.show h4, &.show span {
 		opacity: 1;
+	}
+
+	&.show .design {
+		transform: translateY(0);
 	}
 }
 
@@ -48,20 +65,20 @@ body {
   	font-style: normal;
   	font-variant: normal;
   	text-rendering: auto;
-	line-height: 1; 
-  
+	line-height: 1;
+
   	&.fa-github-square:before {
-  		content: "\f092"; 
+  		content: "\f092";
   		color: $color_yellow;
   	}
 
 	&.fa-facebook-square:before {
-		content: "\f082"; 
+		content: "\f082";
   		color: $color_blue;
 	}
-	  
+
 	&.fa-youtube-square:before {
-		content: "\f431"; 
+		content: "\f431";
   		color: $color_red;
 	}
 }
@@ -74,25 +91,25 @@ body {
   	font-style: normal;
   	font-variant: normal;
   	text-rendering: auto;
-	line-height: 1; 
-	
+	line-height: 1;
+
 	&.fa-heart:before {
-		content: "\f004"; 
+		content: "\f004";
   		color: $color_red;
-	} 
-	
+	}
+
 	&.fa-philippines:before {
-		content: "\f57e"; 
+		content: "\f57e";
   		color: $color_yellow;
 	}
-	
+
 	&.fa-computer:before {
-		content: "\f108"; 
+		content: "\f108";
   		color: $color_blue;
 	}
-	
+
 	&.fa-download:before {
-		content: "\f019"; 
+		content: "\f019";
   		color: $color_red;
 	}
 }
@@ -134,14 +151,14 @@ body {
 header {
 	position:relative;
 	border-bottom: 0.125rem solid #fcd116;
-	
+
 	& img {
 		width: 50%;
 		margin: 0 25%;
 		height: 100%;
 		display: block;
 	}
-	
+
 	& h1 {
 		position: absolute;
 		bottom: 0;
@@ -150,7 +167,7 @@ header {
 		font-size: 4.75rem;
 		color: $color_yellow;
 	}
-	
+
 	p::first-line {
 		text-indent: initial;
 	}
@@ -198,11 +215,11 @@ a {
 		font-size: 1.2rem;
 		justify-content: space-between;
 	    width: 6rem;
-	    
+
 	    & span {
 	    	font-family: $text_header_stack;
 	    }
-	    
+
 	    & i {
 	    	color: white;
 	    }
@@ -217,7 +234,10 @@ a {
     top: 0;
     left: 50%;
     width: $website_border_size;
-    
+	transition: transform 0.25s cubic-bezier(0.75,0,0.25,1);
+	transition-delay: 0.1s;
+	transform: translateY(-100%);
+
     &::after {
     	@include diamond();
     	bottom: -0.4rem;
@@ -238,13 +258,13 @@ a {
     	padding-top: 10rem;
 	    text-align: center;
 	}
-	
+
 }
 
 #theexcerpt {
     position: relative;
     font-style: italic;
-	
+
 	&::before {
 		@include diamond();
 	    top: -0.4rem;
@@ -256,7 +276,7 @@ a {
 	    bottom: -0.4rem;
 	    left: 30%;
 	}
-	
+
 	p {
 		@include alinea();
 	}
@@ -269,7 +289,7 @@ a {
 	text-align: center;
 	background: $color_yellow;
 	color: white;
-	
+
 	&::before {
 		@include diamond();
 		background: $color_white;
@@ -281,7 +301,7 @@ a {
 
 .wp-block-image {
     position: relative;
-    
+
 	& .fa-download {
 		position: absolute;
 	    padding: 10px;
