@@ -20,10 +20,6 @@ body span {
 body.show #theexcerpt, body.show i, body.show h1, body.show h2, body.show h3, body.show h4, body.show span {
   opacity: 1;
 }
-/* line 29, sass/shared.scss */
-body.show .design {
-  transform: translateY(0);
-}
 
 @font-face {
   font-family: "GothamSSm-Book";
@@ -67,7 +63,7 @@ body.show .design {
   font-weight: 400;
   font-style: normal;
 }
-/* line 60, sass/shared.scss */
+/* line 56, sass/shared.scss */
 .fa {
   font-family: 'fa-brands-400';
   -moz-osx-font-smoothing: grayscale;
@@ -78,23 +74,23 @@ body.show .design {
   text-rendering: auto;
   line-height: 1;
 }
-/* line 70, sass/shared.scss */
+/* line 66, sass/shared.scss */
 .fa.fa-github-square:before {
   content: "\f092";
   color: #fcd116;
 }
-/* line 75, sass/shared.scss */
+/* line 71, sass/shared.scss */
 .fa.fa-facebook-square:before {
   content: "\f082";
   color: #61affe;
 }
-/* line 80, sass/shared.scss */
+/* line 76, sass/shared.scss */
 .fa.fa-youtube-square:before {
   content: "\f431";
   color: #ff514d;
 }
 
-/* line 86, sass/shared.scss */
+/* line 82, sass/shared.scss */
 .far {
   font-family: 'fa-regular-400';
   -moz-osx-font-smoothing: grayscale;
@@ -105,28 +101,28 @@ body.show .design {
   text-rendering: auto;
   line-height: 1;
 }
-/* line 96, sass/shared.scss */
+/* line 92, sass/shared.scss */
 .far.fa-heart:before {
   content: "\f004";
   color: #ff514d;
 }
-/* line 101, sass/shared.scss */
+/* line 97, sass/shared.scss */
 .far.fa-philippines:before {
   content: "\f57e";
   color: #fcd116;
 }
-/* line 106, sass/shared.scss */
+/* line 102, sass/shared.scss */
 .far.fa-computer:before {
   content: "\f108";
   color: #61affe;
 }
-/* line 111, sass/shared.scss */
+/* line 107, sass/shared.scss */
 .far.fa-download:before {
   content: "\f019";
   color: #ff514d;
 }
 
-/* line 117, sass/shared.scss */
+/* line 113, sass/shared.scss */
 .material-icons {
   font-family: 'MaterialIcons-Regular';
   font-weight: normal;
@@ -150,7 +146,7 @@ body.show .design {
   font-feature-settings: 'liga';
 }
 
-/* line 144, sass/shared.scss */
+/* line 140, sass/shared.scss */
 body {
   font-family: Arial, sans-serif;
   font-size: 16px;
@@ -158,19 +154,19 @@ body {
   margin: 0;
 }
 
-/* line 151, sass/shared.scss */
+/* line 147, sass/shared.scss */
 header {
   position: relative;
   border-bottom: 0.125rem solid #fcd116;
 }
-/* line 155, sass/shared.scss */
+/* line 151, sass/shared.scss */
 header img {
   width: 50%;
   margin: 0 25%;
   height: 100%;
   display: block;
 }
-/* line 162, sass/shared.scss */
+/* line 158, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -179,19 +175,19 @@ header h1 {
   font-size: 4.75rem;
   color: #fcd116;
 }
-/* line 171, sass/shared.scss */
+/* line 167, sass/shared.scss */
 header p::first-line {
   text-indent: initial;
 }
 
-/* line 176, sass/shared.scss */
+/* line 172, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 182, sass/shared.scss */
+/* line 178, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -209,18 +205,18 @@ p::first-letter {
   font-size: 1.5rem;
 }
 
-/* line 190, sass/shared.scss */
+/* line 186, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 195, sass/shared.scss */
+/* line 191, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 199, sass/shared.scss */
+/* line 195, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -230,7 +226,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 208, sass/shared.scss */
+/* line 204, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -242,27 +238,26 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 219, sass/shared.scss */
+/* line 215, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 223, sass/shared.scss */
+/* line 219, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 231, sass/shared.scss */
+/* line 227, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
   top: 0;
   left: 50%;
   width: 0.125rem;
-  transition: transform 0.25s cubic-bezier(0.75, 0, 0.25, 1);
-  transition-delay: 0.1s;
-  transform: translateY(-100%);
+  transform: translateY(-150%);
+  transition: transform 0.5s 1.35s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 241, sass/shared.scss */
+/* line 236, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -277,24 +272,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 248, sass/shared.scss */
+/* line 243, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 256, sass/shared.scss */
+/* line 251, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 264, sass/shared.scss */
+/* line 259, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 268, sass/shared.scss */
+/* line 263, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -308,7 +303,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 274, sass/shared.scss */
+/* line 269, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -333,7 +328,7 @@ a {
   font-size: 1.5rem;
 }
 
-/* line 285, sass/shared.scss */
+/* line 280, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -342,7 +337,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 293, sass/shared.scss */
+/* line 288, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -358,11 +353,11 @@ a {
   left: -0.4rem;
 }
 
-/* line 302, sass/shared.scss */
+/* line 297, sass/shared.scss */
 .wp-block-image {
   position: relative;
 }
-/* line 305, sass/shared.scss */
+/* line 300, sass/shared.scss */
 .wp-block-image .fa-download {
   position: absolute;
   padding: 10px;

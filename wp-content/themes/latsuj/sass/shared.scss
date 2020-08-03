@@ -25,10 +25,6 @@ body {
 	&.show #theexcerpt, &.show i, &.show h1, &.show h2, &.show h3, &.show h4, &.show span {
 		opacity: 1;
 	}
-
-	&.show .design {
-		transform: translateY(0);
-	}
 }
 
 // ==============================================================================================>
@@ -234,9 +230,8 @@ a {
     top: 0;
     left: 50%;
     width: $website_border_size;
-	transition: transform 0.25s cubic-bezier(0.75,0,0.25,1);
-	transition-delay: 0.1s;
-	transform: translateY(-100%);
+	transform: translateY(-150%);
+	transition: transform 0.5s 1.35s cubic-bezier(0.75,0,0.25,1);
 
     &::after {
     	@include diamond();
