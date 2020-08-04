@@ -18,10 +18,12 @@ if (have_posts()) :
     while (have_posts()) :
         the_post();
         the_title();
+		?><div id="loading"><?php
         the_date();
         the_excerpt();
         the_post_thumbnail("full");
         the_content();
+		?></div><?php
     endwhile
     ;
 else :
@@ -37,10 +39,10 @@ endif;
     </a>
 </div>
 
-<?php 
+<?php
     wpse_get_partial('template-parts/related_posts', array(
         'id' => get_the_ID()
-    )); 
+    ));
 ?>
 
 <?php
