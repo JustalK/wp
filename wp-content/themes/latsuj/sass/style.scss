@@ -24,7 +24,7 @@ h2 {
 
 h3 {
     font-size: $text_header_proportion / 4;
-} 
+}
 
 // ==========================================================
 
@@ -44,16 +44,16 @@ body {
 	    pointer-events: none;
 	    transform: translateY(-100%);
 	    transition: all 1.3s cubic-bezier(0.75,0,0.25,1);
-	    
+
 	    &.right {
 	    	transform: translate3d(12rem,0,0);
 	    }
 	}
-	
+
 	&.show .design_side {
 		transform: translateY(0);
 	}
-	
+
 	&.home .design_side {
 		transform: translateY(10rem);;
 	}
@@ -67,16 +67,16 @@ body {
 
 #nav .options:hover {
 	transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
-	
+
 	& i {
 		transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
 		color: $color_yellow;
 	}
-	
+
 	&:nth-child(1) {
 	 	color: $color_red;
 	}
-	
+
 	&:nth-child(2) {
 	 	color: $color_blue;
 	}
@@ -91,7 +91,7 @@ body {
     height: 100%;
     background: $color_blue;
     transform: translate3d(-12rem,0,0);
-    
+
     &.right {
     	transform: translate3d(0,0,0);
 	}
@@ -99,7 +99,7 @@ body {
 
 // ==========================================================
 
-article.post {    
+article.post {
 	position: relative;
 	margin-bottom: 3rem;
 }
@@ -107,7 +107,7 @@ article.post {
 .single, .category {
 	& h1 {
 		width: 100% - 2 * $website_margin + 10%;
-	    margin: 0 $website_margin - 5%;	
+	    margin: 0 $website_margin - 5%;
 	}
 }
 
@@ -119,23 +119,23 @@ article.post {
 	overflow: hidden;
 	filter: drop-shadow(2px 4px 4px #111);
     transition: opacity 0.25s cubic-bezier(0.75,0,0.25,1), transform 0.5s cubic-bezier(0.75,0,0.25,1);
-	
+
 	&.invisible {
 		opacity: 0;
 	}
-	
+
 	& h2 {
     	@include posts-title($text_header_proportion / 2.5);
 	}
-	
+
 	&.secondary_post h2 {
     	@include posts-title($text_header_proportion / 3.5);
 	}
-	
+
 	& h3 {
     	@include posts-title($text_header_proportion / 4.5);
 	}
-	
+
 	&::before {
 	    content: " ";
 	    position: absolute;
@@ -148,24 +148,24 @@ article.post {
 	    z-index: 2;
     	transition: all 0.5s cubic-bezier(0.75,0,0.25,1);
 	}
-	
+
 	&:hover {
 		filter: drop-shadow(2px 4px 8px #111);
 		transform: translate3d(0, 0, 2px);
-		
+
 		& h2,& h3 {
 			transform: translateY(50%) skewY(-10deg) translateX(-150%);
 		}
-		
+
 		&::before {
 	    	transform: rotateZ(15deg) translateX(75%);
 	    }
-	    
+
 	    &::after {
 	    	opacity: 0;
 	    }
 	}
-	
+
 	&::after {
 		content: " ";
 	    width: 100%;
@@ -187,7 +187,7 @@ article h2 {
 
 article h3 {
     margin: 25px $website_margin;
-} 
+}
 
 article p {
     padding: 0 $website_margin;
@@ -200,7 +200,7 @@ article p {
 	display: inline-flex;
     justify-content: space-between;
     perspective: 100px;
-    
+
     &::before {
 		@include diamond();
 	    top: -0.45rem;
@@ -223,15 +223,15 @@ article p {
 	&.column23 {
 		width: 66%;
 	}
-	
+
 	&.column13 {
 		width: 33.99%;
 	}
-	
+
 	&.column12 {
 		width: 47%;
 	}
-	
+
 }
 
 // ==========================================================
@@ -240,7 +240,7 @@ article p {
     position:relative;
 	padding: 0 $website_margin - 5%;
 	margin: 8rem 0;
-	
+
 	&::before {
 		content: " ";
 	    position: absolute;
@@ -253,7 +253,7 @@ article p {
 	    z-index: -1;
 	    padding: 4rem 0;
 	}
-	
+
 	& .legend {
 	    display: block;
 		font-family: $text_header_stack;
@@ -261,10 +261,10 @@ article p {
 	    padding-bottom: 2rem;
 	    color: $color_white;
 	}
-	
+
 	& p {
-		position: relative; 
-		
+		position: relative;
+
 		& a {
 			position: absolute;
 		    right: 0;
@@ -274,7 +274,7 @@ article p {
 		    box-shadow: 0px 0px 6px white;
 		    bottom: -3rem;
    	 		transition: all 0.2s cubic-bezier(0.75,0,0.25,1);
-		    
+
 		    &:hover {
 		    	background: $color_white;
 		    	color: $color_yellow;
@@ -285,7 +285,7 @@ article p {
 
 .wp-block-image {
     margin: 0 $website_margin;
-    
+
     & > img {
     	height: initial;
     }
@@ -307,7 +307,7 @@ ul {
 
 #theexcerpt {
 	margin: 0;
-	
+
 	p {
 		@include line($website_margin);
 	}
@@ -318,7 +318,7 @@ ul {
     height: 22rem;
     margin: 1rem $website_category_margin;
     perspective: 100px;
-    
+
     & a {
 	    display: block;
 	    width: 100%;
@@ -336,12 +336,12 @@ ul {
 	    display: block;
 	    width: 90%;
 	    height: 100%;
-	    
+
 	    &.secondary_post {
 	    	height: 44%;
 	    	width: 100%;
 	    }
-	    
+
 	    &.bottom_post {
 			position: absolute;
 			bottom: 0;
@@ -358,13 +358,13 @@ ul {
     perspective: 100px;
 	border-bottom: $website_border_size solid $color_yellow;
     width: 50%;
-    
+
     & a {
 	    display: block;
 	    width: 100%;
 	    height: 100%;
 	}
-	
+
 	&::after {
 		@include diamond();
 	    bottom: -0.45rem;
@@ -378,8 +378,8 @@ ul {
 
 header {
 	margin: 1rem $website_category_margin - 5%;
-	
-	& p {	
+
+	& p {
 		position: absolute;
 	    width: 20%;
 	    bottom: 5%;
@@ -387,7 +387,7 @@ header {
 		&.left {
 		    left: 5%;
 		}
-		
+
 		&.right {
 		    right: 5%;
 		    direction:rtl;
@@ -404,7 +404,7 @@ header {
     width: 50%;
     padding: 0 5%;
     perspective: 100px;
-    
+
     & a {
 	    width: 47.5%;
 	    display: block;
@@ -418,20 +418,20 @@ header {
     color: $color_yellow;
     cursor: pointer;
     transition: all 0.35s cubic-bezier(0.75,0,0.25,1);
-	
+
 	&.left {
     	left: 0;
     	transform: translateY(-50%) translateX(-50%);
-    	
+
     	&:hover {
     		color: $color_blue;
     	}
 	}
-	
+
 	&.right {
     	right: 0;
     	transform: translateY(-50%) translateX(50%);
-    	    	
+
     	&:hover {
     		color: $color_red;
     	}
@@ -447,25 +447,25 @@ hr {
     border-style: solid;
 }
 
-.hcb_wrap { 
+.hcb_wrap {
 	background: #f7f6f6;
-	
+
 	& pre.prism {
 		margin: 25px 25%;
 	}
-	
+
 	& pre::before {
 		opacity: 0;
 	}
-	
+
 	& .line-numbers-rows>span::before {
 		text-align: left !important;
 	}
-	
+
 	& pre.line-numbers {
 		padding-left: 1.75em !important;
 	}
-	
+
 	& .line-numbers .line-numbers-rows {
 		width: 1.2em !important;
 		left: -1.75em !important;
@@ -475,14 +475,14 @@ hr {
 .site-footer {
 	margin: 1rem $website_margin 3rem;
 	text-align: center;
-	
+
 	& .legend {
 		font-size: 1rem;
 	    font-family: $text_header_stack;
 	    text-transform: uppercase;
 	    color: $color_yellow;
 	}
-	
+
 	& span {
 		font-size: 0.8rem;
 	}
@@ -494,32 +494,36 @@ hr {
 }
 
 #share {
-	position: fixed;
-    bottom: 0.5rem;
+    position: fixed;
+    bottom: 0;
     right: 1rem;
     z-index: 10;
-    
+
     & a {
-	    padding: 0.5rem 1rem;
+	    padding: 0.25rem 1rem;
 	    background: $color_yellow;
 	    color: white;
+      align-items: center;
+      justify-content: space-between;
+      text-align: center;
+      width: 5rem;
+      font-size: 1rem;
+      display: flex;
 	    font-family: $text_p_stack;
 	    transition: all 0.25s cubic-bezier(0.75,0,0.25,1);
-	    
+
 	    & i::before {
 	    	transition: all 0.25s cubic-bezier(0.75,0,0.25,1);
 	    	color: white;
 	    }
-	    
+
 	    &:hover {
 	    	background: $color_blue;
 	    	color: $color_yellow;
-	    	
+
 	    	& i::before {
 	    		color: $color_yellow;
 	    	}
     	}
-    }   
+    }
 }
-
-
