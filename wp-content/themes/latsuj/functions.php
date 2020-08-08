@@ -95,6 +95,12 @@ function wrapping_date($content) {
 function wrapping_the_post_thumbnail($content) {
     global $post;
     $thumbnail = get_the_post_thumbnail_url($post->ID,"full");
+    preg_match('/(?<=src=")[^ "]*/',$content,$matches_src);
+    preg_match('/(?<=srcset=")[^"]*/',$content,$matches_srcset);
+    $content = str_replace($matches_src[0],"asda.jpg",$content);
+
+    var_dump($matches_srcset);
+    $content = str_replace($matches_srcset[0],"sfs.jpg",$content);
     if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
     return $content;
 }
@@ -218,7 +224,7 @@ function get_loop_posts(){
     $order = $_GET["order"];
     $category_ID = $_GET["category"]!="undefined" ? intval($_GET["category"]) : NULL;
     $total = count_all_published_post($category_ID);
-    
+
     $posts = [];
     $args = array(
         'post_type' => 'post',
@@ -228,7 +234,7 @@ function get_loop_posts(){
         'category' => $category_ID,
         'order' => 'DESC'
     );
-    
+
     for($i=0;$i<3;$i++) {
         $args["offset"] = ($loop + $i) % $total;
         $post = wp_get_recent_posts($args)[0];
@@ -237,7 +243,7 @@ function get_loop_posts(){
         $post["backgroundImage"] = getUrlSizeImageByPostId($post["ID"]);
         $posts[] = $post;
     }
-    
+
     echo json_encode($posts);
     die();
 }
@@ -249,13 +255,13 @@ function get_loop_categories(){
     $loop = $_GET["loop"];
     $categories = get_all_categories();
     $total_categories = sizeof($categories);
-    
+
     for($i=$total_categories;$i--;) {
         $categories[$i]->url = get_category_link($categories[$i]->cat_ID);
         $categories[$i]->innerHTML = $categories[$i]->cat_name;
         $categories[$i]->backgroundImage = getUrlSizeImageBySlug("cat-".$categories[$i]->slug);
     }
-    
+
     echo get_loop_elements(2,$loop,$categories);
     die();
 }
@@ -277,17 +283,17 @@ add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
 
 function addingMeta() {
     global $post;
-    
+
     if(is_singular()){
         ?>
-    
+
         <meta property="og:url"           content="<?= the_permalink($post->ID) ?>" />
         <meta property="og:type"          content="website" />
         <meta property="og:title"         content="<?= $post->post_title ?>" />
         <meta property="og:description"   content="<?= $post->post_excerpt ?>" />
         <meta property="og:image"         content="<?= get_the_post_thumbnail_url($post->ID,"full") ?>" />
         <meta property="fb:app_id" 		  content="2561616047423116" />
-    
+
       	<?php
     }
 
@@ -299,6 +305,3 @@ function register_my_service_worker () {
     echo "<script>navigator.serviceWorker.register('".get_site_url()."/service-worker.js')</script>";
 }
 add_action ( 'wp_head', 'register_my_service_worker' );
-
-
-
