@@ -96,7 +96,7 @@ function wrapping_the_post_thumbnail($content) {
     global $post;
     $thumbnail = get_the_post_thumbnail_url($post->ID,"full");
     preg_match('/(?<=src=")[^ "]*/',$content,$matches_src);
-    $lqip = str_replace(".jpg","_low.jpg",$matches_src[0]);
+    $lqip = getLowQualityImage($matches_src[0]);
     $content = str_replace($matches_src[0],$lqip.'" data-src="'.$matches_src[0],$content);
 
     if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
@@ -115,6 +115,57 @@ function disable_wp_responsive_images() {
 	return 1;
 }
 add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
+
+
+// disable stylesheet
+function disable_scripts_styles() {
+    wp_deregister_script( 'hcb_prism_script' );
+	wp_dequeue_script('hcb_prism_script');
+    wp_deregister_script( 'wp-embed' );
+}
+add_action('wp_enqueue_scripts', 'disable_scripts_styles', 1000);
+
+function disable_emoji_feature() {
+
+	// Prevent Emoji from loading on the front-end
+	remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+	remove_action( 'wp_print_styles', 'print_emoji_styles' );
+
+	// Remove from admin area also
+	remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+	remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+	// Remove from RSS feeds also
+	remove_filter( 'the_content_feed', 'wp_staticize_emoji');
+	remove_filter( 'comment_text_rss', 'wp_staticize_emoji');
+
+	// Remove from Embeds
+	remove_filter( 'embed_head', 'print_emoji_detection_script' );
+
+	// Remove from emails
+	remove_filter( 'wp_mail', 'wp_staticize_emoji_for_email' );
+
+	// Disable from TinyMCE editor. Currently disabled in block editor by default
+	add_filter( 'tiny_mce_plugins', 'disable_emojis_tinymce' );
+
+	/** Finally, prevent character conversion too
+         ** without this, emojis still work
+         ** if it is available on the user's device
+	 */
+
+	add_filter( 'option_use_smilies', '__return_false' );
+
+}
+
+function disable_emojis_tinymce( $plugins ) {
+	if( is_array($plugins) ) {
+		$plugins = array_diff( $plugins, array( 'wpemoji' ) );
+	}
+	return $plugins;
+}
+
+add_action('init', 'disable_emoji_feature');
+
 
 function get_category_by_index($index,$id) {
     $categories = get_the_category();
@@ -206,6 +257,10 @@ function getUrlSizeImageBySlug( $slug ) {
 
 function getSizeImage() {
     return wp_is_mobile() ? "post-thumbnail" : "medium";
+}
+
+function getLowQualityImage($url) {
+    return str_replace(".jpg","_low.jpg",$url);
 }
 
 function wpse_get_partial($template_name, $data = []) {
