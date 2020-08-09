@@ -96,12 +96,9 @@ function wrapping_the_post_thumbnail($content) {
     global $post;
     $thumbnail = get_the_post_thumbnail_url($post->ID,"full");
     preg_match('/(?<=src=")[^ "]*/',$content,$matches_src);
-    preg_match('/(?<=srcset=")[^"]*/',$content,$matches_srcset);
-    $content = str_replace($matches_src[0],"http://localhost:800/wp-content/uploads/my_filipino_wife_pinay_004-768x384.jpg",$content);
+    $lqip = str_replace(".jpg","_low.jpg",$matches_src[0]);
+    $content = str_replace($matches_src[0],$lqip.'" data-src="'.$matches_src[0],$content);
 
-    var_dump($matches_srcset);
-    //http://localhost:800/wp-content/uploads/my_filipino_wife_pinay_004-768x384.jpg
-    $content = str_replace($matches_srcset[0],"sfs.jpg",$content);
     if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
     return $content;
 }
