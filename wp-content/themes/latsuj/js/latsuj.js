@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     let arrow = document.getElementsByClassName("arrow");
-    for(let i=arrow.length;i--;) {       
+    for(let i=arrow.length;i--;) {
         arrow[i].addEventListener("click", sliderActive);
     }
 
@@ -51,10 +51,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(sliderItemVisible, 200, a);
             }
         };
-    }    
+    }
 
     function nextLoop(e,total_loop,loop,nbr_element) {
-        if(e.target.classList.contains('right') && loop*1 + nbr_element>=total_loop) return loop*1 + nbr_element-total_loop; 
+        if(e.target.classList.contains('right') && loop*1 + nbr_element>=total_loop) return loop*1 + nbr_element-total_loop;
         if(e.target.classList.contains('right')) return loop*1 + nbr_element;
         if(loop*1 - nbr_element>=0) return loop*1 - nbr_element;
         return total_loop-nbr_element;
@@ -93,18 +93,19 @@ document.addEventListener("DOMContentLoaded", function() {
             }, i*200);
         }
     }
-    
-    
- // Register the service worker
-    /**
-    if ('serviceWorker' in navigator) {
-    	navigator.serviceWorker.register(my_service_worker.url).then(function(registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }).catch(function(err) {
-        // registration failed :(
-        	console.log('ServiceWorker registration failed: ', err);
+
+    function loadHighQualityImage() {
+        console.log("hey");
+        const thumbnails = document.querySelectorAll("img.attachment-full");
+        const thumbnail_low = thumbnails[0];
+        const thumbnail_high = thumbnails[1];
+        const tmp = new Image();
+        // We just add a background for the second frame - the first one dont need it because of the three.js canvas
+        tmp.src = thumbnail_low.getAttribute("data-src");
+        tmp.addEventListener('load',function() {
+            thumbnail_high.src = tmp.src;
+            thumbnail_high.classList.add("show");
         });
     }
-    **/
+    loadHighQualityImage();
 })

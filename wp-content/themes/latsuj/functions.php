@@ -99,7 +99,7 @@ function wrapping_the_post_thumbnail($content) {
     $lqip = str_replace(".jpg","_low.jpg",$matches_src[0]);
     $content = str_replace($matches_src[0],$lqip.'" data-src="'.$matches_src[0],$content);
 
-    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
+    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
     return $content;
 }
 

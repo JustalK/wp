@@ -797,43 +797,54 @@ a.posts {
 .wp-block-image > img {
   height: initial;
 }
+/* line 347, sass/mb-style.scss */
+.wp-block-image > img:nth-child(2) {
+  transition: opacity 0.5s 1s cubic-bezier(0.75, 0, 0.25, 1);
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+/* line 354, sass/mb-style.scss */
+.wp-block-image > img.show {
+  opacity: 1;
+}
 
-/* line 349, sass/mb-style.scss */
+/* line 360, sass/mb-style.scss */
 .line-description {
   margin: 1rem 5% 0;
 }
 
-/* line 354, sass/mb-style.scss */
+/* line 365, sass/mb-style.scss */
 article h2, article h3 {
   margin: 2rem 5%;
 }
-/* line 358, sass/mb-style.scss */
+/* line 369, sass/mb-style.scss */
 article p {
   padding: 0 5%;
 }
 
-/* line 364, sass/mb-style.scss */
+/* line 375, sass/mb-style.scss */
 .wp-block-code p {
   margin: 0 5%;
 }
 
-/* line 369, sass/mb-style.scss */
+/* line 380, sass/mb-style.scss */
 footer {
   width: 100%;
   background: #fcd116;
 }
-/* line 373, sass/mb-style.scss */
+/* line 384, sass/mb-style.scss */
 footer .legend {
   margin: 3rem 0 1rem;
 }
-/* line 377, sass/mb-style.scss */
+/* line 388, sass/mb-style.scss */
 footer .copyright {
   text-align: center;
   display: block;
   padding: 2rem;
 }
 
-/* line 384, sass/mb-style.scss */
+/* line 395, sass/mb-style.scss */
 #bsocials {
   position: relative;
   padding: 0 20%;
@@ -842,12 +853,12 @@ footer .copyright {
   font-size: 1.8rem;
   z-index: 20;
 }
-/* line 392, sass/mb-style.scss */
+/* line 403, sass/mb-style.scss */
 #bsocials .fa-github-square:before {
   color: black;
 }
 
-/* line 397, sass/mb-style.scss */
+/* line 408, sass/mb-style.scss */
 #all-posts {
   margin-bottom: 6rem;
 }
@@ -863,19 +874,19 @@ footer .copyright {
   font-size: 1.5rem;
 }
 
-/* line 407, sass/mb-style.scss */
+/* line 418, sass/mb-style.scss */
 #share {
   padding: 3rem 5% 1rem;
   display: flex;
   justify-content: center;
 }
-/* line 412, sass/mb-style.scss */
+/* line 423, sass/mb-style.scss */
 #share .fshare {
   background: #1877f2;
   padding: 0.5rem;
   color: white;
 }
-/* line 417, sass/mb-style.scss */
+/* line 428, sass/mb-style.scss */
 #share .fshare i::before {
   color: white;
 }
