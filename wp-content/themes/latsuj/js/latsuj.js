@@ -1,4 +1,4 @@
-document.addEventListener("DOMContentLoaded", function() {
+window.addEventListener("DOMContentLoaded", function() {
     let body = document.body;
     body.classList.add("show");
 
@@ -93,19 +93,32 @@ document.addEventListener("DOMContentLoaded", function() {
             }, i*200);
         }
     }
+})
 
+window.addEventListener("load", function() {
     function loadHighQualityImage() {
-        console.log("hey");
         const thumbnails = document.querySelectorAll("img.attachment-full");
         const thumbnail_low = thumbnails[0];
         const thumbnail_high = thumbnails[1];
-        const tmp = new Image();
-        // We just add a background for the second frame - the first one dont need it because of the three.js canvas
-        tmp.src = thumbnail_low.getAttribute("data-src");
-        tmp.addEventListener('load',function() {
-            thumbnail_high.src = tmp.src;
+        thumbnail_high.src = thumbnail_low.getAttribute("data-src")
+        thumbnail_high.addEventListener('load',function() {
             thumbnail_high.classList.add("show");
         });
     }
     loadHighQualityImage();
+
+    function loadBackgroundHighQualityImages() {
+        const thumbnails = document.querySelectorAll(".lqip");
+        for(let i = thumbnails.length;i--;) {
+             loadBackgroundHighQualityImage(thumbnails[i]);
+        }
+    }
+    function loadBackgroundHighQualityImage(thumbnail) {
+        thumbnail.src = thumbnail.getAttribute("data-src");
+        thumbnail.addEventListener('load',function() {
+            //thumbnail.style["background-image"] = 'url("'+tmp.src+'")';
+            thumbnail.classList.add("show");
+        });
+    }
+    loadBackgroundHighQualityImages();
 })

@@ -363,4 +363,4 @@ add_action( 'wp_head', 'addingMeta' );
 function register_my_service_worker () {
     echo "<script>navigator.serviceWorker.register('".get_site_url()."/service-worker.js')</script>";
 }
-add_action ( 'wp_head', 'register_my_service_worker' );
+//add_action ( 'wp_head', 'register_my_service_worker' );
