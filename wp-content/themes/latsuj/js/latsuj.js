@@ -106,19 +106,28 @@ window.addEventListener("load", function() {
         });
     }
     loadHighQualityImage();
-
-    function loadBackgroundHighQualityImages() {
-        const thumbnails = document.querySelectorAll(".lqip");
-        for(let i = thumbnails.length;i--;) {
-             loadBackgroundHighQualityImage(thumbnails[i]);
-        }
-    }
-    function loadBackgroundHighQualityImage(thumbnail) {
-        thumbnail.src = thumbnail.getAttribute("data-src");
-        thumbnail.addEventListener('load',function() {
-            //thumbnail.style["background-image"] = 'url("'+tmp.src+'")';
-            thumbnail.classList.add("show");
-        });
-    }
-    loadBackgroundHighQualityImages();
 })
+
+let activatedLoadBackgroundHighQualityImages = false;
+function loadBackgroundHighQualityImages() {
+    const thumbnails = document.querySelectorAll(".lqip");
+    for(let i = thumbnails.length;i--;) {
+         loadBackgroundHighQualityImage(thumbnails[i]);
+    }
+}
+function loadBackgroundHighQualityImage(thumbnail) {
+    thumbnail.src = thumbnail.getAttribute("data-src");
+    thumbnail.addEventListener('load',function() {
+        thumbnail.classList.add("show");
+    });
+}
+
+window.addEventListener("scroll", function() {
+    let screenYBottom = window.pageYOffset+window.outerHeight;
+    const relatePost = document.querySelector("#mb-vertical-posts");
+
+    if(screenYBottom>relatePost.offsetTop && !activatedLoadBackgroundHighQualityImages) {
+        activatedLoadBackgroundHighQualityImages = true;
+        loadBackgroundHighQualityImages();
+    }
+});
