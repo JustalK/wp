@@ -35,7 +35,7 @@ endif;
 
 <div id="share">
     <a class="fshare" href="https://www.facebook.com/sharer/sharer.php?u=<?= get_permalink(); ?>" target="_blank">
-      <i class="fa fa-facebook-square"></i> Share
+      <i class="fa fa-facebook-square"></i> <span>Share</span>
     </a>
 </div>
 

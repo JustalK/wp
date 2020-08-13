@@ -406,7 +406,7 @@ footer {
 
 #bsocials {
     position: relative;
-    padding: 0 20%;
+    padding: 0 30%;
     display: flex;
     justify-content: space-between;
     font-size: 1.8rem;
@@ -433,12 +433,15 @@ footer {
     justify-content: center;
 
     .fshare {
-		background: #1877f2;
-	    padding: 0.5rem;
-	    color: white;
+        background: #1877f2;
+        color: $color_white;
+        display: flex;
+        align-items: center;
+        padding: 0 1rem;
 
 	    & i::before {
 	    	color:white;
+            padding-right: 0.5rem;
 	    }
     }
 }
