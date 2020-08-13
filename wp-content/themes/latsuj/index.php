@@ -31,7 +31,7 @@
     ));
 
     ?>
-	<a id="mb-see-all" href="<?php echo esc_url( get_permalink( get_page_by_path( 'posts' ) ) ); ?>">See all<i class="fa fa-arrow-right"></i></a>
+	<a id="mb-see-all" href="<?php echo esc_url( get_permalink( get_page_by_path( 'posts' ) ) ); ?>">See all&nbsp;&nbsp;<i class="fa fa-arrow-right"></i></a>
 
 
 <?php else : ?>

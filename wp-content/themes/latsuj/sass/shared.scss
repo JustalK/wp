@@ -56,6 +56,10 @@ body {
 	line-height: 1;
 	font-size: 3rem;
 
+	&:before {
+		vertical-align: middle;
+	}
+
 	&.fa-youtube-square:before {
 		content: "G";
   		color: $color_red;
@@ -79,16 +83,19 @@ body {
 	&.fa-heart:before {
 		content: "H";
 		color: $color_red;
+		vertical-align: inherit;
 	}
 
 	&.fa-philippines:before {
 		content: "J";
 		color: $color_yellow;
+		vertical-align: inherit;
 	}
 
 	&.fa-computer:before {
 		content: "K";
 		color: $color_blue;
+		vertical-align: inherit;
 	}
 
 	&.fa-download:before {
