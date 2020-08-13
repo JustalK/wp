@@ -54,51 +54,67 @@ body {
   	font-variant: normal;
   	text-rendering: auto;
 	line-height: 1;
-
+	font-size: 3rem;
 
 	&.fa-youtube-square:before {
-		content: "A";
+		content: "G";
   		color: $color_red;
 	}
 
   	&.fa-github-square:before {
-  		content: "B";
+  		content: "F";
   		color: $color_yellow;
   	}
 
+	&.fa-home:before {
+		content: "D";
+  		color: $color_white;
+	}
+
 	&.fa-facebook-square:before {
-		content: "C";
+		content: "E";
   		color: $color_blue;
 	}
 
 	&.fa-heart:before {
-		content: "G";
-		color: $color_red;
-	}
-
-	&.fa-philippines:before {
-		content: "E";
-		color: $color_yellow;
-	}
-
-	&.fa-computer:before {
-		content: "F";
-		color: $color_blue;
-	}
-
-	&.fa-download:before {
 		content: "H";
 		color: $color_red;
 	}
 
-	&.fa-arrow-left:before {
+	&.fa-philippines:before {
+		content: "J";
+		color: $color_yellow;
+	}
+
+	&.fa-computer:before {
+		content: "K";
+		color: $color_blue;
+	}
+
+	&.fa-download:before {
 		content: "I";
 		color: $color_red;
 	}
 
+	&.fa-arrow-left:before {
+		content: "L";
+	}
+
 	&.fa-arrow-right:before {
-		content: "J";
-		color: $color_red;
+		content: "M";
+	}
+
+	&.fa-arrow2-left:before {
+		content: "A";
+		color: $color_white;
+	}
+
+	&.fa-arrow2-right:before {
+		content: "B";
+	}
+
+	&.fa-wife:before {
+		content: "C";
 	}
 }
 
