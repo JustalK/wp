@@ -280,6 +280,7 @@ a {
 
 		    & .image {
 		    	height: 50%;
+                position: relative;
 		    	@include full-background();
 		    }
     	}
@@ -379,10 +380,16 @@ article {
 
 .lqip {
     transition: opacity 0.5s 1s cubic-bezier(0.75,0,0.25,1);
-    opacity: 0;
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    &.high {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+    }
 
     &.show {
         opacity: 1;

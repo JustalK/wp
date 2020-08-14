@@ -12,7 +12,10 @@ $posts = get_related_posts($ids);
     		<?php foreach($posts as $post) { ?>
         		<li>
         			<a class="posts" href="<?= the_permalink($post["ID"]) ?>">
-                		<div class="image"><img class="lqip" data-src="<?= get_the_post_thumbnail_url($post["ID"],'full') ?>"></img></div>
+                		<div class="image">
+                            <img class="lqip" src="<?= getLowQualityImage(get_the_post_thumbnail_url($post["ID"],'full')) ?>"></img>
+                            <img class="lqip high" data-src="<?= get_the_post_thumbnail_url($post["ID"],'full') ?>"></img>
+                        </div>
                 		<div class="post_informations">
                 			<span><?= get_the_category($post["ID"])[0]->cat_name ?></span>
                 			<h3><?= $post["post_title"]; ?></h3>

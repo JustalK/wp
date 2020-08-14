@@ -110,7 +110,7 @@ window.addEventListener("load", function() {
 
 let activatedLoadBackgroundHighQualityImages = false;
 function loadBackgroundHighQualityImages() {
-    const thumbnails = document.querySelectorAll(".lqip");
+    const thumbnails = document.querySelectorAll(".lqip.high");
     for(let i = thumbnails.length;i--;) {
          loadBackgroundHighQualityImage(thumbnails[i]);
     }
