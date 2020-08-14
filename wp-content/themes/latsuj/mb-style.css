@@ -408,11 +408,11 @@ a {
   left: -0.4rem;
 }
 
-/* line 287, sass/shared.scss */
+/* line 286, sass/shared.scss */
 .wp-block-image {
   position: relative;
 }
-/* line 290, sass/shared.scss */
+/* line 289, sass/shared.scss */
 .wp-block-image .fa-download {
   position: absolute;
   padding: 10px;
@@ -421,6 +421,21 @@ a {
   right: 0;
   text-align: center;
   line-height: 0.5;
+}
+/* line 299, sass/shared.scss */
+.wp-block-image > img {
+  height: initial;
+}
+/* line 302, sass/shared.scss */
+.wp-block-image > img:nth-child(2) {
+  transition: opacity 0.5s 1s cubic-bezier(0.75, 0, 0.25, 1);
+  position: absolute;
+  left: 0;
+  opacity: 0;
+}
+/* line 309, sass/shared.scss */
+.wp-block-image > img.show {
+  opacity: 1;
 }
 
 /* line 15, sass/mb-style.scss */
