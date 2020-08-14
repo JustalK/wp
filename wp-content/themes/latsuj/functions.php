@@ -99,7 +99,7 @@ function wrapping_the_post_thumbnail($content) {
     $lqip = getLowQualityImage($matches_src[0]);
     $content = str_replace($matches_src[0],$lqip.'" data-src="'.$matches_src[0],$content);
 
-    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.$content.'<a class="far fa-download" href="'.$thumbnail.'" download></a></div>';
+    if(is_singular()) return '<div id="thepostthumbnail" class="wp-block-image">'.$content.$content.'<a class="fa fa-download" href="'.$thumbnail.'" download></a></div>';
     return $content;
 }
 
@@ -363,4 +363,4 @@ add_action( 'wp_head', 'addingMeta' );
 function register_my_service_worker () {
     echo "<script>navigator.serviceWorker.register('".get_site_url()."/service-worker.js')</script>";
 }
-//add_action ( 'wp_head', 'register_my_service_worker' );
+add_action ( 'wp_head', 'register_my_service_worker' );

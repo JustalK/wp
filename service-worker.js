@@ -2,15 +2,15 @@ var cacheVersion = 2;
 var currentCache = {
   offline: 'offline-cache' + cacheVersion
 };
-const offlineUrl = 'http://localhost:800/offline/';
+const offlineUrl = 'https://teamkd.online/offline/';
 
 this.addEventListener('install', event => {
   event.waitUntil(
     caches.open(currentCache.offline).then(function(cache) {
       return cache.addAll([
           offlineUrl,
-          'http://localhost:800/wp-content/themes/latsuj/js/latsuj.js?ver=5.4.2',
-          'http://localhost:800/wp-content/themes/latsuj/offline.css?ver=5.4.2'
+          'https://teamkd.online/wp-content/themes/latsuj/js/latsuj.js?ver=5.4.2',
+          'https://teamkd.online/wp-content/themes/latsuj/offline.css?ver=5.4.2'
       ]);
     })
   );

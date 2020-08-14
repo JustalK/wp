@@ -420,6 +420,7 @@ a {
   bottom: 0;
   right: 0;
   text-align: center;
+  line-height: 0.5;
 }
 
 /* line 15, sass/mb-style.scss */
