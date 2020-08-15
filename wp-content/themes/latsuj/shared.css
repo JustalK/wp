@@ -370,3 +370,17 @@ a {
 .wp-block-image > img.show {
   opacity: 1;
 }
+
+/* line 319, sass/shared.scss */
+.lqip {
+  transition: opacity 0.5s 1s cubic-bezier(0.75, 0, 0.25, 1);
+}
+/* line 322, sass/shared.scss */
+.lqip.high {
+  position: absolute;
+  opacity: 0;
+}
+/* line 327, sass/shared.scss */
+.lqip.show {
+  opacity: 1;
+}

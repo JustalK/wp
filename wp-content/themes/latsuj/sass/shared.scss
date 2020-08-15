@@ -315,3 +315,16 @@ a {
         }
     }
 }
+
+.lqip {
+    transition: opacity 0.5s 1s cubic-bezier(0.75,0,0.25,1);
+
+    &.high {
+        position: absolute;
+        opacity: 0;
+    }
+
+    &.show {
+        opacity: 1;
+    }
+}

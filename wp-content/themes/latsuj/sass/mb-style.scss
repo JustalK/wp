@@ -176,6 +176,17 @@ a {
 #mb-vertical-posts, #mb-horizontal-posts {
 	position: relative;
 
+    .lqip {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        &.high {
+            top: 0;
+            left: 0;
+        }
+    }
+
     & .bottom {
     	transform: skewY(5deg) translateY(2rem);
     }
@@ -242,6 +253,7 @@ a {
 		height: 8rem;
 
     	& .image {
+            position: relative;
 		    width: 50%;
 		    height: 100%;
 		    float: left;
@@ -260,17 +272,6 @@ a {
 }
 
 #mb-vertical-posts {
-    .lqip {
-        object-fit: cover;
-        width: 100%;
-        height: 100%;
-
-        &.high {
-            top: 0;
-            left: 0;
-        }
-    }
-
 	& ul {
 		display: flex;
 		justify-content: space-between;
@@ -387,19 +388,6 @@ article {
 	& p {
 		margin: 0 $mobile_website_margin;
 	}
-}
-
-.lqip {
-    transition: opacity 0.5s 1s cubic-bezier(0.75,0,0.25,1);
-
-    &.high {
-        position: absolute;
-        opacity: 0;
-    }
-
-    &.show {
-        opacity: 1;
-    }
 }
 
 footer {
