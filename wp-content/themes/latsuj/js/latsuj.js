@@ -106,12 +106,15 @@ window.addEventListener("load", function() {
         });
     }
     if(document.querySelector("body.single")) loadHighQualityImage();
-    loadBackgroundHighQualityImages();
+    if(document.querySelector("body.home")) {
+        const thumbnails = document.querySelectorAll("header .lqip.high");
+        loadBackgroundHighQualityImages(thumbnails);
+    }
 })
 
-let activatedLoadBackgroundHighQualityImages = false;
-function loadBackgroundHighQualityImages() {
-    const thumbnails = document.querySelectorAll(".lqip.high");
+let activatedVerticalMostRecentPost = false;
+let activatedHorizontalMostRecentPost = false;
+function loadBackgroundHighQualityImages(thumbnails) {
     for(let i = thumbnails.length;i--;) {
          loadBackgroundHighQualityImage(thumbnails[i]);
     }
@@ -125,10 +128,18 @@ function loadBackgroundHighQualityImage(thumbnail) {
 
 window.addEventListener("scroll", function() {
     let screenYBottom = window.pageYOffset+window.outerHeight;
-    const relatePost = document.querySelector("#mb-vertical-posts");
+    const verticalMostRecentPost = document.querySelector("#mb-vertical-posts");
+    const horizontalMostRecentPost = document.querySelector("#mb-horizontal-posts");
 
-    if(screenYBottom>relatePost.offsetTop && !activatedLoadBackgroundHighQualityImages) {
-        activatedLoadBackgroundHighQualityImages = true;
-        loadBackgroundHighQualityImages();
+    if(horizontalMostRecentPost && screenYBottom>horizontalMostRecentPost.offsetTop && !activatedHorizontalMostRecentPost) {
+        activatedHorizontalMostRecentPost = true;
+        const thumbnails = document.querySelectorAll("#mb-horizontal-posts .lqip.high");
+        loadBackgroundHighQualityImages(thumbnails);
+    }
+
+    if(verticalMostRecentPost && screenYBottom>verticalMostRecentPost.offsetTop && !activatedVerticalMostRecentPost) {
+        activatedVerticalMostRecentPost = true;
+        const thumbnails = document.querySelectorAll("#mb-vertical-posts .lqip.high");
+        loadBackgroundHighQualityImages(thumbnails);
     }
 });

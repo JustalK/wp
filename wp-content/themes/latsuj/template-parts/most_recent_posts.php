@@ -8,7 +8,7 @@ $posts = get_most_recent_posts($nbr_of_post,$offset,$cat_id);
 <?php if ( wp_is_mobile() ) : ?>
 
     <?php if($direction=="horizontal") { ?>
-        <div id="mb-horizontal-posts">
+        <div id="mb-horizontal-posts" class="most-recent">
         	<?php if(!is_null($title)) { ?><span class="legend title"><?= $title ?></span><?php } ?>
         	<ul>
         		<?php foreach($posts as $post) { ?>
