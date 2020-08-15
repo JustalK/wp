@@ -150,7 +150,11 @@ header img {
   height: 100%;
   display: block;
 }
-/* line 148, sass/shared.scss */
+/* line 147, sass/shared.scss */
+header img.high {
+  top: 0;
+}
+/* line 152, sass/shared.scss */
 header h1 {
   position: absolute;
   bottom: 0;
@@ -159,19 +163,19 @@ header h1 {
   font-size: 4.75rem;
   color: #fcd116;
 }
-/* line 157, sass/shared.scss */
+/* line 161, sass/shared.scss */
 header p::first-line {
   text-indent: initial;
 }
 
-/* line 162, sass/shared.scss */
+/* line 166, sass/shared.scss */
 h1, h2, h3, h4, h5, h6 {
   font-family: "GothamSSm-Black", Arial, sans-serif;
   text-transform: uppercase;
   color: #111;
 }
 
-/* line 168, sass/shared.scss */
+/* line 172, sass/shared.scss */
 p {
   font-family: "Maitree-Regular", Arial, sans-serif;
   line-height: 1.4rem;
@@ -189,18 +193,18 @@ p::first-letter {
   font-size: 1.5rem;
 }
 
-/* line 176, sass/shared.scss */
+/* line 180, sass/shared.scss */
 span {
   font-family: "Maitree-Regular", Arial, sans-serif;
   word-spacing: 0.005rem;
 }
 
-/* line 181, sass/shared.scss */
+/* line 185, sass/shared.scss */
 a {
   text-decoration: none;
 }
 
-/* line 185, sass/shared.scss */
+/* line 189, sass/shared.scss */
 #nav {
   position: fixed;
   width: 100%;
@@ -210,7 +214,7 @@ a {
   justify-content: space-between;
   z-index: 100;
 }
-/* line 194, sass/shared.scss */
+/* line 198, sass/shared.scss */
 #nav .options {
   text-transform: uppercase;
   display: flex;
@@ -222,16 +226,16 @@ a {
   justify-content: space-between;
   width: 6rem;
 }
-/* line 205, sass/shared.scss */
+/* line 209, sass/shared.scss */
 #nav .options span {
   font-family: "GothamSSm-Black", Arial, sans-serif;
 }
-/* line 209, sass/shared.scss */
+/* line 213, sass/shared.scss */
 #nav .options i {
   color: white;
 }
 
-/* line 217, sass/shared.scss */
+/* line 221, sass/shared.scss */
 .design {
   position: absolute;
   background: #fcd116;
@@ -241,7 +245,7 @@ a {
   transform: translateY(-150%);
   transition: transform 0.5s 1.35s cubic-bezier(0.75, 0, 0.25, 1);
 }
-/* line 226, sass/shared.scss */
+/* line 230, sass/shared.scss */
 .design::after {
   content: '';
   position: absolute;
@@ -256,24 +260,24 @@ a {
   left: -0.345rem;
 }
 
-/* line 233, sass/shared.scss */
+/* line 237, sass/shared.scss */
 #design_bottom {
   bottom: 0;
 }
 
-/* line 241, sass/shared.scss */
+/* line 245, sass/shared.scss */
 .single h1, .category h1, .page-template-all h1 {
   padding-bottom: 4rem;
   padding-top: 10rem;
   text-align: center;
 }
 
-/* line 249, sass/shared.scss */
+/* line 253, sass/shared.scss */
 #theexcerpt {
   position: relative;
   font-style: italic;
 }
-/* line 253, sass/shared.scss */
+/* line 257, sass/shared.scss */
 #theexcerpt::before {
   content: '';
   position: absolute;
@@ -287,7 +291,7 @@ a {
   top: -0.4rem;
   right: 30%;
 }
-/* line 259, sass/shared.scss */
+/* line 263, sass/shared.scss */
 #theexcerpt::after {
   content: '';
   position: absolute;
@@ -312,7 +316,7 @@ a {
   font-size: 1.5rem;
 }
 
-/* line 270, sass/shared.scss */
+/* line 274, sass/shared.scss */
 .line-description {
   position: relative;
   display: inline-block;
@@ -321,7 +325,7 @@ a {
   background: #fcd116;
   color: white;
 }
-/* line 278, sass/shared.scss */
+/* line 282, sass/shared.scss */
 .line-description::before {
   content: '';
   position: absolute;
@@ -337,11 +341,11 @@ a {
   left: -0.4rem;
 }
 
-/* line 286, sass/shared.scss */
+/* line 290, sass/shared.scss */
 .wp-block-image {
   position: relative;
 }
-/* line 289, sass/shared.scss */
+/* line 293, sass/shared.scss */
 .wp-block-image .fa-download {
   position: absolute;
   padding: 10px;
@@ -351,18 +355,18 @@ a {
   text-align: center;
   line-height: 0.5;
 }
-/* line 299, sass/shared.scss */
+/* line 303, sass/shared.scss */
 .wp-block-image > img {
   height: initial;
 }
-/* line 302, sass/shared.scss */
+/* line 306, sass/shared.scss */
 .wp-block-image > img:nth-child(2) {
   transition: opacity 0.5s 1s cubic-bezier(0.75, 0, 0.25, 1);
   position: absolute;
   left: 0;
   opacity: 0;
 }
-/* line 309, sass/shared.scss */
+/* line 313, sass/shared.scss */
 .wp-block-image > img.show {
   opacity: 1;
 }

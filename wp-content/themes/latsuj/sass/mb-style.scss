@@ -260,6 +260,17 @@ a {
 }
 
 #mb-vertical-posts {
+    .lqip {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+
+        &.high {
+            top: 0;
+            left: 0;
+        }
+    }
+
 	& ul {
 		display: flex;
 		justify-content: space-between;
@@ -380,14 +391,9 @@ article {
 
 .lqip {
     transition: opacity 0.5s 1s cubic-bezier(0.75,0,0.25,1);
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
 
     &.high {
         position: absolute;
-        top: 0;
-        left: 0;
         opacity: 0;
     }
 

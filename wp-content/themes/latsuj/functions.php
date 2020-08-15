@@ -260,7 +260,10 @@ function getSizeImage() {
 }
 
 function getLowQualityImage($url) {
-    return str_replace(".jpg","_low.jpg",$url);
+    $ext = strrchr($url, ".");
+    preg_match('/-\d+x\d+/',$url,$matches);
+    $size = !is_null($matches[0]) ? $matches[0] : '';
+    return str_replace($size.$ext,"_low".$size.$ext,$url);
 }
 
 function wpse_get_partial($template_name, $data = []) {

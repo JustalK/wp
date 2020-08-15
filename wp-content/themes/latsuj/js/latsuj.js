@@ -105,7 +105,8 @@ window.addEventListener("load", function() {
             thumbnail_high.classList.add("show");
         });
     }
-    loadHighQualityImage();
+    if(document.querySelector("body.single")) loadHighQualityImage();
+    loadBackgroundHighQualityImages();
 })
 
 let activatedLoadBackgroundHighQualityImages = false;
