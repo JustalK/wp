@@ -22,6 +22,8 @@ Active the compass for watching the change and automatically create the css
 compass watch
 ```
 
+Then, go to the localhost in the browser.
+
 ## License
 
 MIT - Copyright &copy; [JUSTAL Kevin](https://teamkd.online/)
