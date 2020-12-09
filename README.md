@@ -6,6 +6,9 @@ This project is a blog for relating my adventure with my wife. It's a custom `Wo
 
 I explain with all the details how I build the project and my way of working.
 
+1. [Organization](#organization)
+2. [Developing](#developing)
+
 ## Organization
 
 ## Developing
